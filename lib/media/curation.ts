@@ -42,13 +42,20 @@ export function generateList(items: CurationItem[], input: GeneratorInput): Cura
     .map((s) => s.it);
 }
 
-// ===== 音乐策展专题（50 条，editorial 定义，条目名种子构建期解析） =====
+// ===== 策展专题（每频道 50 条，editorial 定义，条目名种子构建期解析） =====
 import { MUSIC_THEMES } from './seeds-music';
 import { GAME_THEMES } from './seeds-games';
+import { FILM_THEMES } from './seeds-film';
+import { TV_THEMES } from './seeds-tv';
 
-export { MUSIC_THEMES, GAME_THEMES };
+export { MUSIC_THEMES, GAME_THEMES, FILM_THEMES, TV_THEMES };
 
-// 合并生成器候选池（当前首发 music；game 上线后并入）
-export const ALL_THEMES: CurationTheme[] = [...MUSIC_THEMES, ...GAME_THEMES];
+// 合并生成器候选池（四个频道全部并入）
+export const ALL_THEMES: CurationTheme[] = [
+  ...MUSIC_THEMES,
+  ...GAME_THEMES,
+  ...FILM_THEMES,
+  ...TV_THEMES,
+];
 
 export const THEME_TARGET = 50; // 每频道目标

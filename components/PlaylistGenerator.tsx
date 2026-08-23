@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import { MUSIC_ITEMS } from '@/lib/media/generated-music';
 import { GAME_ITEMS } from '@/lib/media/generated-games';
+import { FILM_ITEMS } from '@/lib/media/generated-film';
+import { TV_ITEMS } from '@/lib/media/generated-tv';
 import type { CurationItem } from '@/lib/media/musicbrainz';
 
 const MOODS = ['relaxed', 'focused', 'energetic', 'melancholy', 'party'];
@@ -9,13 +11,17 @@ const DECADES = ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s'];
 const GENRES = ['rock', 'electronic', 'jazz', 'hiphop', 'classical', 'indie', 'ambient', 'soul'];
 
 export function PlaylistGenerator() {
-  const [mode, setMode] = useState<'music' | 'game'>('music');
+  const [mode, setMode] = useState<'music' | 'game' | 'film' | 'tv'>('music');
   const [mood, setMood] = useState('relaxed');
   const [decade, setDecade] = useState('');
   const [genre, setGenre] = useState('');
   const [result, setResult] = useState<CurationItem[] | null>(null);
 
-  const pool = mode === 'music' ? MUSIC_ITEMS : GAME_ITEMS;
+  const pool =
+    mode === 'music' ? MUSIC_ITEMS :
+    mode === 'game' ? GAME_ITEMS :
+    mode === 'film' ? FILM_ITEMS :
+    TV_ITEMS;
 
   function build() {
     const scored = pool
@@ -34,16 +40,20 @@ export function PlaylistGenerator() {
     setResult(scored);
   }
 
+  const labelMap: Record<string, string> = {
+    music: 'playlist', game: 'gamelist', film: 'watchlist', tv: 'bingelist',
+  };
+
   return (
     <div className="gen-box">
-      <h3 style={{ marginTop: 0 }}>Build your {mode === 'music' ? 'playlist' : 'gamelist'}</h3>
+      <h3 style={{ marginTop: 0 }}>Build your {labelMap[mode]}</h3>
       <p className="muted" style={{ marginBottom: 4 }}>
         Pick a mood and optionally a decade or genre. We assemble a starter list from our
         curated catalog with real metadata.
         {pool.length === 0 && ' (catalog populating — demo mode active)'}
       </p>
 
-      <div style={{ display: 'flex', gap: 8, margin: '8px 0 4px' }}>
+      <div style={{ display: 'flex', gap: 8, margin: '8px 0 4px', flexWrap: 'wrap' }}>
         <button
           onClick={() => setMode('music')}
           className="gen-btn"
@@ -57,6 +67,20 @@ export function PlaylistGenerator() {
           style={{ background: mode === 'game' ? 'var(--violet-600)' : 'var(--line-strong)', margin: 0 }}
         >
           🎮 Games
+        </button>
+        <button
+          onClick={() => setMode('film')}
+          className="gen-btn"
+          style={{ background: mode === 'film' ? 'var(--violet-600)' : 'var(--line-strong)', margin: 0 }}
+        >
+          🎬 Film
+        </button>
+        <button
+          onClick={() => setMode('tv')}
+          className="gen-btn"
+          style={{ background: mode === 'tv' ? 'var(--violet-600)' : 'var(--line-strong)', margin: 0 }}
+        >
+          📺 TV
         </button>
       </div>
 

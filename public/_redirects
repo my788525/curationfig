@@ -1,0 +1,9 @@
+# Cloudflare Pages 静态导出：目录路径尾斜杠规范化
+# 避免 /games /music /tools/playlist 等无尾斜杠访问返回 404
+/games /games/ 301
+/music /music/ 301
+/film /film/ 301
+/tv /tv/ 301
+/tools/playlist /tools/playlist/ 301
+/data /data/ 301
+/about /about/ 301

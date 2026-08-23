@@ -44,7 +44,7 @@ export const ATTRIBUTION_HTML = `
     Music data: <a href="https://musicbrainz.org/" rel="nofollow noopener">MusicBrainz</a> (CC0).
     Cover art: <a href="https://coverartarchive.org/" rel="nofollow noopener">Cover Art Archive</a>.
     Game data: <a href="https://rawg.io/" rel="nofollow noopener">RAWG</a> (attribution required).
-    Film/TV data (upcoming): <a href="https://www.themoviedb.org/" rel="nofollow noopener">TMDB</a>
+    Film/TV data: <a href="https://www.themoviedb.org/" rel="nofollow noopener">TMDB</a>
     — this product uses the TMDB API but is not endorsed or certified by TMDB.
   </p>
 `;

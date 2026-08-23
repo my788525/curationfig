@@ -17,6 +17,6 @@ export type Channel = 'music' | 'game' | 'film' | 'tv';
 export const CHANNELS: { key: Channel; label: string; tagline: string; live: boolean }[] = [
   { key: 'music', label: 'Music', tagline: 'Playlists & artist curation', live: true },
   { key: 'game', label: 'Games', tagline: 'Gamelists & studio curation', live: true },
-  { key: 'film', label: 'Film', tagline: 'Watchlists & director curation', live: false },
-  { key: 'tv', label: 'TV', tagline: 'Binge guides & show curation', live: false },
+  { key: 'film', label: 'Film', tagline: 'Watchlists & director curation', live: true },
+  { key: 'tv', label: 'TV', tagline: 'Binge guides & show curation', live: true },
 ];

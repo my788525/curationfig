@@ -67,8 +67,9 @@ export default function DataPage() {
           <a href="https://musicbrainz.org/" rel="nofollow noopener">MusicBrainz</a> (CC0) and
           cover art from <a href="https://coverartarchive.org/" rel="nofollow noopener">Cover Art Archive</a>.
           Game data from <a href="https://rawg.io/" rel="nofollow noopener">RAWG</a> (attribution
-          required). Film &amp; TV (TMDB) channels launch in a later batch — this product uses the
-          TMDB API but is not endorsed or certified by TMDB.
+          required). Film &amp; TV data from{' '}
+          <a href="https://www.themoviedb.org/" rel="nofollow noopener">TMDB</a> — this product uses
+          the TMDB API but is not endorsed or certified by TMDB.
         </div>
 
         <h2 style={{ marginTop: 28 }}>Open datasets</h2>
@@ -82,8 +83,13 @@ export default function DataPage() {
             build time.
           </li>
           <li>
-            <code>lib/media/generated-music.ts</code> &amp;{' '}
-            <code>generated-games.ts</code> — typed data modules consumed by the static site.
+            <code>film-items.json</code> / <code>tv-items.json</code> — TMDB film/TV metadata,
+            generated at build time.
+          </li>
+          <li>
+            <code>lib/media/generated-music.ts</code> / <code>generated-games.ts</code> /{' '}
+            <code>generated-film.ts</code> / <code>generated-tv.ts</code> — typed data modules
+            consumed by the static site.
           </li>
         </ul>
       </div>
