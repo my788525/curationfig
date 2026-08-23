@@ -111,6 +111,21 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "c35e782d-be05-380b-ac26-1b9c48878ee5",
+    "title": "Kind of Blue",
+    "seedName": "Kind of Blue",
+    "creator": "Swiss Blues Authority",
+    "year": "2000",
+    "tags": [
+      "jazz",
+      "1970s",
+      "instrumental"
+    ],
+    "cover": "/images/music/music-c35e782d.webp",
+    "url": "/music/cosmic-jazz"
+  },
+  {
+    "source": "music",
     "refId": "4f4e1ba2-b68f-4b56-86a0-5589f17c5e22",
     "title": "Head Hunters",
     "seedName": "Head Hunters",
@@ -126,17 +141,17 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "c35e782d-be05-380b-ac26-1b9c48878ee5",
-    "title": "Kind of Blue",
-    "seedName": "Kind of Blue",
-    "creator": "Swiss Blues Authority",
-    "year": "2000",
+    "refId": "2029015a-a1b3-4beb-9003-7bc2f820a987",
+    "title": "Bitches Brew",
+    "seedName": "Bitches Brew",
+    "creator": "Violet Orlandi",
+    "year": "2023",
     "tags": [
       "jazz",
       "1970s",
       "instrumental"
     ],
-    "cover": "/images/music/music-c35e782d.webp",
+    "cover": "/images/music/music-2029015a.webp",
     "url": "/music/cosmic-jazz"
   },
   {
@@ -168,21 +183,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "alternative hip hop"
     ],
     "cover": "/images/music/music-3a11c96d.webp",
-    "url": "/music/cosmic-jazz"
-  },
-  {
-    "source": "music",
-    "refId": "2029015a-a1b3-4beb-9003-7bc2f820a987",
-    "title": "Bitches Brew",
-    "seedName": "Bitches Brew",
-    "creator": "Violet Orlandi",
-    "year": "2023",
-    "tags": [
-      "jazz",
-      "1970s",
-      "instrumental"
-    ],
-    "cover": "/images/music/music-2029015a.webp",
     "url": "/music/cosmic-jazz"
   },
   {
@@ -254,21 +254,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "3f8652fb-b917-4bb6-bd50-a940c96d4cc2",
-    "title": "Ready to Die",
-    "seedName": "Ready to Die",
-    "creator": "Iggy and The Stooges",
-    "year": "2013",
-    "tags": [
-      "garage rock",
-      "hard rock",
-      "rock"
-    ],
-    "cover": "/images/music/music-3f8652fb.webp",
-    "url": "/music/hiphop-storytelling"
-  },
-  {
-    "source": "music",
     "refId": "28298e2c-4d70-3eed-a0f5-a3280c662b3d",
     "title": "Illmatic",
     "seedName": "Illmatic",
@@ -287,6 +272,21 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "3f8652fb-b917-4bb6-bd50-a940c96d4cc2",
+    "title": "Ready to Die",
+    "seedName": "Ready to Die",
+    "creator": "Iggy and The Stooges",
+    "year": "2013",
+    "tags": [
+      "garage rock",
+      "hard rock",
+      "rock"
+    ],
+    "cover": "/images/music/music-3f8652fb.webp",
+    "url": "/music/hiphop-storytelling"
+  },
+  {
+    "source": "music",
     "refId": "3ab46a97-b206-4d1a-8cbb-69ece0cacd3a",
     "title": "College Dropout",
     "seedName": "The College Dropout",
@@ -298,6 +298,21 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "lyrical"
     ],
     "cover": "/images/music/music-3ab46a97.webp",
+    "url": "/music/hiphop-storytelling"
+  },
+  {
+    "source": "music",
+    "refId": "f06753b9-95d1-3cfe-8c3a-5a6c1182d556",
+    "title": "Flowers and Liquor",
+    "seedName": "Food & Liquor",
+    "creator": "Hayes Carll",
+    "year": "2002",
+    "tags": [
+      "country",
+      "country rock",
+      "rock"
+    ],
+    "cover": "/images/music/music-f06753b9.webp",
     "url": "/music/hiphop-storytelling"
   },
   {
@@ -320,21 +335,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "f06753b9-95d1-3cfe-8c3a-5a6c1182d556",
-    "title": "Flowers and Liquor",
-    "seedName": "Food & Liquor",
-    "creator": "Hayes Carll",
-    "year": "2002",
-    "tags": [
-      "country",
-      "country rock",
-      "rock"
-    ],
-    "cover": "/images/music/music-f06753b9.webp",
-    "url": "/music/hiphop-storytelling"
-  },
-  {
-    "source": "music",
     "refId": "5c1b80d3-b68d-4db9-a908-0ee6fa6b273b",
     "title": "DAMN!DAMN!DAMN!DAMN!",
     "seedName": "Damn",
@@ -350,21 +350,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "d4aad049-0d50-3954-b81c-ec198854222d",
-    "title": "Gymnopedie",
-    "seedName": "Gymnopedie",
-    "creator": "The Kurstins",
-    "year": "",
-    "tags": [
-      "classical",
-      "piano",
-      "romantic"
-    ],
-    "cover": "/images/music/music-d4aad049.webp",
-    "url": "/music/classical-rainy-window"
-  },
-  {
-    "source": "music",
     "refId": "a087f023-24fa-4c11-92b3-fb049a2392e6",
     "title": "Clair de Lune",
     "seedName": "Clair de Lune",
@@ -376,6 +361,21 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "romantic"
     ],
     "cover": "/images/music/music-a087f023.webp",
+    "url": "/music/classical-rainy-window"
+  },
+  {
+    "source": "music",
+    "refId": "d4aad049-0d50-3954-b81c-ec198854222d",
+    "title": "Gymnopedie",
+    "seedName": "Gymnopedie",
+    "creator": "The Kurstins",
+    "year": "",
+    "tags": [
+      "classical",
+      "piano",
+      "romantic"
+    ],
+    "cover": "/images/music/music-d4aad049.webp",
     "url": "/music/classical-rainy-window"
   },
   {
@@ -424,21 +424,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "4668e618-e9f9-43b8-9eb3-b556342137d9",
-    "title": "Im Spiegel",
-    "seedName": "Spiegel im Spiegel",
-    "creator": "Schwarzschild",
-    "year": "2019",
-    "tags": [
-      "classical",
-      "piano",
-      "romantic"
-    ],
-    "cover": "/images/music/music-4668e618.webp",
-    "url": "/music/classical-rainy-window"
-  },
-  {
-    "source": "music",
     "refId": "46e86c38-9600-3fb8-9e9a-ccea84b8cd36",
     "title": "In C",
     "seedName": "Prelude in C",
@@ -450,6 +435,21 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "romantic"
     ],
     "cover": "/images/music/music-46e86c38.webp",
+    "url": "/music/classical-rainy-window"
+  },
+  {
+    "source": "music",
+    "refId": "4668e618-e9f9-43b8-9eb3-b556342137d9",
+    "title": "Im Spiegel",
+    "seedName": "Spiegel im Spiegel",
+    "creator": "Schwarzschild",
+    "year": "2019",
+    "tags": [
+      "classical",
+      "piano",
+      "romantic"
+    ],
+    "cover": "/images/music/music-4668e618.webp",
     "url": "/music/classical-rainy-window"
   },
   {
@@ -547,20 +547,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "37640496-1871-3fee-8356-fcfdd87bec9c",
-    "title": "Big Fun",
-    "seedName": "Big Fun",
-    "creator": "C.C.Catch",
-    "year": "1988",
-    "tags": [
-      "electronic",
-      "pop"
-    ],
-    "cover": "/images/music/music-37640496.webp",
-    "url": "/music/detroit-techno-origin"
-  },
-  {
-    "source": "music",
     "refId": "cfd4c8fd-d8c9-3934-a9e9-a2213a838d2f",
     "title": "Nude Photo",
     "seedName": "Nude Photo",
@@ -571,6 +557,20 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "techno"
     ],
     "cover": "/images/music/music-cfd4c8fd.webp",
+    "url": "/music/detroit-techno-origin"
+  },
+  {
+    "source": "music",
+    "refId": "37640496-1871-3fee-8356-fcfdd87bec9c",
+    "title": "Big Fun",
+    "seedName": "Big Fun",
+    "creator": "C.C.Catch",
+    "year": "1988",
+    "tags": [
+      "electronic",
+      "pop"
+    ],
+    "cover": "/images/music/music-37640496.webp",
     "url": "/music/detroit-techno-origin"
   },
   {
@@ -591,22 +591,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "a78036db-f2d9-3072-9fb8-6a6c14b048c7",
-    "title": "Chega de Saudade",
-    "seedName": "Chega de Saudade",
-    "creator": "Melo D",
-    "year": "2005",
-    "tags": [
-      "bossa",
-      "latin",
-      "1960s",
-      "acoustic"
-    ],
-    "cover": "/images/music/music-a78036db.webp",
-    "url": "/music/brazilian-bossa"
-  },
-  {
-    "source": "music",
     "refId": "b248d212-aace-3c3e-a23d-e13aaac1f87a",
     "title": "Getz / Gilberto",
     "seedName": "Getz/Gilberto",
@@ -621,6 +605,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "samba-canção"
     ],
     "cover": "/images/music/music-b248d212.webp",
+    "url": "/music/brazilian-bossa"
+  },
+  {
+    "source": "music",
+    "refId": "a78036db-f2d9-3072-9fb8-6a6c14b048c7",
+    "title": "Chega de Saudade",
+    "seedName": "Chega de Saudade",
+    "creator": "Melo D",
+    "year": "2005",
+    "tags": [
+      "bossa",
+      "latin",
+      "1960s",
+      "acoustic"
+    ],
+    "cover": "/images/music/music-a78036db.webp",
     "url": "/music/brazilian-bossa"
   },
   {
@@ -731,6 +731,19 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "811e9c1c-b542-31f3-88d8-780333a90776",
+    "title": "CLOSER",
+    "seedName": "Closer",
+    "creator": "井上ジョー",
+    "year": "2008",
+    "tags": [
+      "anime"
+    ],
+    "cover": "/images/music/music-811e9c1c.webp",
+    "url": "/music/post-punk-uk"
+  },
+  {
+    "source": "music",
     "refId": "95b4ac0b-3286-3208-8821-b292ab88dfac",
     "title": "Fire of Love",
     "seedName": "Fire of Love",
@@ -749,15 +762,18 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "811e9c1c-b542-31f3-88d8-780333a90776",
-    "title": "CLOSER",
-    "seedName": "Closer",
-    "creator": "井上ジョー",
+    "refId": "8148b492-4a1d-35c1-bdd1-498eacbc3843",
+    "title": "METAL BOX",
+    "seedName": "Metal Box",
+    "creator": "Ra:IN",
     "year": "2008",
     "tags": [
-      "anime"
+      "postpunk",
+      "rock",
+      "1980s",
+      "uk"
     ],
-    "cover": "/images/music/music-811e9c1c.webp",
+    "cover": "/images/music/music-8148b492.webp",
     "url": "/music/post-punk-uk"
   },
   {
@@ -780,18 +796,18 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "8148b492-4a1d-35c1-bdd1-498eacbc3843",
-    "title": "METAL BOX",
-    "seedName": "Metal Box",
-    "creator": "Ra:IN",
-    "year": "2008",
+    "refId": "4136267a-21f5-3d46-a562-dd703ea4422c",
+    "title": "Entertainment",
+    "seedName": "Entertainment",
+    "creator": "Inflight",
+    "year": "2002",
     "tags": [
       "postpunk",
       "rock",
       "1980s",
       "uk"
     ],
-    "cover": "/images/music/music-8148b492.webp",
+    "cover": "/images/music/music-4136267a.webp",
     "url": "/music/post-punk-uk"
   },
   {
@@ -807,22 +823,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "post-bop"
     ],
     "cover": "/images/music/music-ec870873.webp",
-    "url": "/music/post-punk-uk"
-  },
-  {
-    "source": "music",
-    "refId": "4136267a-21f5-3d46-a562-dd703ea4422c",
-    "title": "Entertainment",
-    "seedName": "Entertainment",
-    "creator": "Inflight",
-    "year": "2002",
-    "tags": [
-      "postpunk",
-      "rock",
-      "1980s",
-      "uk"
-    ],
-    "cover": "/images/music/music-4136267a.webp",
     "url": "/music/post-punk-uk"
   },
   {
@@ -845,6 +845,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "0eac8139-ee59-4f5e-94d3-7954c6302ed5",
+    "title": "Nightcall",
+    "seedName": "Nightcall",
+    "creator": "London Grammar",
+    "year": "2013",
+    "tags": [
+      "electronic",
+      "indie rock",
+      "remix",
+      "rock"
+    ],
+    "cover": "/images/music/music-0eac8139.webp",
+    "url": "/music/synthwave-retro"
+  },
+  {
+    "source": "music",
     "refId": "72d9855d-9c43-45c2-93ea-e9e0f843cb10",
     "title": "Resonance",
     "seedName": "Resonance",
@@ -863,35 +879,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "0eac8139-ee59-4f5e-94d3-7954c6302ed5",
-    "title": "Nightcall",
-    "seedName": "Nightcall",
-    "creator": "London Grammar",
-    "year": "2013",
-    "tags": [
-      "electronic",
-      "indie rock",
-      "remix",
-      "rock"
-    ],
-    "cover": "/images/music/music-0eac8139.webp",
-    "url": "/music/synthwave-retro"
-  },
-  {
-    "source": "music",
-    "refId": "1bb1973c-06cb-4231-9a65-d1685d613b12",
-    "title": "Endless Summer",
-    "seedName": "Endless Summer",
-    "creator": "松本伊代",
-    "year": "1983",
-    "tags": [
-      "pop"
-    ],
-    "cover": "/images/music/music-1bb1973c.webp",
-    "url": "/music/synthwave-retro"
-  },
-  {
-    "source": "music",
     "refId": "3f6e2d50-d29e-4fa2-b42a-ccace8ed407e",
     "title": "Outland",
     "seedName": "Outland",
@@ -905,6 +892,19 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "trip hop"
     ],
     "cover": "/images/music/music-3f6e2d50.webp",
+    "url": "/music/synthwave-retro"
+  },
+  {
+    "source": "music",
+    "refId": "1bb1973c-06cb-4231-9a65-d1685d613b12",
+    "title": "Endless Summer",
+    "seedName": "Endless Summer",
+    "creator": "松本伊代",
+    "year": "1983",
+    "tags": [
+      "pop"
+    ],
+    "cover": "/images/music/music-1bb1973c.webp",
     "url": "/music/synthwave-retro"
   },
   {
@@ -957,6 +957,19 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "ac22c931-b545-3a54-aff2-d3f901b07986",
+    "title": "84",
+    "seedName": "Lost 84",
+    "creator": "DJ Tonka",
+    "year": "2004",
+    "tags": [
+      "house"
+    ],
+    "cover": "/images/music/music-ac22c931.webp",
+    "url": "/music/synthwave-retro"
+  },
+  {
+    "source": "music",
     "refId": "ab778e7e-e4ad-4b4c-8849-9c662fba4510",
     "title": "Whats Going On",
     "seedName": "Whats Going On",
@@ -970,19 +983,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
     ],
     "cover": "/images/music/music-ab778e7e.webp",
     "url": "/music/soul-stax-motown"
-  },
-  {
-    "source": "music",
-    "refId": "ac22c931-b545-3a54-aff2-d3f901b07986",
-    "title": "84",
-    "seedName": "Lost 84",
-    "creator": "DJ Tonka",
-    "year": "2004",
-    "tags": [
-      "house"
-    ],
-    "cover": "/images/music/music-ac22c931.webp",
-    "url": "/music/synthwave-retro"
   },
   {
     "source": "music",
@@ -1018,22 +1018,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "b284c7ee-24d3-34df-b011-91d32f90714f",
-    "title": "My Girl",
-    "seedName": "My Girl",
-    "creator": "강성훈",
-    "year": "2002",
-    "tags": [
-      "soul",
-      "rnb",
-      "1960s",
-      "vocal"
-    ],
-    "cover": "/images/music/music-b284c7ee.webp",
-    "url": "/music/soul-stax-motown"
-  },
-  {
-    "source": "music",
     "refId": "aceb3408-268b-43a8-9f84-82f16783691d",
     "title": "RESPECT",
     "seedName": "Respect",
@@ -1046,6 +1030,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "vocal"
     ],
     "cover": "/images/music/music-aceb3408.webp",
+    "url": "/music/soul-stax-motown"
+  },
+  {
+    "source": "music",
+    "refId": "b284c7ee-24d3-34df-b011-91d32f90714f",
+    "title": "My Girl",
+    "seedName": "My Girl",
+    "creator": "강성훈",
+    "year": "2002",
+    "tags": [
+      "soul",
+      "rnb",
+      "1960s",
+      "vocal"
+    ],
+    "cover": "/images/music/music-b284c7ee.webp",
     "url": "/music/soul-stax-motown"
   },
   {
@@ -1082,6 +1082,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "efa6627e-5704-3490-85f2-64c271aa1b5e",
+    "title": "Sir Duke",
+    "seedName": "Sir Duke",
+    "creator": "Duke Ellington",
+    "year": "1994",
+    "tags": [
+      "soul",
+      "rnb",
+      "1960s",
+      "vocal"
+    ],
+    "cover": "/images/music/music-efa6627e.webp",
+    "url": "/music/soul-stax-motown"
+  },
+  {
+    "source": "music",
     "refId": "e19106eb-74a7-4ddf-b52b-381788f447f1",
     "title": "American Football",
     "seedName": "American Football",
@@ -1097,22 +1113,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
     ],
     "cover": "/images/music/music-e19106eb.webp",
     "url": "/music/math-rock"
-  },
-  {
-    "source": "music",
-    "refId": "efa6627e-5704-3490-85f2-64c271aa1b5e",
-    "title": "Sir Duke",
-    "seedName": "Sir Duke",
-    "creator": "Duke Ellington",
-    "year": "1994",
-    "tags": [
-      "soul",
-      "rnb",
-      "1960s",
-      "vocal"
-    ],
-    "cover": "/images/music/music-efa6627e.webp",
-    "url": "/music/soul-stax-motown"
   },
   {
     "source": "music",
@@ -1149,6 +1149,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "b8eeca57-40fa-4564-a30f-792533b568bd",
+    "title": "Animals",
+    "seedName": "Animals",
+    "creator": "KIT",
+    "year": "2010",
+    "tags": [
+      "mathrock",
+      "instrumental",
+      "2000s",
+      "indie"
+    ],
+    "cover": "/images/music/music-b8eeca57.webp",
+    "url": "/music/math-rock"
+  },
+  {
+    "source": "music",
     "refId": "63ea2ac2-55b7-42b0-8ab0-de3d2e5e9690",
     "title": "Moon Is Down",
     "seedName": "The Moon Is Down",
@@ -1180,18 +1196,18 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "b8eeca57-40fa-4564-a30f-792533b568bd",
-    "title": "Animals",
-    "seedName": "Animals",
-    "creator": "KIT",
-    "year": "2010",
+    "refId": "5c9f871c-7d67-466c-a93e-9abb05afffd4",
+    "title": "Geography",
+    "seedName": "Geography",
+    "creator": "Always August",
+    "year": "1988",
     "tags": [
-      "mathrock",
-      "instrumental",
-      "2000s",
-      "indie"
+      "alternative rock",
+      "jazz",
+      "jazz rock",
+      "rock"
     ],
-    "cover": "/images/music/music-b8eeca57.webp",
+    "cover": "/images/music/music-5c9f871c.webp",
     "url": "/music/math-rock"
   },
   {
@@ -1206,22 +1222,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "progressive rock"
     ],
     "cover": "/images/music/music-0314a08c.webp",
-    "url": "/music/math-rock"
-  },
-  {
-    "source": "music",
-    "refId": "5c9f871c-7d67-466c-a93e-9abb05afffd4",
-    "title": "Geography",
-    "seedName": "Geography",
-    "creator": "Always August",
-    "year": "1988",
-    "tags": [
-      "alternative rock",
-      "jazz",
-      "jazz rock",
-      "rock"
-    ],
-    "cover": "/images/music/music-5c9f871c.webp",
     "url": "/music/math-rock"
   },
   {
@@ -1258,20 +1258,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "bb4128b4-0551-4eff-9afa-57da1919e645",
-    "title": "Above",
-    "seedName": "Spring Above",
-    "creator": "Marc Atmost",
-    "year": "2011",
-    "tags": [
-      "dub techno",
-      "electronic"
-    ],
-    "cover": "/images/music/music-bb4128b4.webp",
-    "url": "/music/korea-indie-city"
-  },
-  {
-    "source": "music",
     "refId": "e64835dc-5fce-4e81-a4e1-15745ef11b38",
     "title": "Good Person",
     "seedName": "Good Person",
@@ -1284,6 +1270,20 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "acoustic"
     ],
     "cover": "/images/music/music-e64835dc.webp",
+    "url": "/music/korea-indie-city"
+  },
+  {
+    "source": "music",
+    "refId": "bb4128b4-0551-4eff-9afa-57da1919e645",
+    "title": "Above",
+    "seedName": "Spring Above",
+    "creator": "Marc Atmost",
+    "year": "2011",
+    "tags": [
+      "dub techno",
+      "electronic"
+    ],
+    "cover": "/images/music/music-bb4128b4.webp",
     "url": "/music/korea-indie-city"
   },
   {
@@ -1363,6 +1363,23 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "71912543-2f21-444b-9976-01ec403769bd",
+    "title": "Tago Mago",
+    "seedName": "Tago Mago",
+    "creator": "This Heat",
+    "year": "1997",
+    "tags": [
+      "alternative rock",
+      "avant-garde",
+      "experimental",
+      "noise",
+      "rock"
+    ],
+    "cover": "/images/music/music-71912543.webp",
+    "url": "/music/german-krautrock"
+  },
+  {
+    "source": "music",
     "refId": "34ec11b1-07d4-3a25-a5bf-d43097a91f35",
     "title": "Neu! ’75",
     "seedName": "Neu 75",
@@ -1394,19 +1411,16 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "71912543-2f21-444b-9976-01ec403769bd",
-    "title": "Tago Mago",
-    "seedName": "Tago Mago",
-    "creator": "This Heat",
-    "year": "1997",
+    "refId": "ec986b8e-4b25-364e-8ec3-8a110d241246",
+    "title": "“Movie Monster”",
+    "seedName": "Monster Movie",
+    "creator": "Sound Team",
+    "year": "2006",
     "tags": [
-      "alternative rock",
-      "avant-garde",
-      "experimental",
-      "noise",
+      "indie rock",
       "rock"
     ],
-    "cover": "/images/music/music-71912543.webp",
+    "cover": "/images/music/music-ec986b8e.webp",
     "url": "/music/german-krautrock"
   },
   {
@@ -1422,20 +1436,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "krautrock"
     ],
     "cover": "/images/music/music-5981f323.webp",
-    "url": "/music/german-krautrock"
-  },
-  {
-    "source": "music",
-    "refId": "ec986b8e-4b25-364e-8ec3-8a110d241246",
-    "title": "“Movie Monster”",
-    "seedName": "Monster Movie",
-    "creator": "Sound Team",
-    "year": "2006",
-    "tags": [
-      "indie rock",
-      "rock"
-    ],
-    "cover": "/images/music/music-ec986b8e.webp",
     "url": "/music/german-krautrock"
   },
   {
@@ -1456,22 +1456,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "d5a3ba5e-dd69-4fb8-83f7-000e46f564bb",
-    "title": "Ne Me Quitte Pas",
-    "seedName": "Ne Me Quitte Pas",
-    "creator": "Remundo",
-    "year": "2019",
-    "tags": [
-      "chanson",
-      "french",
-      "vocal",
-      "acoustic"
-    ],
-    "cover": "/images/music/music-d5a3ba5e.webp",
-    "url": "/music/french-chanson"
-  },
-  {
-    "source": "music",
     "refId": "a4b405a6-0577-3b77-b46d-06af1b98fbd2",
     "title": "Ege Bamyası",
     "seedName": "Ege Bamyasi",
@@ -1486,18 +1470,18 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "f0001685-af94-4345-9ee4-89052a1e8b9d",
-    "title": "Le Ciel",
-    "seedName": "Sous le Ciel",
-    "creator": "Retro X",
-    "year": "2020",
+    "refId": "d5a3ba5e-dd69-4fb8-83f7-000e46f564bb",
+    "title": "Ne Me Quitte Pas",
+    "seedName": "Ne Me Quitte Pas",
+    "creator": "Remundo",
+    "year": "2019",
     "tags": [
       "chanson",
       "french",
       "vocal",
       "acoustic"
     ],
-    "cover": "/images/music/music-f0001685.webp",
+    "cover": "/images/music/music-d5a3ba5e.webp",
     "url": "/music/french-chanson"
   },
   {
@@ -1518,16 +1502,18 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "a77e5188-b024-479d-8b47-45279e75c377",
-    "title": "La Vie en rose",
-    "seedName": "La Vie en Rose",
-    "creator": "Louis Armstrong",
-    "year": "2023",
+    "refId": "f0001685-af94-4345-9ee4-89052a1e8b9d",
+    "title": "Le Ciel",
+    "seedName": "Sous le Ciel",
+    "creator": "Retro X",
+    "year": "2020",
     "tags": [
-      "classic pop vocals",
-      "jazz"
+      "chanson",
+      "french",
+      "vocal",
+      "acoustic"
     ],
-    "cover": "/images/music/music-a77e5188.webp",
+    "cover": "/images/music/music-f0001685.webp",
     "url": "/music/french-chanson"
   },
   {
@@ -1542,6 +1528,36 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "pop"
     ],
     "cover": "/images/music/music-a1239438.webp",
+    "url": "/music/french-chanson"
+  },
+  {
+    "source": "music",
+    "refId": "a77e5188-b024-479d-8b47-45279e75c377",
+    "title": "La Vie en rose",
+    "seedName": "La Vie en Rose",
+    "creator": "Louis Armstrong",
+    "year": "2023",
+    "tags": [
+      "classic pop vocals",
+      "jazz"
+    ],
+    "cover": "/images/music/music-a77e5188.webp",
+    "url": "/music/french-chanson"
+  },
+  {
+    "source": "music",
+    "refId": "416e4d07-62d9-4670-996e-26062debb0e8",
+    "title": "Je ne regrette rien",
+    "seedName": "Non Je Ne Regrette",
+    "creator": "Gužva u 16-ercu",
+    "year": "2012",
+    "tags": [
+      "chanson",
+      "french",
+      "vocal",
+      "acoustic"
+    ],
+    "cover": "/images/music/music-416e4d07.webp",
     "url": "/music/french-chanson"
   },
   {
@@ -1591,19 +1607,19 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "416e4d07-62d9-4670-996e-26062debb0e8",
-    "title": "Je ne regrette rien",
-    "seedName": "Non Je Ne Regrette",
-    "creator": "Gužva u 16-ercu",
-    "year": "2012",
+    "refId": "bf05005a-369d-4569-ace7-76332bdea1d9",
+    "title": "ANTHEMS 00000000",
+    "seedName": "Anthems",
+    "creator": "HDMIRROR",
+    "year": "2017",
     "tags": [
-      "chanson",
-      "french",
-      "vocal",
-      "acoustic"
+      "electronic",
+      "experimental",
+      "pop",
+      "trance"
     ],
-    "cover": "/images/music/music-416e4d07.webp",
-    "url": "/music/french-chanson"
+    "cover": "/images/music/music-bf05005a.webp",
+    "url": "/music/black-metal-atmosphere"
   },
   {
     "source": "music",
@@ -1637,22 +1653,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "rock"
     ],
     "cover": "/images/music/music-c2841928.webp",
-    "url": "/music/black-metal-atmosphere"
-  },
-  {
-    "source": "music",
-    "refId": "bf05005a-369d-4569-ace7-76332bdea1d9",
-    "title": "ANTHEMS 00000000",
-    "seedName": "Anthems",
-    "creator": "HDMIRROR",
-    "year": "2017",
-    "tags": [
-      "electronic",
-      "experimental",
-      "pop",
-      "trance"
-    ],
-    "cover": "/images/music/music-bf05005a.webp",
     "url": "/music/black-metal-atmosphere"
   },
   {
@@ -1993,21 +1993,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "c20a40a7-1831-4bcb-a9ab-2dd7fa1f1255",
-    "title": "Utero",
-    "seedName": "In Utero",
-    "creator": "Astral & Shit",
-    "year": "2016",
-    "tags": [
-      "ambient",
-      "chillout",
-      "dark ambient"
-    ],
-    "cover": "/images/music/music-c20a40a7.webp",
-    "url": "/music/grunge-seattle"
-  },
-  {
-    "source": "music",
     "refId": "c40f73f3-c3e0-4cb2-8319-bf6dc7721822",
     "title": "Superunknown",
     "seedName": "Superunknown",
@@ -2020,6 +2005,21 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "seattle"
     ],
     "cover": "/images/music/music-c40f73f3.webp",
+    "url": "/music/grunge-seattle"
+  },
+  {
+    "source": "music",
+    "refId": "c20a40a7-1831-4bcb-a9ab-2dd7fa1f1255",
+    "title": "Utero",
+    "seedName": "In Utero",
+    "creator": "Astral & Shit",
+    "year": "2016",
+    "tags": [
+      "ambient",
+      "chillout",
+      "dark ambient"
+    ],
+    "cover": "/images/music/music-c20a40a7.webp",
     "url": "/music/grunge-seattle"
   },
   {
@@ -2037,6 +2037,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "rock"
     ],
     "cover": "/images/music/music-4b1a29b4.webp",
+    "url": "/music/grunge-seattle"
+  },
+  {
+    "source": "music",
+    "refId": "056353d4-1551-3dcf-a675-79e09903bd88",
+    "title": "Sweet Oblivion",
+    "seedName": "Sweet Oblivion",
+    "creator": "Absynthe Minded",
+    "year": "2002",
+    "tags": [
+      "grunge",
+      "rock",
+      "1990s",
+      "seattle"
+    ],
+    "cover": "/images/music/music-056353d4.webp",
     "url": "/music/grunge-seattle"
   },
   {
@@ -2070,22 +2086,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
     ],
     "cover": "/images/music/music-b16d9280.webp",
     "url": "/music/afrobeat-pioneers"
-  },
-  {
-    "source": "music",
-    "refId": "056353d4-1551-3dcf-a675-79e09903bd88",
-    "title": "Sweet Oblivion",
-    "seedName": "Sweet Oblivion",
-    "creator": "Absynthe Minded",
-    "year": "2002",
-    "tags": [
-      "grunge",
-      "rock",
-      "1990s",
-      "seattle"
-    ],
-    "cover": "/images/music/music-056353d4.webp",
-    "url": "/music/grunge-seattle"
   },
   {
     "source": "music",
@@ -2167,22 +2167,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "1771d480-d25c-32d4-a489-36488d1f4b03",
-    "title": "Heaven or Las Vegas",
-    "seedName": "Heaven or Las Vegas",
-    "creator": "Cocteau Twins",
-    "year": "1990",
-    "tags": [
-      "ambient",
-      "downtempo",
-      "electronic",
-      "rock"
-    ],
-    "cover": "/images/music/music-1771d480.webp",
-    "url": "/music/dream-pop"
-  },
-  {
-    "source": "music",
     "refId": "fa725c83-d579-4d69-9066-cff3d0892b96",
     "title": "Black Man",
     "seedName": "Black Man",
@@ -2196,6 +2180,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
     ],
     "cover": "/images/music/music-fa725c83.webp",
     "url": "/music/afrobeat-pioneers"
+  },
+  {
+    "source": "music",
+    "refId": "1771d480-d25c-32d4-a489-36488d1f4b03",
+    "title": "Heaven or Las Vegas",
+    "seedName": "Heaven or Las Vegas",
+    "creator": "Cocteau Twins",
+    "year": "1990",
+    "tags": [
+      "ambient",
+      "downtempo",
+      "electronic",
+      "rock"
+    ],
+    "cover": "/images/music/music-1771d480.webp",
+    "url": "/music/dream-pop"
   },
   {
     "source": "music",
@@ -2233,6 +2233,23 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "7a3f50c5-6389-3d23-87da-47a09238a9b4",
+    "title": "Garlands",
+    "seedName": "Garlands",
+    "creator": "Gale Grand Central",
+    "year": "2002",
+    "tags": [
+      "ambient",
+      "electro",
+      "electronic",
+      "industrial",
+      "noise"
+    ],
+    "cover": "/images/music/music-7a3f50c5.webp",
+    "url": "/music/dream-pop"
+  },
+  {
+    "source": "music",
     "refId": "33260535-22d6-36b5-a636-f0c012e2f5a4",
     "title": "Blue Bell Knoll",
     "seedName": "Blue Bell Knoll",
@@ -2247,23 +2264,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "experimental"
     ],
     "cover": "/images/music/music-33260535.webp",
-    "url": "/music/dream-pop"
-  },
-  {
-    "source": "music",
-    "refId": "7a3f50c5-6389-3d23-87da-47a09238a9b4",
-    "title": "Garlands",
-    "seedName": "Garlands",
-    "creator": "Gale Grand Central",
-    "year": "2002",
-    "tags": [
-      "ambient",
-      "electro",
-      "electronic",
-      "industrial",
-      "noise"
-    ],
-    "cover": "/images/music/music-7a3f50c5.webp",
     "url": "/music/dream-pop"
   },
   {
@@ -2314,6 +2314,23 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "91f64a19-4032-3a23-8638-37296e74b4c3",
+    "title": "Tower of Power",
+    "seedName": "Tower of Power",
+    "creator": "Tower of Power",
+    "year": "1973",
+    "tags": [
+      "funk",
+      "funk soul",
+      "jazz-funk",
+      "laut.de",
+      "soul"
+    ],
+    "cover": "/images/music/music-91f64a19.webp",
+    "url": "/music/funk-70s"
+  },
+  {
+    "source": "music",
     "refId": "d6ab4932-3683-4e34-907e-202c5e54d4de",
     "title": "Super Fly",
     "seedName": "Super Fly",
@@ -2340,19 +2357,17 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "91f64a19-4032-3a23-8638-37296e74b4c3",
-    "title": "Tower of Power",
-    "seedName": "Tower of Power",
-    "creator": "Tower of Power",
-    "year": "1973",
+    "refId": "c1e24091-6e8a-4f71-b964-dc6d932d97f8",
+    "title": "Flash Light",
+    "seedName": "Flash Light",
+    "creator": "Parliament",
+    "year": "1977",
     "tags": [
       "funk",
-      "funk soul",
-      "jazz-funk",
-      "laut.de",
-      "soul"
+      "p-funk",
+      "synth funk"
     ],
-    "cover": "/images/music/music-91f64a19.webp",
+    "cover": "/images/music/music-c1e24091.webp",
     "url": "/music/funk-70s"
   },
   {
@@ -2371,21 +2386,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "c1e24091-6e8a-4f71-b964-dc6d932d97f8",
-    "title": "Flash Light",
-    "seedName": "Flash Light",
-    "creator": "Parliament",
-    "year": "1977",
-    "tags": [
-      "funk",
-      "p-funk",
-      "synth funk"
-    ],
-    "cover": "/images/music/music-c1e24091.webp",
-    "url": "/music/funk-70s"
-  },
-  {
-    "source": "music",
     "refId": "a204f4c2-394c-4007-9999-80702982fd09",
     "title": "Cissy Strut",
     "seedName": "Cissy Strut",
@@ -2395,6 +2395,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "pop"
     ],
     "cover": "/images/music/music-a204f4c2.webp",
+    "url": "/music/funk-70s"
+  },
+  {
+    "source": "music",
+    "refId": "c8859d8f-4934-3337-94fe-2cb1baf04a44",
+    "title": "Give It Away",
+    "seedName": "Give It Away",
+    "creator": "Gaither Vocal Band",
+    "year": "2006",
+    "tags": [
+      "funk",
+      "soul",
+      "1970s",
+      "dance"
+    ],
+    "cover": "/images/music/music-c8859d8f.webp",
     "url": "/music/funk-70s"
   },
   {
@@ -2423,22 +2439,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
     ],
     "cover": "/images/music/music-1442632f.webp",
     "url": "/music/noise-rock"
-  },
-  {
-    "source": "music",
-    "refId": "c8859d8f-4934-3337-94fe-2cb1baf04a44",
-    "title": "Give It Away",
-    "seedName": "Give It Away",
-    "creator": "Gaither Vocal Band",
-    "year": "2006",
-    "tags": [
-      "funk",
-      "soul",
-      "1970s",
-      "dance"
-    ],
-    "cover": "/images/music/music-c8859d8f.webp",
-    "url": "/music/funk-70s"
   },
   {
     "source": "music",
@@ -2485,6 +2485,23 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "a1958d73-e5a2-43a0-a65a-6d4ea11cd796",
+    "title": "Sonic Youth",
+    "seedName": "Sonic Youth",
+    "creator": "Teen Suicide",
+    "year": "2015",
+    "tags": [
+      "indie pop",
+      "indie rock",
+      "lo-fi",
+      "pop",
+      "rock"
+    ],
+    "cover": "/images/music/music-a1958d73.webp",
+    "url": "/music/noise-rock"
+  },
+  {
+    "source": "music",
     "refId": "d0e0ca76-8986-419e-b350-45c79060381a",
     "title": "Cop Shoot Cop",
     "seedName": "Cop",
@@ -2502,19 +2519,18 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "a1958d73-e5a2-43a0-a65a-6d4ea11cd796",
-    "title": "Sonic Youth",
-    "seedName": "Sonic Youth",
-    "creator": "Teen Suicide",
-    "year": "2015",
+    "refId": "fad87634-119c-425a-828d-a363f19cbc68",
+    "title": "Pussy Galore",
+    "seedName": "Pussy Galore",
+    "creator": "Ben Stevens",
+    "year": "2013",
     "tags": [
-      "indie pop",
-      "indie rock",
-      "lo-fi",
-      "pop",
-      "rock"
+      "noiserock",
+      "rock",
+      "1980s",
+      "noise"
     ],
-    "cover": "/images/music/music-a1958d73.webp",
+    "cover": "/images/music/music-fad87634.webp",
     "url": "/music/noise-rock"
   },
   {
@@ -2550,22 +2566,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
     ],
     "cover": "/images/music/music-2a8fb501.webp",
     "url": "/music/trip-hop-bristol"
-  },
-  {
-    "source": "music",
-    "refId": "fad87634-119c-425a-828d-a363f19cbc68",
-    "title": "Pussy Galore",
-    "seedName": "Pussy Galore",
-    "creator": "Ben Stevens",
-    "year": "2013",
-    "tags": [
-      "noiserock",
-      "rock",
-      "1980s",
-      "noise"
-    ],
-    "cover": "/images/music/music-fad87634.webp",
-    "url": "/music/noise-rock"
   },
   {
     "source": "music",
@@ -2620,6 +2620,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "a2d5a152-c7e5-322d-a859-f8dd077ec2b2",
+    "title": "Mezzanine",
+    "seedName": "Mezzanine",
+    "creator": "Elise Witt",
+    "year": "1993",
+    "tags": [
+      "triphop",
+      "electronic",
+      "1990s",
+      "uk"
+    ],
+    "cover": "/images/music/music-a2d5a152.webp",
+    "url": "/music/trip-hop-bristol"
+  },
+  {
+    "source": "music",
     "refId": "5b341168-5273-30a4-8e30-b4d1963a5dd6",
     "title": "Pre-Millennium Tension",
     "seedName": "Pre-Millennium",
@@ -2638,22 +2654,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "a2d5a152-c7e5-322d-a859-f8dd077ec2b2",
-    "title": "Mezzanine",
-    "seedName": "Mezzanine",
-    "creator": "Elise Witt",
-    "year": "1993",
-    "tags": [
-      "triphop",
-      "electronic",
-      "1990s",
-      "uk"
-    ],
-    "cover": "/images/music/music-a2d5a152.webp",
-    "url": "/music/trip-hop-bristol"
-  },
-  {
-    "source": "music",
     "refId": "03e561e1-bf7a-39b9-a753-0bbc00707e83",
     "title": "Heroes",
     "seedName": "Heroes",
@@ -2666,6 +2666,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
     ],
     "cover": "/images/music/music-03e561e1.webp",
     "url": "/music/trip-hop-bristol"
+  },
+  {
+    "source": "music",
+    "refId": "5406b23e-117a-4480-8f3f-649a60cf1545",
+    "title": "Foggy Mountain Anarchy",
+    "seedName": "Foggy Mountain",
+    "creator": "Killbilly",
+    "year": "1994",
+    "tags": [
+      "bluegrass",
+      "country",
+      "acoustic",
+      "folk"
+    ],
+    "cover": "/images/music/music-5406b23e.webp",
+    "url": "/music/bluegrass-acoustic"
   },
   {
     "source": "music",
@@ -2710,22 +2726,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "bluegrass"
     ],
     "cover": "/images/music/music-43809aea.webp",
-    "url": "/music/bluegrass-acoustic"
-  },
-  {
-    "source": "music",
-    "refId": "5406b23e-117a-4480-8f3f-649a60cf1545",
-    "title": "Foggy Mountain Anarchy",
-    "seedName": "Foggy Mountain",
-    "creator": "Killbilly",
-    "year": "1994",
-    "tags": [
-      "bluegrass",
-      "country",
-      "acoustic",
-      "folk"
-    ],
-    "cover": "/images/music/music-5406b23e.webp",
     "url": "/music/bluegrass-acoustic"
   },
   {
@@ -2838,20 +2838,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "059d0319-4af9-4cba-a388-1b468ec06ade",
-    "title": "Music Is the Key",
-    "seedName": "Music Is the Key",
-    "creator": "Weldon Irvine",
-    "year": "1994",
-    "tags": [
-      "acid jazz",
-      "jazz"
-    ],
-    "cover": "/images/music/music-059d0319.webp",
-    "url": "/music/house-chicago"
-  },
-  {
-    "source": "music",
     "refId": "51ace0c2-88a3-326d-b43a-06431966422e",
     "title": "Can You Feel",
     "seedName": "Can You Feel",
@@ -2864,6 +2850,20 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "chicago"
     ],
     "cover": "/images/music/music-51ace0c2.webp",
+    "url": "/music/house-chicago"
+  },
+  {
+    "source": "music",
+    "refId": "059d0319-4af9-4cba-a388-1b468ec06ade",
+    "title": "Music Is the Key",
+    "seedName": "Music Is the Key",
+    "creator": "Weldon Irvine",
+    "year": "1994",
+    "tags": [
+      "acid jazz",
+      "jazz"
+    ],
+    "cover": "/images/music/music-059d0319.webp",
     "url": "/music/house-chicago"
   },
   {
@@ -3108,22 +3108,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "df72cf16-4fca-43f5-aa28-b4b4eeafbdd7",
-    "title": "Love Is A",
-    "seedName": "Love Is a",
-    "creator": "Greta Hat",
-    "year": "2025",
-    "tags": [
-      "citypop",
-      "japanese",
-      "1980s",
-      "pop"
-    ],
-    "cover": "/images/music/music-df72cf16.webp",
-    "url": "/music/japanese-citypop"
-  },
-  {
-    "source": "music",
     "refId": "ebb33a27-4e78-4eaf-a815-992a72f2f0b4",
     "title": "Telephone",
     "seedName": "Telephone",
@@ -3136,6 +3120,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "rock"
     ],
     "cover": "/images/music/music-ebb33a27.webp",
+    "url": "/music/japanese-citypop"
+  },
+  {
+    "source": "music",
+    "refId": "df72cf16-4fca-43f5-aa28-b4b4eeafbdd7",
+    "title": "Love Is A",
+    "seedName": "Love Is a",
+    "creator": "Greta Hat",
+    "year": "2025",
+    "tags": [
+      "citypop",
+      "japanese",
+      "1980s",
+      "pop"
+    ],
+    "cover": "/images/music/music-df72cf16.webp",
     "url": "/music/japanese-citypop"
   },
   {
@@ -3176,19 +3176,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "f62a5d7b-2b41-4448-93eb-8183dc5a8979",
-    "title": "Era",
-    "seedName": "Fear Era",
-    "creator": "Breakbeat Era",
-    "year": "1999",
-    "tags": [
-      "electronic"
-    ],
-    "cover": "/images/music/music-f62a5d7b.webp",
-    "url": "/music/hardcore-punk-80s"
-  },
-  {
-    "source": "music",
     "refId": "b589806a-ceda-3f6e-b294-64c2fd78ead4",
     "title": "Minor Threat",
     "seedName": "Minor Threat",
@@ -3206,17 +3193,15 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "722fb093-2309-4930-9122-3283e6358730",
-    "title": "Repulsion",
-    "seedName": "Repulsion",
-    "creator": "Greys",
-    "year": "2015",
+    "refId": "f62a5d7b-2b41-4448-93eb-8183dc5a8979",
+    "title": "Era",
+    "seedName": "Fear Era",
+    "creator": "Breakbeat Era",
+    "year": "1999",
     "tags": [
-      "noise",
-      "post-punk",
-      "rock"
+      "electronic"
     ],
-    "cover": "/images/music/music-722fb093.webp",
+    "cover": "/images/music/music-f62a5d7b.webp",
     "url": "/music/hardcore-punk-80s"
   },
   {
@@ -3237,18 +3222,17 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "ca555391-e692-3acd-b177-0d5d5b4bd403",
-    "title": "DISKORD",
-    "seedName": "Diskord",
-    "creator": "babamania",
-    "year": "2000",
+    "refId": "722fb093-2309-4930-9122-3283e6358730",
+    "title": "Repulsion",
+    "seedName": "Repulsion",
+    "creator": "Greys",
+    "year": "2015",
     "tags": [
-      "hardcore",
-      "punk",
-      "1980s",
-      "fast"
+      "noise",
+      "post-punk",
+      "rock"
     ],
-    "cover": "/images/music/music-ca555391.webp",
+    "cover": "/images/music/music-722fb093.webp",
     "url": "/music/hardcore-punk-80s"
   },
   {
@@ -3265,6 +3249,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "fast"
     ],
     "cover": "/images/music/music-86cf45ff.webp",
+    "url": "/music/hardcore-punk-80s"
+  },
+  {
+    "source": "music",
+    "refId": "ca555391-e692-3acd-b177-0d5d5b4bd403",
+    "title": "DISKORD",
+    "seedName": "Diskord",
+    "creator": "babamania",
+    "year": "2000",
+    "tags": [
+      "hardcore",
+      "punk",
+      "1980s",
+      "fast"
+    ],
+    "cover": "/images/music/music-ca555391.webp",
     "url": "/music/hardcore-punk-80s"
   },
   {
@@ -3452,6 +3452,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "58726780-ad15-3b77-8da8-4baa681862e4",
+    "title": "LP5",
+    "seedName": "LP5",
+    "creator": "Autechre",
+    "year": "1998",
+    "tags": [
+      "abstract",
+      "electronic",
+      "experimental",
+      "idm"
+    ],
+    "cover": "/images/music/music-58726780.webp",
+    "url": "/music/idm-breaks"
+  },
+  {
+    "source": "music",
     "refId": "87f1a316-510f-36c3-9f2c-38230b0e56e0",
     "title": "Drukqs",
     "seedName": "Drukqs",
@@ -3470,18 +3486,18 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "58726780-ad15-3b77-8da8-4baa681862e4",
-    "title": "LP5",
-    "seedName": "LP5",
-    "creator": "Autechre",
-    "year": "1998",
+    "refId": "40cf3320-e168-4ea3-8d53-cf83bb7e3ce6",
+    "title": "Djämes Braun",
+    "seedName": "Richard DJames",
+    "creator": "Djämes Braun",
+    "year": "2012",
     "tags": [
-      "abstract",
+      "idm",
       "electronic",
-      "experimental",
-      "idm"
+      "1990s",
+      "experimental"
     ],
-    "cover": "/images/music/music-58726780.webp",
+    "cover": "/images/music/music-40cf3320.webp",
     "url": "/music/idm-breaks"
   },
   {
@@ -3498,22 +3514,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "experimental"
     ],
     "cover": "/images/music/music-3bc1a4b5.webp",
-    "url": "/music/idm-breaks"
-  },
-  {
-    "source": "music",
-    "refId": "40cf3320-e168-4ea3-8d53-cf83bb7e3ce6",
-    "title": "Djämes Braun",
-    "seedName": "Richard DJames",
-    "creator": "Djämes Braun",
-    "year": "2012",
-    "tags": [
-      "idm",
-      "electronic",
-      "1990s",
-      "experimental"
-    ],
-    "cover": "/images/music/music-40cf3320.webp",
     "url": "/music/idm-breaks"
   },
   {
@@ -3543,6 +3543,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "american"
     ],
     "cover": "/images/music/music-a31410c4.webp",
+    "url": "/music/country-outlaw"
+  },
+  {
+    "source": "music",
+    "refId": "90c69d4a-8aa7-41b1-a6e8-c414cb456648",
+    "title": "WanteD! WanteD!",
+    "seedName": "Wanted",
+    "creator": "Mrs. GREEN APPLE",
+    "year": "2017",
+    "tags": [
+      "country",
+      "outlaw",
+      "1970s",
+      "american"
+    ],
+    "cover": "/images/music/music-90c69d4a.webp",
     "url": "/music/country-outlaw"
   },
   {
@@ -3590,22 +3606,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "90c69d4a-8aa7-41b1-a6e8-c414cb456648",
-    "title": "WanteD! WanteD!",
-    "seedName": "Wanted",
-    "creator": "Mrs. GREEN APPLE",
-    "year": "2017",
-    "tags": [
-      "country",
-      "outlaw",
-      "1970s",
-      "american"
-    ],
-    "cover": "/images/music/music-90c69d4a.webp",
-    "url": "/music/country-outlaw"
-  },
-  {
-    "source": "music",
     "refId": "e268e53a-ad6c-473e-94ea-a06a3ac6f1ec",
     "title": "Pancho",
     "seedName": "Pancho",
@@ -3638,22 +3638,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "ac2f432d-02ff-3e5a-93a0-0e2465830254",
-    "title": "Oh Happy Day",
-    "seedName": "Oh Happy Day",
-    "creator": "Joybells",
-    "year": "2002",
-    "tags": [
-      "gospel",
-      "soul",
-      "vocal",
-      "church"
-    ],
-    "cover": "/images/music/music-ac2f432d.webp",
-    "url": "/music/gospel-choir"
-  },
-  {
-    "source": "music",
     "refId": "c40821ba-92f2-4e12-bdcf-9c4d9a2f4477",
     "title": "Amazing Grace",
     "seedName": "Amazing Grace",
@@ -3666,6 +3650,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "church"
     ],
     "cover": "/images/music/music-c40821ba.webp",
+    "url": "/music/gospel-choir"
+  },
+  {
+    "source": "music",
+    "refId": "ac2f432d-02ff-3e5a-93a0-0e2465830254",
+    "title": "Oh Happy Day",
+    "seedName": "Oh Happy Day",
+    "creator": "Joybells",
+    "year": "2002",
+    "tags": [
+      "gospel",
+      "soul",
+      "vocal",
+      "church"
+    ],
+    "cover": "/images/music/music-ac2f432d.webp",
     "url": "/music/gospel-choir"
   },
   {
@@ -3829,6 +3829,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "7fd7b6be-c59e-3f9e-8538-33a1f26f9797",
+    "title": "Slowdive",
+    "seedName": "Slowdive",
+    "creator": "Siouxsie and the Banshees",
+    "year": "1982",
+    "tags": [
+      "dance-rock",
+      "new wave",
+      "post-punk",
+      "rock"
+    ],
+    "cover": "/images/music/music-7fd7b6be.webp",
+    "url": "/music/shoegaze-revival"
+  },
+  {
+    "source": "music",
     "refId": "de61f1f7-7ca3-305f-9543-f7ee56b0ee52",
     "title": "Everything is Everything",
     "seedName": "Everything Is",
@@ -3857,22 +3873,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "noise"
     ],
     "cover": "/images/music/music-6e1cc88f.webp",
-    "url": "/music/shoegaze-revival"
-  },
-  {
-    "source": "music",
-    "refId": "7fd7b6be-c59e-3f9e-8538-33a1f26f9797",
-    "title": "Slowdive",
-    "seedName": "Slowdive",
-    "creator": "Siouxsie and the Banshees",
-    "year": "1982",
-    "tags": [
-      "dance-rock",
-      "new wave",
-      "post-punk",
-      "rock"
-    ],
-    "cover": "/images/music/music-7fd7b6be.webp",
     "url": "/music/shoegaze-revival"
   },
   {
@@ -3907,22 +3907,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "d6b72aa5-646f-4aca-b2bc-af08a3d1d0c5",
-    "title": "Le Freak",
-    "seedName": "Le Freak",
-    "creator": "Aristofreeks",
-    "year": "2014",
-    "tags": [
-      "disco",
-      "dance",
-      "1970s",
-      "strings"
-    ],
-    "cover": "/images/music/music-d6b72aa5.webp",
-    "url": "/music/disco-era"
-  },
-  {
-    "source": "music",
     "refId": "31899778-eeaf-490c-9f62-483f4a41bfa5",
     "title": "Feel Love",
     "seedName": "I Feel Love",
@@ -3935,6 +3919,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "strings"
     ],
     "cover": "/images/music/music-31899778.webp",
+    "url": "/music/disco-era"
+  },
+  {
+    "source": "music",
+    "refId": "d6b72aa5-646f-4aca-b2bc-af08a3d1d0c5",
+    "title": "Le Freak",
+    "seedName": "Le Freak",
+    "creator": "Aristofreeks",
+    "year": "2014",
+    "tags": [
+      "disco",
+      "dance",
+      "1970s",
+      "strings"
+    ],
+    "cover": "/images/music/music-d6b72aa5.webp",
     "url": "/music/disco-era"
   },
   {
@@ -3955,20 +3955,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "74234e9a-9bbf-3dca-879c-0968a7547d2a",
-    "title": "MacArthur Park",
-    "seedName": "MacArthur Park",
-    "creator": "Richard Harris",
-    "year": "1997",
-    "tags": [
-      "pop",
-      "rock"
-    ],
-    "cover": "/images/music/music-74234e9a.webp",
-    "url": "/music/disco-era"
-  },
-  {
-    "source": "music",
     "refId": "c18424e6-a0d1-48f8-a61a-b02612c1fd23",
     "title": "Good Times (Good Times)",
     "seedName": "Good Times",
@@ -3985,17 +3971,16 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "9ae102ee-5208-3be5-8e37-768962e1cb8f",
-    "title": "YMCA",
-    "seedName": "YMCA",
-    "creator": "Touché",
-    "year": "1998",
+    "refId": "74234e9a-9bbf-3dca-879c-0968a7547d2a",
+    "title": "MacArthur Park",
+    "seedName": "MacArthur Park",
+    "creator": "Richard Harris",
+    "year": "1997",
     "tags": [
-      "electronic",
-      "euro house",
-      "hip hop"
+      "pop",
+      "rock"
     ],
-    "cover": "/images/music/music-9ae102ee.webp",
+    "cover": "/images/music/music-74234e9a.webp",
     "url": "/music/disco-era"
   },
   {
@@ -4016,19 +4001,18 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "65636ff8-9371-40a0-8c9f-53c927f71821",
-    "title": "Earth 2",
-    "seedName": "Earth 2",
-    "creator": "Baaz",
-    "year": "2018",
+    "refId": "9ae102ee-5208-3be5-8e37-768962e1cb8f",
+    "title": "YMCA",
+    "seedName": "YMCA",
+    "creator": "Touché",
+    "year": "1998",
     "tags": [
-      "drone",
-      "ambient",
-      "instrumental",
-      "minimal"
+      "electronic",
+      "euro house",
+      "hip hop"
     ],
-    "cover": "/images/music/music-65636ff8.webp",
-    "url": "/music/ambient-drone"
+    "cover": "/images/music/music-9ae102ee.webp",
+    "url": "/music/disco-era"
   },
   {
     "source": "music",
@@ -4044,6 +4028,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "minimal"
     ],
     "cover": "/images/music/music-f34ed5c9.webp",
+    "url": "/music/ambient-drone"
+  },
+  {
+    "source": "music",
+    "refId": "65636ff8-9371-40a0-8c9f-53c927f71821",
+    "title": "Earth 2",
+    "seedName": "Earth 2",
+    "creator": "Baaz",
+    "year": "2018",
+    "tags": [
+      "drone",
+      "ambient",
+      "instrumental",
+      "minimal"
+    ],
+    "cover": "/images/music/music-65636ff8.webp",
     "url": "/music/ambient-drone"
   },
   {
@@ -4080,6 +4080,21 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "5f7f6428-c1ae-4e5a-aaaf-42319c49f709",
+    "title": "Forms",
+    "seedName": "Two Forms",
+    "creator": "Ellery Eskelin",
+    "year": "1991",
+    "tags": [
+      "contemporary jazz",
+      "free jazz",
+      "jazz"
+    ],
+    "cover": "/images/music/music-5f7f6428.webp",
+    "url": "/music/ambient-drone"
+  },
+  {
+    "source": "music",
     "refId": "dd8d0f08-1019-3572-a456-53d2647b0378",
     "title": "A Field",
     "seedName": "A Field",
@@ -4096,21 +4111,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "5f7f6428-c1ae-4e5a-aaaf-42319c49f709",
-    "title": "Forms",
-    "seedName": "Two Forms",
-    "creator": "Ellery Eskelin",
-    "year": "1991",
-    "tags": [
-      "contemporary jazz",
-      "free jazz",
-      "jazz"
-    ],
-    "cover": "/images/music/music-5f7f6428.webp",
-    "url": "/music/ambient-drone"
-  },
-  {
-    "source": "music",
     "refId": "283df62c-bb53-32cb-b825-ace7d8ba81a6",
     "title": "Tara",
     "seedName": "Tara",
@@ -4122,21 +4122,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
     ],
     "cover": "/images/music/music-283df62c.webp",
     "url": "/music/ambient-drone"
-  },
-  {
-    "source": "music",
-    "refId": "87fb5b23-cae8-4dbc-9ab3-232bff83acb4",
-    "title": "Never Mind",
-    "seedName": "Never Mind",
-    "creator": "Edenhouse",
-    "year": "1993",
-    "tags": [
-      "electronic",
-      "hard trance",
-      "techno"
-    ],
-    "cover": "/images/music/music-87fb5b23.webp",
-    "url": "/music/punk-77"
   },
   {
     "source": "music",
@@ -4156,18 +4141,17 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "45891df1-c854-36e8-9548-f5a98907a1e0",
-    "title": "R.A.M.O.N.E.S.",
-    "seedName": "Ramones",
-    "creator": "Ramones",
-    "year": "1996",
+    "refId": "87fb5b23-cae8-4dbc-9ab3-232bff83acb4",
+    "title": "Never Mind",
+    "seedName": "Never Mind",
+    "creator": "Edenhouse",
+    "year": "1993",
     "tags": [
-      "punk",
-      "rock",
-      "1977",
-      "uk"
+      "electronic",
+      "hard trance",
+      "techno"
     ],
-    "cover": "/images/music/music-45891df1.webp",
+    "cover": "/images/music/music-87fb5b23.webp",
     "url": "/music/punk-77"
   },
   {
@@ -4187,18 +4171,18 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "716c6b85-9c90-4261-9bfe-c133f5ea3a2a",
-    "title": "London’s Calling",
-    "seedName": "London Calling",
-    "creator": "KITSCHKRIEG",
-    "year": "2025",
+    "refId": "45891df1-c854-36e8-9548-f5a98907a1e0",
+    "title": "R.A.M.O.N.E.S.",
+    "seedName": "Ramones",
+    "creator": "Ramones",
+    "year": "1996",
     "tags": [
       "punk",
       "rock",
       "1977",
       "uk"
     ],
-    "cover": "/images/music/music-716c6b85.webp",
+    "cover": "/images/music/music-45891df1.webp",
     "url": "/music/punk-77"
   },
   {
@@ -4215,6 +4199,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "uk"
     ],
     "cover": "/images/music/music-42a74fe3.webp",
+    "url": "/music/punk-77"
+  },
+  {
+    "source": "music",
+    "refId": "716c6b85-9c90-4261-9bfe-c133f5ea3a2a",
+    "title": "London’s Calling",
+    "seedName": "London Calling",
+    "creator": "KITSCHKRIEG",
+    "year": "2025",
+    "tags": [
+      "punk",
+      "rock",
+      "1977",
+      "uk"
+    ],
+    "cover": "/images/music/music-716c6b85.webp",
     "url": "/music/punk-77"
   },
   {
@@ -4488,6 +4488,20 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "4ce23e4b-f3bb-366b-b985-844feaf37754",
+    "title": "Notorious",
+    "seedName": "The Notorious",
+    "creator": "Robert Armani",
+    "year": "2001",
+    "tags": [
+      "electronic",
+      "techno"
+    ],
+    "cover": "/images/music/music-4ce23e4b.webp",
+    "url": "/music/psychedelic-60s"
+  },
+  {
+    "source": "music",
     "refId": "e81bcc9a-7999-4b41-bf57-31e520ece105",
     "title": "Ogden Nash Reads Ogden Nash",
     "seedName": "Ogden",
@@ -4500,20 +4514,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "experimental"
     ],
     "cover": "/images/music/music-e81bcc9a.webp",
-    "url": "/music/psychedelic-60s"
-  },
-  {
-    "source": "music",
-    "refId": "4ce23e4b-f3bb-366b-b985-844feaf37754",
-    "title": "Notorious",
-    "seedName": "The Notorious",
-    "creator": "Robert Armani",
-    "year": "2001",
-    "tags": [
-      "electronic",
-      "techno"
-    ],
-    "cover": "/images/music/music-4ce23e4b.webp",
     "url": "/music/psychedelic-60s"
   },
   {
@@ -4545,6 +4545,24 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "phonk"
     ],
     "cover": "/images/music/music-d47ddbdd.webp",
+    "url": "/music/trap-modern"
+  },
+  {
+    "source": "music",
+    "refId": "c0704c7d-dc5b-43cd-b372-8056a3bf7bb2",
+    "title": "ASTROWORLD",
+    "seedName": "Astroworld",
+    "creator": "Travis Scott",
+    "year": "2018",
+    "tags": [
+      "alternative r&b",
+      "cloud rap",
+      "hip hop",
+      "jahrescharts 2024",
+      "pop rap",
+      "southern hip hop"
+    ],
+    "cover": "/images/music/music-c0704c7d.webp",
     "url": "/music/trap-modern"
   },
   {
@@ -4596,24 +4614,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "c0704c7d-dc5b-43cd-b372-8056a3bf7bb2",
-    "title": "ASTROWORLD",
-    "seedName": "Astroworld",
-    "creator": "Travis Scott",
-    "year": "2018",
-    "tags": [
-      "alternative r&b",
-      "cloud rap",
-      "hip hop",
-      "jahrescharts 2024",
-      "pop rap",
-      "southern hip hop"
-    ],
-    "cover": "/images/music/music-c0704c7d.webp",
-    "url": "/music/trap-modern"
-  },
-  {
-    "source": "music",
     "refId": "ce6bfccb-c392-426c-aaa8-4c632053ae6d",
     "title": "Luv Is",
     "seedName": "Luv Is",
@@ -4658,6 +4658,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "e812a7e0-5788-4272-8eb2-80ef282b108c",
+    "title": "Brandenburg",
+    "seedName": "Brandenburg",
+    "creator": "SIR",
+    "year": "2015",
+    "tags": [
+      "baroque",
+      "classical",
+      "instrumental",
+      "harpsichord"
+    ],
+    "cover": "/images/music/music-e812a7e0.webp",
+    "url": "/music/baroque-court"
+  },
+  {
+    "source": "music",
     "refId": "4ce8111e-a043-3700-905f-39ae5ce06b32",
     "title": "Toccata",
     "seedName": "Toccata",
@@ -4689,18 +4705,18 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "e812a7e0-5788-4272-8eb2-80ef282b108c",
-    "title": "Brandenburg",
-    "seedName": "Brandenburg",
-    "creator": "SIR",
-    "year": "2015",
+    "refId": "1b1ebbb5-6347-36af-898f-53c1db5937ac",
+    "title": "Messiah",
+    "seedName": "Messiah",
+    "creator": "George Frideric Handel",
+    "year": "1994",
     "tags": [
       "baroque",
       "classical",
       "instrumental",
       "harpsichord"
     ],
-    "cover": "/images/music/music-e812a7e0.webp",
+    "cover": "/images/music/music-1b1ebbb5.webp",
     "url": "/music/baroque-court"
   },
   {
@@ -4737,22 +4753,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "1b1ebbb5-6347-36af-898f-53c1db5937ac",
-    "title": "Messiah",
-    "seedName": "Messiah",
-    "creator": "George Frideric Handel",
-    "year": "1994",
-    "tags": [
-      "baroque",
-      "classical",
-      "instrumental",
-      "harpsichord"
-    ],
-    "cover": "/images/music/music-1b1ebbb5.webp",
-    "url": "/music/baroque-court"
-  },
-  {
-    "source": "music",
     "refId": "1794d1ca-aeda-45a6-a428-ef9790b184b4",
     "title": "Clarity",
     "seedName": "Clarity",
@@ -4765,6 +4765,20 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "confessional"
     ],
     "cover": "/images/music/music-1794d1ca.webp",
+    "url": "/music/emo-second-wave"
+  },
+  {
+    "source": "music",
+    "refId": "7f4d8092-d0bd-4035-a7ff-7e9f46204272",
+    "title": "Bleed American",
+    "seedName": "Bleed American",
+    "creator": "Dig It Up",
+    "year": "2010",
+    "tags": [
+      "punk",
+      "rock"
+    ],
+    "cover": "/images/music/music-7f4d8092.webp",
     "url": "/music/emo-second-wave"
   },
   {
@@ -4795,20 +4809,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "confessional"
     ],
     "cover": null,
-    "url": "/music/emo-second-wave"
-  },
-  {
-    "source": "music",
-    "refId": "7f4d8092-d0bd-4035-a7ff-7e9f46204272",
-    "title": "Bleed American",
-    "seedName": "Bleed American",
-    "creator": "Dig It Up",
-    "year": "2010",
-    "tags": [
-      "punk",
-      "rock"
-    ],
-    "cover": "/images/music/music-7f4d8092.webp",
     "url": "/music/emo-second-wave"
   },
   {
@@ -5080,6 +5080,19 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "a9089958-a1bf-4366-9bd1-da77acba628f",
+    "title": "Friends Friends Friends",
+    "seedName": "The Friends",
+    "creator": "François Lindemann",
+    "year": "2012",
+    "tags": [
+      "jazz"
+    ],
+    "cover": "/images/music/music-a9089958.webp",
+    "url": "/music/noise-pop"
+  },
+  {
+    "source": "music",
     "refId": "d57d27a3-db37-4ba4-890d-9a7eb8310c4a",
     "title": "Murmur",
     "seedName": "Murmur",
@@ -5097,15 +5110,18 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "a9089958-a1bf-4366-9bd1-da77acba628f",
-    "title": "Friends Friends Friends",
-    "seedName": "The Friends",
-    "creator": "François Lindemann",
-    "year": "2012",
+    "refId": "5b05f89d-c553-4719-9780-4f797c0ff6bf",
+    "title": "Fonder",
+    "seedName": "Fonder",
+    "creator": "Laura Lucas",
+    "year": "2023",
     "tags": [
-      "jazz"
+      "noisepop",
+      "indie",
+      "1990s",
+      "jangle"
     ],
-    "cover": "/images/music/music-a9089958.webp",
+    "cover": "/images/music/music-5b05f89d.webp",
     "url": "/music/noise-pop"
   },
   {
@@ -5122,22 +5138,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
     ],
     "cover": "/images/music/music-199f456e.webp",
     "url": "/music/spiritual-jazz"
-  },
-  {
-    "source": "music",
-    "refId": "5b05f89d-c553-4719-9780-4f797c0ff6bf",
-    "title": "Fonder",
-    "seedName": "Fonder",
-    "creator": "Laura Lucas",
-    "year": "2023",
-    "tags": [
-      "noisepop",
-      "indie",
-      "1990s",
-      "jangle"
-    ],
-    "cover": "/images/music/music-5b05f89d.webp",
-    "url": "/music/noise-pop"
   },
   {
     "source": "music",
@@ -5158,20 +5158,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "f7f60ccb-d5b3-3718-b413-ab1ebfaa17b2",
-    "title": "Tauhid",
-    "seedName": "Tauhid",
-    "creator": "Boxcutter",
-    "year": "2006",
-    "tags": [
-      "dubstep",
-      "electronic"
-    ],
-    "cover": "/images/music/music-f7f60ccb.webp",
-    "url": "/music/spiritual-jazz"
-  },
-  {
-    "source": "music",
     "refId": "df4a9658-2e56-4dd5-a2d2-d22398b11b9d",
     "title": "KARMA",
     "seedName": "Karma",
@@ -5185,6 +5171,20 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "rock"
     ],
     "cover": "/images/music/music-df4a9658.webp",
+    "url": "/music/spiritual-jazz"
+  },
+  {
+    "source": "music",
+    "refId": "f7f60ccb-d5b3-3718-b413-ab1ebfaa17b2",
+    "title": "Tauhid",
+    "seedName": "Tauhid",
+    "creator": "Boxcutter",
+    "year": "2006",
+    "tags": [
+      "dubstep",
+      "electronic"
+    ],
+    "cover": "/images/music/music-f7f60ccb.webp",
     "url": "/music/spiritual-jazz"
   },
   {
@@ -5236,6 +5236,20 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "47fb55c7-b8da-3527-8df3-01599a96daf1",
+    "title": "World Galaxy",
+    "seedName": "World Galaxy",
+    "creator": "Alice Coltrane",
+    "year": "1972",
+    "tags": [
+      "free jazz",
+      "jazz"
+    ],
+    "cover": "/images/music/music-47fb55c7.webp",
+    "url": "/music/spiritual-jazz"
+  },
+  {
+    "source": "music",
     "refId": "604a38e1-7d2c-4fc3-9d10-1313648cb40d",
     "title": "You Want",
     "seedName": "Dont You Want",
@@ -5281,17 +5295,19 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "47fb55c7-b8da-3527-8df3-01599a96daf1",
-    "title": "World Galaxy",
-    "seedName": "World Galaxy",
-    "creator": "Alice Coltrane",
-    "year": "1972",
+    "refId": "75ebf5eb-4d58-467c-b3cc-9c418e032253",
+    "title": "Monday Monday Monday",
+    "seedName": "Blue Monday",
+    "creator": "Becca Mancari",
+    "year": "2024",
     "tags": [
-      "free jazz",
-      "jazz"
+      "synthpop",
+      "electronic",
+      "1980s",
+      "pop"
     ],
-    "cover": "/images/music/music-47fb55c7.webp",
-    "url": "/music/spiritual-jazz"
+    "cover": "/images/music/music-75ebf5eb.webp",
+    "url": "/music/synth-pop-80s"
   },
   {
     "source": "music",
@@ -5344,18 +5360,20 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "75ebf5eb-4d58-467c-b3cc-9c418e032253",
-    "title": "Monday Monday Monday",
-    "seedName": "Blue Monday",
-    "creator": "Becca Mancari",
-    "year": "2024",
+    "refId": "af2f353d-90a9-3e03-bbcd-5395d3ff5bbd",
+    "title": "Enjoy the Silence",
+    "seedName": "Enjoy the Silence",
+    "creator": "Depeche Mode",
+    "year": "1990",
     "tags": [
-      "synthpop",
+      "alternative/indie rock",
       "electronic",
-      "1980s",
-      "pop"
+      "house",
+      "synth and techno pop",
+      "synth-pop",
+      "synthpop"
     ],
-    "cover": "/images/music/music-75ebf5eb.webp",
+    "cover": "/images/music/music-af2f353d.webp",
     "url": "/music/synth-pop-80s"
   },
   {
@@ -5390,24 +5408,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "af2f353d-90a9-3e03-bbcd-5395d3ff5bbd",
-    "title": "Enjoy the Silence",
-    "seedName": "Enjoy the Silence",
-    "creator": "Depeche Mode",
-    "year": "1990",
-    "tags": [
-      "alternative/indie rock",
-      "electronic",
-      "house",
-      "synth and techno pop",
-      "synth-pop",
-      "synthpop"
-    ],
-    "cover": "/images/music/music-af2f353d.webp",
-    "url": "/music/synth-pop-80s"
-  },
-  {
-    "source": "music",
     "refId": "0b77c28e-29d0-3768-b9a4-15505bd1a799",
     "title": "trace",
     "seedName": "Trace",
@@ -5420,22 +5420,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "roots"
     ],
     "cover": "/images/music/music-0b77c28e.webp",
-    "url": "/music/americana-roots"
-  },
-  {
-    "source": "music",
-    "refId": "a0aeb1f6-ba3f-3f42-8df0-daa098650872",
-    "title": "Ghost Ghost",
-    "seedName": "The Ghost",
-    "creator": "Jacuzzi Boys",
-    "year": "2007",
-    "tags": [
-      "americana",
-      "folk",
-      "country",
-      "roots"
-    ],
-    "cover": "/images/music/music-a0aeb1f6.webp",
     "url": "/music/americana-roots"
   },
   {
@@ -5453,6 +5437,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "rock"
     ],
     "cover": "/images/music/music-d91e7341.webp",
+    "url": "/music/americana-roots"
+  },
+  {
+    "source": "music",
+    "refId": "a0aeb1f6-ba3f-3f42-8df0-daa098650872",
+    "title": "Ghost Ghost",
+    "seedName": "The Ghost",
+    "creator": "Jacuzzi Boys",
+    "year": "2007",
+    "tags": [
+      "americana",
+      "folk",
+      "country",
+      "roots"
+    ],
+    "cover": "/images/music/music-a0aeb1f6.webp",
     "url": "/music/americana-roots"
   },
   {
@@ -5643,6 +5643,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "525a7012-52a1-4ce1-a197-546464468ee5",
+    "title": "Original Evergreen Tunes Vol. 1",
+    "seedName": "King Onyina",
+    "creator": "King Onyina",
+    "year": "",
+    "tags": [
+      "highlife",
+      "african",
+      "guitar",
+      "dance"
+    ],
+    "cover": "/images/music/music-525a7012.webp",
+    "url": "/music/highlife-ghana"
+  },
+  {
+    "source": "music",
     "refId": "f670bfce-684e-4f60-8ea7-298c8605c23f",
     "title": "Fin Project Orchestra (Orchestra)",
     "seedName": "Orchestra",
@@ -5672,18 +5688,18 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "525a7012-52a1-4ce1-a197-546464468ee5",
-    "title": "Original Evergreen Tunes Vol. 1",
-    "seedName": "King Onyina",
-    "creator": "King Onyina",
-    "year": "",
+    "refId": "2e4a2122-4ed2-4199-9a49-a439ef935850",
+    "title": "Yaa Amponsah Special",
+    "seedName": "Yaa Amponsah",
+    "creator": "The African Brothers International Band",
+    "year": "1974",
     "tags": [
+      "bolero",
       "highlife",
-      "african",
-      "guitar",
-      "dance"
+      "latin",
+      "rumba"
     ],
-    "cover": "/images/music/music-525a7012.webp",
+    "cover": "/images/music/music-2e4a2122.webp",
     "url": "/music/highlife-ghana"
   },
   {
@@ -5704,18 +5720,18 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "2e4a2122-4ed2-4199-9a49-a439ef935850",
-    "title": "Yaa Amponsah Special",
-    "seedName": "Yaa Amponsah",
-    "creator": "The African Brothers International Band",
-    "year": "1974",
+    "refId": "5689d441-57b5-42a9-92f4-635e8f31c9c8",
+    "title": "Nimo Productions",
+    "seedName": "Koo Nimo",
+    "creator": "Jaaska",
+    "year": "2011",
     "tags": [
-      "bolero",
       "highlife",
-      "latin",
-      "rumba"
+      "african",
+      "guitar",
+      "dance"
     ],
-    "cover": "/images/music/music-2e4a2122.webp",
+    "cover": "/images/music/music-5689d441.webp",
     "url": "/music/highlife-ghana"
   },
   {
@@ -5752,22 +5768,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "5689d441-57b5-42a9-92f4-635e8f31c9c8",
-    "title": "Nimo Productions",
-    "seedName": "Koo Nimo",
-    "creator": "Jaaska",
-    "year": "2011",
-    "tags": [
-      "highlife",
-      "african",
-      "guitar",
-      "dance"
-    ],
-    "cover": "/images/music/music-5689d441.webp",
-    "url": "/music/highlife-ghana"
-  },
-  {
-    "source": "music",
     "refId": "d1b44c2f-0456-4211-9060-2281f9713e4b",
     "title": "Channel",
     "seedName": "Channel",
@@ -5784,22 +5784,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "f491987d-5fd3-33b5-9e01-72162cdce865",
-    "title": "Wonder Wonder",
-    "seedName": "Wonder",
-    "creator": "Edith Frost",
-    "year": "2001",
-    "tags": [
-      "country rock",
-      "folk rock",
-      "indie rock",
-      "rock"
-    ],
-    "cover": "/images/music/music-f491987d.webp",
-    "url": "/music/breakcore"
-  },
-  {
-    "source": "music",
     "refId": "bd7508e3-1ea4-4642-b6e5-e45b66cdf3e8",
     "title": "Crack‐Crack‐Crackle",
     "seedName": "Crack",
@@ -5812,6 +5796,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "fast"
     ],
     "cover": "/images/music/music-bd7508e3.webp",
+    "url": "/music/breakcore"
+  },
+  {
+    "source": "music",
+    "refId": "f491987d-5fd3-33b5-9e01-72162cdce865",
+    "title": "Wonder Wonder",
+    "seedName": "Wonder",
+    "creator": "Edith Frost",
+    "year": "2001",
+    "tags": [
+      "country rock",
+      "folk rock",
+      "indie rock",
+      "rock"
+    ],
+    "cover": "/images/music/music-f491987d.webp",
     "url": "/music/breakcore"
   },
   {
@@ -5915,6 +5915,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "505bbc51-29e6-47c1-bf09-2cdae9ca7e2b",
+    "title": "Feather",
+    "seedName": "Feather",
+    "creator": "Waterfall",
+    "year": "2025",
+    "tags": [
+      "lofihiphop",
+      "hiphop",
+      "2010s",
+      "chill"
+    ],
+    "cover": "/images/music/music-505bbc51.webp",
+    "url": "/music/lofi-hiphop"
+  },
+  {
+    "source": "music",
     "refId": "264f90de-9f43-49f2-8566-c6e23d9944ae",
     "title": "Luv! Luv! Luv!",
     "seedName": "Luv",
@@ -5941,22 +5957,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "swing"
     ],
     "cover": "/images/music/music-527ec4c2.webp",
-    "url": "/music/lofi-hiphop"
-  },
-  {
-    "source": "music",
-    "refId": "505bbc51-29e6-47c1-bf09-2cdae9ca7e2b",
-    "title": "Feather",
-    "seedName": "Feather",
-    "creator": "Waterfall",
-    "year": "2025",
-    "tags": [
-      "lofihiphop",
-      "hiphop",
-      "2010s",
-      "chill"
-    ],
-    "cover": "/images/music/music-505bbc51.webp",
     "url": "/music/lofi-hiphop"
   },
   {
@@ -6081,6 +6081,19 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "c62335f0-e900-434c-afcb-c2c891dc9823",
+    "title": "Once in a Lifetime",
+    "seedName": "Once in a Lifetime",
+    "creator": "Mac McAnally",
+    "year": "2020",
+    "tags": [
+      "country"
+    ],
+    "cover": "/images/music/music-c62335f0.webp",
+    "url": "/music/new-wave"
+  },
+  {
+    "source": "music",
     "refId": "24bfef54-2c1b-37c6-bdd8-5fadbe4ed0cd",
     "title": "Bizarre",
     "seedName": "Bizarre",
@@ -6093,19 +6106,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "pop"
     ],
     "cover": "/images/music/music-24bfef54.webp",
-    "url": "/music/new-wave"
-  },
-  {
-    "source": "music",
-    "refId": "c62335f0-e900-434c-afcb-c2c891dc9823",
-    "title": "Once in a Lifetime",
-    "seedName": "Once in a Lifetime",
-    "creator": "Mac McAnally",
-    "year": "2020",
-    "tags": [
-      "country"
-    ],
-    "cover": "/images/music/music-c62335f0.webp",
     "url": "/music/new-wave"
   },
   {
@@ -6141,6 +6141,20 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "ba3de544-7340-3b5e-86a8-6d325f68635f",
+    "title": "Qawwali",
+    "seedName": "Qawwali",
+    "creator": "Pinch",
+    "year": "2006",
+    "tags": [
+      "dubstep",
+      "electronic"
+    ],
+    "cover": "/images/music/music-ba3de544.webp",
+    "url": "/music/sufi-devotional"
+  },
+  {
+    "source": "music",
     "refId": "e5670ca4-0f12-3a6e-b5d2-db6530bb1147",
     "title": "Mast Mast",
     "seedName": "Dam Mast",
@@ -6166,20 +6180,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "qawwali"
     ],
     "cover": "/images/music/music-eb722fee.webp",
-    "url": "/music/sufi-devotional"
-  },
-  {
-    "source": "music",
-    "refId": "ba3de544-7340-3b5e-86a8-6d325f68635f",
-    "title": "Qawwali",
-    "seedName": "Qawwali",
-    "creator": "Pinch",
-    "year": "2006",
-    "tags": [
-      "dubstep",
-      "electronic"
-    ],
-    "cover": "/images/music/music-ba3de544.webp",
     "url": "/music/sufi-devotional"
   },
   {
@@ -6352,19 +6352,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "d0202774-974b-46a4-8933-ba13175bfb58",
-    "title": "Roche",
-    "seedName": "Roche",
-    "creator": "Mayerling",
-    "year": "2018",
-    "tags": [
-      "electronic"
-    ],
-    "cover": "/images/music/music-d0202774.webp",
-    "url": "/music/bluegrass-women"
-  },
-  {
-    "source": "music",
     "refId": "6f46414a-19b6-4cef-b9ff-5a8bde4fc330",
     "title": "Female",
     "seedName": "The Female",
@@ -6374,6 +6361,19 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "contemporary country"
     ],
     "cover": "/images/music/music-6f46414a.webp",
+    "url": "/music/bluegrass-women"
+  },
+  {
+    "source": "music",
+    "refId": "d0202774-974b-46a4-8933-ba13175bfb58",
+    "title": "Roche",
+    "seedName": "Roche",
+    "creator": "Mayerling",
+    "year": "2018",
+    "tags": [
+      "electronic"
+    ],
+    "cover": "/images/music/music-d0202774.webp",
     "url": "/music/bluegrass-women"
   },
   {
@@ -6424,6 +6424,19 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "02d7d29a-ac4d-4768-b6d6-a916195723f2",
+    "title": "Pretty Pretty",
+    "seedName": "Pretty",
+    "creator": "Tiffany Houghton",
+    "year": "2019",
+    "tags": [
+      "pop"
+    ],
+    "cover": "/images/music/music-02d7d29a.webp",
+    "url": "/music/bluegrass-women"
+  },
+  {
+    "source": "music",
     "refId": "9c607787-4ece-3caf-9021-8686c4f4fd4b",
     "title": "Singing",
     "seedName": "Singing",
@@ -6436,19 +6449,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "acoustic"
     ],
     "cover": "/images/music/music-9c607787.webp",
-    "url": "/music/bluegrass-women"
-  },
-  {
-    "source": "music",
-    "refId": "02d7d29a-ac4d-4768-b6d6-a916195723f2",
-    "title": "Pretty Pretty",
-    "seedName": "Pretty",
-    "creator": "Tiffany Houghton",
-    "year": "2019",
-    "tags": [
-      "pop"
-    ],
-    "cover": "/images/music/music-02d7d29a.webp",
     "url": "/music/bluegrass-women"
   },
   {
@@ -6577,6 +6577,22 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "63ddc672-9448-446e-806b-3f719fa0d49d",
+    "title": "SOCA",
+    "seedName": "Soca",
+    "creator": "RAIZHELL",
+    "year": "2024",
+    "tags": [
+      "calypso",
+      "caribbean",
+      "dance",
+      "political"
+    ],
+    "cover": "/images/music/music-63ddc672.webp",
+    "url": "/music/calypso-soca"
+  },
+  {
+    "source": "music",
     "refId": "9b29c94c-ad8c-41ad-bc37-312ba4711d0e",
     "title": "Caribbean",
     "seedName": " Caribbean",
@@ -6609,22 +6625,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "63ddc672-9448-446e-806b-3f719fa0d49d",
-    "title": "SOCA",
-    "seedName": "Soca",
-    "creator": "RAIZHELL",
-    "year": "2024",
-    "tags": [
-      "calypso",
-      "caribbean",
-      "dance",
-      "political"
-    ],
-    "cover": "/images/music/music-63ddc672.webp",
-    "url": "/music/calypso-soca"
-  },
-  {
-    "source": "music",
     "refId": "4bb63e4a-ceeb-30b0-82ae-354f29707ff5",
     "title": "Wine, Wine, Wine",
     "seedName": "Wine",
@@ -6634,6 +6634,24 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "pop/rock"
     ],
     "cover": "/images/music/music-4bb63e4a.webp",
+    "url": "/music/calypso-soca"
+  },
+  {
+    "source": "music",
+    "refId": "9995fa61-0a0d-4ecc-9672-67c298852a47",
+    "title": "Hot!Hot!Hot!Hot!Hot!Hot!",
+    "seedName": "Hot",
+    "creator": "Your Song Is Good",
+    "year": "2007",
+    "tags": [
+      "calypso",
+      "funk",
+      "jazz",
+      "reggae",
+      "rock",
+      "ska"
+    ],
+    "cover": "/images/music/music-9995fa61.webp",
     "url": "/music/calypso-soca"
   },
   {
@@ -6654,20 +6672,18 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "9995fa61-0a0d-4ecc-9672-67c298852a47",
-    "title": "Hot!Hot!Hot!Hot!Hot!Hot!",
-    "seedName": "Hot",
-    "creator": "Your Song Is Good",
-    "year": "2007",
+    "refId": "659f1ed1-3377-4acc-bd7a-a0865af847a6",
+    "title": "Fête de fête",
+    "seedName": "Fete",
+    "creator": "La Feeling",
+    "year": "2016",
     "tags": [
       "calypso",
-      "funk",
-      "jazz",
-      "reggae",
-      "rock",
-      "ska"
+      "caribbean",
+      "dance",
+      "political"
     ],
-    "cover": "/images/music/music-9995fa61.webp",
+    "cover": "/images/music/music-659f1ed1.webp",
     "url": "/music/calypso-soca"
   },
   {
@@ -6716,22 +6732,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "659f1ed1-3377-4acc-bd7a-a0865af847a6",
-    "title": "Fête de fête",
-    "seedName": "Fete",
-    "creator": "La Feeling",
-    "year": "2016",
-    "tags": [
-      "calypso",
-      "caribbean",
-      "dance",
-      "political"
-    ],
-    "cover": "/images/music/music-659f1ed1.webp",
-    "url": "/music/calypso-soca"
-  },
-  {
-    "source": "music",
     "refId": "37dbc2fa-e531-38e7-b70a-a7a08dce811f",
     "title": "New Age",
     "seedName": "New Age",
@@ -6776,6 +6776,20 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "a4034e06-5e1a-4066-85a7-4e254fdaeedd",
+    "title": "Crashed",
+    "seedName": "Crashed",
+    "creator": "Monolith",
+    "year": "2014",
+    "tags": [
+      "electronic",
+      "industrial"
+    ],
+    "cover": "/images/music/music-a4034e06.webp",
+    "url": "/music/tape-lofi"
+  },
+  {
+    "source": "music",
     "refId": "8d52b401-fcaf-4769-bf34-2c917e855365",
     "title": "MARCEL",
     "seedName": "Marcel",
@@ -6789,20 +6803,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
     ],
     "cover": "/images/music/music-8d52b401.webp",
     "url": "/music/middle-east-oud"
-  },
-  {
-    "source": "music",
-    "refId": "a4034e06-5e1a-4066-85a7-4e254fdaeedd",
-    "title": "Crashed",
-    "seedName": "Crashed",
-    "creator": "Monolith",
-    "year": "2014",
-    "tags": [
-      "electronic",
-      "industrial"
-    ],
-    "cover": "/images/music/music-a4034e06.webp",
-    "url": "/music/tape-lofi"
   },
   {
     "source": "music",
@@ -6884,6 +6884,19 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "6d44b57a-2b9d-372a-b7c2-c670dca997d3",
+    "title": "Is This It",
+    "seedName": "Is This It",
+    "creator": "The Strokes",
+    "year": "2003",
+    "tags": [
+      "rock"
+    ],
+    "cover": "/images/music/music-6d44b57a.webp",
+    "url": "/music/garage-rock-revival"
+  },
+  {
+    "source": "music",
     "refId": "08bf4045-d92f-30f4-a7ff-a6f12430d312",
     "title": "Elephant Elephant",
     "seedName": "Elephant",
@@ -6896,19 +6909,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "raw"
     ],
     "cover": "/images/music/music-08bf4045.webp",
-    "url": "/music/garage-rock-revival"
-  },
-  {
-    "source": "music",
-    "refId": "6d44b57a-2b9d-372a-b7c2-c670dca997d3",
-    "title": "Is This It",
-    "seedName": "Is This It",
-    "creator": "The Strokes",
-    "year": "2003",
-    "tags": [
-      "rock"
-    ],
-    "cover": "/images/music/music-6d44b57a.webp",
     "url": "/music/garage-rock-revival"
   },
   {
@@ -6994,6 +6994,21 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "cbd7709b-73f8-4a09-b259-0cbaf6e1754f",
+    "title": "Footwork on Hard Hard Hard!!",
+    "seedName": "Hard",
+    "creator": "Various Artists",
+    "year": "2012",
+    "tags": [
+      "electronic",
+      "footwork",
+      "juke"
+    ],
+    "cover": "/images/music/music-cbd7709b.webp",
+    "url": "/music/garage-rock-revival"
+  },
+  {
+    "source": "music",
     "refId": "3d8fde54-4d51-4f2a-92b5-45f004122e41",
     "title": "Meredith",
     "seedName": "Meredith",
@@ -7019,21 +7034,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
     ],
     "cover": "/images/music/music-0ef7fd21.webp",
     "url": "/music/experimental-vocal"
-  },
-  {
-    "source": "music",
-    "refId": "cbd7709b-73f8-4a09-b259-0cbaf6e1754f",
-    "title": "Footwork on Hard Hard Hard!!",
-    "seedName": "Hard",
-    "creator": "Various Artists",
-    "year": "2012",
-    "tags": [
-      "electronic",
-      "footwork",
-      "juke"
-    ],
-    "cover": "/images/music/music-cbd7709b.webp",
-    "url": "/music/garage-rock-revival"
   },
   {
     "source": "music",
@@ -7066,21 +7066,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "05cb8ec8-9c49-403b-a629-62c0df3ec2e7",
-    "title": "Vocal",
-    "seedName": "Vocal",
-    "creator": "Heinrich at Hart",
-    "year": "1997",
-    "tags": [
-      "electro",
-      "electronic",
-      "experimental"
-    ],
-    "cover": "/images/music/music-05cb8ec8.webp",
-    "url": "/music/experimental-vocal"
-  },
-  {
-    "source": "music",
     "refId": "243de0b9-4beb-4b1a-9079-6a5295ffbd99",
     "title": "Litanies",
     "seedName": "The Litanies",
@@ -7093,6 +7078,21 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "instrumental"
     ],
     "cover": "/images/music/music-243de0b9.webp",
+    "url": "/music/experimental-vocal"
+  },
+  {
+    "source": "music",
+    "refId": "05cb8ec8-9c49-403b-a629-62c0df3ec2e7",
+    "title": "Vocal",
+    "seedName": "Vocal",
+    "creator": "Heinrich at Hart",
+    "year": "1997",
+    "tags": [
+      "electro",
+      "electronic",
+      "experimental"
+    ],
+    "cover": "/images/music/music-05cb8ec8.webp",
     "url": "/music/experimental-vocal"
   },
   {
@@ -7129,6 +7129,19 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "09d7ff3d-0974-4448-b188-7ef40e6bd36b",
+    "title": "Scaring the Girls",
+    "seedName": "Scaring",
+    "creator": "The Brats",
+    "year": "2014",
+    "tags": [
+      "rock"
+    ],
+    "cover": "/images/music/music-09d7ff3d.webp",
+    "url": "/music/dreampop-shoegaze-2020s"
+  },
+  {
+    "source": "music",
     "refId": "4fe2dcfb-a494-4861-8316-23b238b9d518",
     "title": "Crush Crush Crush",
     "seedName": "A Crush",
@@ -7145,15 +7158,16 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "09d7ff3d-0974-4448-b188-7ef40e6bd36b",
-    "title": "Scaring the Girls",
-    "seedName": "Scaring",
-    "creator": "The Brats",
-    "year": "2014",
+    "refId": "aec33c40-5c7f-3962-9007-40b45fb07ebc",
+    "title": "GET",
+    "seedName": "Get",
+    "creator": "平家みちよ",
+    "year": "1997",
     "tags": [
-      "rock"
+      "hello project",
+      "j-pop"
     ],
-    "cover": "/images/music/music-09d7ff3d.webp",
+    "cover": "/images/music/music-aec33c40.webp",
     "url": "/music/dreampop-shoegaze-2020s"
   },
   {
@@ -7170,20 +7184,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "ethereal"
     ],
     "cover": "/images/music/music-aeb82a96.webp",
-    "url": "/music/dreampop-shoegaze-2020s"
-  },
-  {
-    "source": "music",
-    "refId": "aec33c40-5c7f-3962-9007-40b45fb07ebc",
-    "title": "GET",
-    "seedName": "Get",
-    "creator": "平家みちよ",
-    "year": "1997",
-    "tags": [
-      "hello project",
-      "j-pop"
-    ],
-    "cover": "/images/music/music-aec33c40.webp",
     "url": "/music/dreampop-shoegaze-2020s"
   },
   {
@@ -7235,6 +7235,21 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "c8a92330-a1ab-3146-a120-aedc24b00a60",
+    "title": "Manteca",
+    "seedName": "Manteca",
+    "creator": "Manhattan Jazz Quintet",
+    "year": "1992",
+    "tags": [
+      "contemporary jazz",
+      "jazz",
+      "post-bop"
+    ],
+    "cover": "/images/music/music-c8a92330.webp",
+    "url": "/music/latin-jazz"
+  },
+  {
+    "source": "music",
     "refId": "a6493143-fe53-31e7-b48a-ad9f4a7059e3",
     "title": "Afro-Cuban",
     "seedName": "Afro-Cuban",
@@ -7264,21 +7279,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
-    "refId": "c8a92330-a1ab-3146-a120-aedc24b00a60",
-    "title": "Manteca",
-    "seedName": "Manteca",
-    "creator": "Manhattan Jazz Quintet",
-    "year": "1992",
-    "tags": [
-      "contemporary jazz",
-      "jazz",
-      "post-bop"
-    ],
-    "cover": "/images/music/music-c8a92330.webp",
-    "url": "/music/latin-jazz"
-  },
-  {
-    "source": "music",
     "refId": "a81d6354-2751-327d-bf36-88608a321c4d",
     "title": "Pool",
     "seedName": "The Pool",
@@ -7295,6 +7295,20 @@ export const MUSIC_ITEMS: CurationItem[] = [
   },
   {
     "source": "music",
+    "refId": "60721e52-cda1-4046-9b14-b3a78a018bdc",
+    "title": "Cal Tjader",
+    "seedName": "Cal Tjader",
+    "creator": "Cal Tjader Quartet",
+    "year": "1958",
+    "tags": [
+      "cool jazz",
+      "jazz"
+    ],
+    "cover": "/images/music/music-60721e52.webp",
+    "url": "/music/latin-jazz"
+  },
+  {
+    "source": "music",
     "refId": "9490f988-3399-43a1-afe2-3d69783075fe",
     "title": "Soul Sauce",
     "seedName": "Soul Sauce",
@@ -7307,20 +7321,6 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "dance"
     ],
     "cover": "/images/music/music-9490f988.webp",
-    "url": "/music/latin-jazz"
-  },
-  {
-    "source": "music",
-    "refId": "60721e52-cda1-4046-9b14-b3a78a018bdc",
-    "title": "Cal Tjader",
-    "seedName": "Cal Tjader",
-    "creator": "Cal Tjader Quartet",
-    "year": "1958",
-    "tags": [
-      "cool jazz",
-      "jazz"
-    ],
-    "cover": "/images/music/music-60721e52.webp",
     "url": "/music/latin-jazz"
   },
   {
@@ -7485,5 +7485,20 @@ export const MUSIC_ITEMS: CurationItem[] = [
     ],
     "cover": "/images/music/music-f39d4e7d.webp",
     "url": "/music/metal-progressive"
+  },
+  {
+    "source": "music",
+    "refId": "f313c403-2265-43e3-8867-4db59074484b",
+    "title": "Mantle",
+    "seedName": "The Mantle",
+    "creator": "Pixel",
+    "year": "2013",
+    "tags": [
+      "ambient",
+      "electronic",
+      "experimental"
+    ],
+    "cover": "/images/music/music-f313c403.webp",
+    "url": "/music/black-metal-atmosphere"
   }
 ];
