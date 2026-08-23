@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: { card: 'summary_large_image', title: SITE.title, description: SITE.description },
+  icons: { icon: '/favicon.svg', shortcut: '/favicon.svg', apple: '/favicon.svg' },
   robots: { index: true, follow: true },
 };
 

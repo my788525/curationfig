@@ -5,8 +5,9 @@ export function Navbar() {
   return (
     <header className="nav">
       <div className="nav-in">
-        <Link href="/" className="nav-brand">
-          {SITE.name}
+        <Link href="/" className="brand-mark">
+          <img src="/logo.svg" alt="CurationFig logo" />
+          <span className="brand-name">{SITE.name}</span>
         </Link>
         <nav className="nav-links">
           {CHANNELS.map((c) => (
@@ -19,7 +20,7 @@ export function Navbar() {
               {c.label}{c.live ? '' : ' · soon'}
             </Link>
           ))}
-          <Link href="/tools/playlist/">Playlist Generator</Link>
+          <Link href="/tools/playlist/">Generator</Link>
           <Link href="/data/">Data & Sources</Link>
           <Link href="/about/">About</Link>
         </nav>

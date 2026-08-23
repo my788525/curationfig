@@ -1,34 +1,33 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { MUSIC_THEMES } from '@/lib/media/curation';
-import { MUSIC_ITEMS } from '@/lib/media/generated-music';
+import { GAME_THEMES } from '@/lib/media/curation';
+import { GAME_ITEMS } from '@/lib/media/generated-games';
 import type { CurationItem } from '@/lib/media/musicbrainz';
 
 export function generateStaticParams() {
-  return MUSIC_THEMES.map((t) => ({ slug: t.slug }));
+  return GAME_THEMES.map((t) => ({ slug: t.slug }));
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const t = MUSIC_THEMES.find((x) => x.slug === params.slug);
-  if (!t) return { title: 'Music Curation' };
+  const t = GAME_THEMES.find((x) => x.slug === params.slug);
+  if (!t) return { title: 'Games Curation' };
   return {
     title: t.title,
     description: t.intro,
-    alternates: { canonical: `/music/${t.slug}/` },
+    alternates: { canonical: `/games/${t.slug}/` },
   };
 }
 
-export default function MusicThemePage({ params }: { params: { slug: string } }) {
-  const t = MUSIC_THEMES.find((x) => x.slug === params.slug);
+export default function GameThemePage({ params }: { params: { slug: string } }) {
+  const t = GAME_THEMES.find((x) => x.slug === params.slug);
   if (!t) notFound();
 
-  // 匹配本专题的真实条目（优先按 seedName 精确匹配，回退 title）
-  const itemsBySeed = new Map(MUSIC_ITEMS.map((i) => [(i.seedName || i.title).toLowerCase(), i]));
+  const itemsBySeed = new Map(GAME_ITEMS.map((i) => [(i.seedName || i.title).toLowerCase(), i]));
   const items: CurationItem[] = [];
   const missing: string[] = [];
   for (const name of t.items) {
-    const hit = itemsBySeed.get(name.toLowerCase()) || itemsBySeed.get(name.toLowerCase().replace(/"/g, ''));
+    const hit = itemsBySeed.get(name.toLowerCase());
     if (hit) items.push(hit);
     else missing.push(name);
   }
@@ -39,12 +38,12 @@ export default function MusicThemePage({ params }: { params: { slug: string } })
       a: t.thesis,
     },
     {
-      q: 'How is this different from an algorithm playlist?',
-      a: 'Algorithm playlists optimize for engagement and familiarity. This is a curated argument — a human chose these records for a reason you can read.',
+      q: 'Why no walkthroughs or stat tables?',
+      a: 'Those are commodity content an AI summary or a wiki already covers. We curate by design argument — the reason these games share a lineage — which no algorithm reproduces.',
     },
     {
       q: 'Can I get a personalized list instead?',
-      a: 'Yes — use the Playlist Generator to build a list from your mood, decade, and genre.',
+      a: 'Yes — use the Playlist Generator (games mode coming) to build a list from your preferred vibe and era.',
     },
   ];
 
@@ -62,7 +61,7 @@ export default function MusicThemePage({ params }: { params: { slug: string } })
     '@type': 'CollectionPage',
     name: t.title,
     description: t.intro,
-    url: `https://curationfig.com/music/${t.slug}/`,
+    url: `https://curationfig.com/games/${t.slug}/`,
   };
 
   return (
@@ -71,7 +70,7 @@ export default function MusicThemePage({ params }: { params: { slug: string } })
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collLd) }} />
         <div className="crumbs">
-          <Link href="/">Home</Link> / <Link href="/music/">Music</Link> / {t.title}
+          <Link href="/">Home</Link> / <Link href="/games/">Games</Link> / {t.title}
         </div>
         <h1>{t.title}</h1>
         <p style={{ fontSize: 18, maxWidth: 720 }}>{t.intro}</p>
@@ -106,17 +105,14 @@ export default function MusicThemePage({ params }: { params: { slug: string } })
             </div>
             {missing.length > 0 && (
               <p className="muted" style={{ marginTop: 10 }}>
-                {missing.length} entries pending metadata resolution from MusicBrainz.
+                {missing.length} entries pending metadata resolution from RAWG.
               </p>
             )}
           </div>
         )}
 
         <div style={{ marginTop: 22, display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-          <Link href="/tools/playlist/" className="pill-tag" style={{ background: 'var(--violet-600)' }}>
-            🎵 Generate your own playlist →
-          </Link>
-          <Link href="/music/" className="pill-tag">← All music themes</Link>
+          <Link href="/games/" className="pill-tag">← All game themes</Link>
         </div>
 
         <h2 style={{ marginTop: 30, fontSize: '1.15rem' }}>Frequently asked</h2>

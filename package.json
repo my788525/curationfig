@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "fetch:music": "node scripts/fetch-musicbrainz.mjs"
+    "fetch:music": "node scripts/fetch-musicbrainz.mjs",
+    "fetch:games": "node scripts/fetch-rawg.mjs",
+    "gen:music-seed": "node scripts/gen-music-seed.mjs"
   },
   "dependencies": {
     "next": "14.2.5",

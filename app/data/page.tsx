@@ -63,17 +63,28 @@ export default function DataPage() {
         </div>
 
         <div className="banner" style={{ marginTop: 22 }}>
-          <strong>TMDB notice:</strong> This product uses the TMDB API but is not endorsed or
-          certified by TMDB. Film &amp; TV channels launch in a later batch.
+          <strong>Attribution:</strong> Music data from{' '}
+          <a href="https://musicbrainz.org/" rel="nofollow noopener">MusicBrainz</a> (CC0) and
+          cover art from <a href="https://coverartarchive.org/" rel="nofollow noopener">Cover Art Archive</a>.
+          Game data from <a href="https://rawg.io/" rel="nofollow noopener">RAWG</a> (attribution
+          required). Film &amp; TV (TMDB) channels launch in a later batch — this product uses the
+          TMDB API but is not endorsed or certified by TMDB.
         </div>
 
         <h2 style={{ marginTop: 28 }}>Open datasets</h2>
         <ul>
           <li>
-            <code>music-artists-2026.json</code> — MusicBrainz artist metadata (CC0), generated
-            at build time.
+            <code>music-items.json</code> — MusicBrainz release-group metadata (CC0), generated at
+            build time.
           </li>
-          <li>Game / Film / TV datasets — pending respective batch launches.</li>
+          <li>
+            <code>game-items.json</code> — RAWG game metadata (attribution required), generated at
+            build time.
+          </li>
+          <li>
+            <code>lib/media/generated-music.ts</code> &amp;{' '}
+            <code>generated-games.ts</code> — typed data modules consumed by the static site.
+          </li>
         </ul>
       </div>
     </section>

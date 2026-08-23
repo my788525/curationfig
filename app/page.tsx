@@ -6,8 +6,8 @@ export default function HomePage() {
   const liveThemes = MUSIC_THEMES.slice(0, 6);
   return (
     <>
-      <section className="hero">
-        <div className="wrap">
+      <section className="hero has-bg" style={{ ['--hero-img' as string]: "url('/images/hero/hero-home.webp')" } as React.CSSProperties}>
+        <div className="wrap hero-inner">
           <h1>Not a database. A point of view.</h1>
           <p>
             {SITE.name} is editorially curated discovery for the things you watch, play, and

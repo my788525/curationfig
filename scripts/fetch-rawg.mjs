@@ -1,0 +1,129 @@
+// 构建期数据管道：RAWG 名称→id 解析 + 元数据 + 封面本地化（并发版）
+// 使用 curl 子进程（稳定走 HTTP 代理环境变量）
+// 生成 public/data/game-items.json + lib/media/generated-games.ts
+import { execFileSync } from 'node:child_process';
+import { writeFileSync as wf, mkdirSync as mk, existsSync as ex, readFileSync as rf } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(__dirname, '..');
+const CACHE_DIR = join(ROOT, 'cache');
+const DATA_DIR = join(ROOT, 'public', 'data');
+const IMG_DIR = join(ROOT, 'public', 'images', 'games');
+const RAWG = 'https://api.rawg.io/api';
+const KEY = process.env.RAWG_API_KEY;
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+mk(CACHE_DIR, { recursive: true });
+mk(DATA_DIR, { recursive: true });
+mk(IMG_DIR, { recursive: true });
+
+const RESOLVE_CACHE = join(CACHE_DIR, 'rawg-resolve.json');
+let resolved = ex(RESOLVE_CACHE) ? JSON.parse(rf(RESOLVE_CACHE, 'utf8')) : {};
+const saveResolve = () => wf(RESOLVE_CACHE, JSON.stringify(resolved, null, 2));
+
+if (!KEY) { console.error('RAWG_API_KEY not set.'); process.exit(1); }
+
+const CURL = 'C:/Windows/system32/curl.exe';
+function curlRaw(args, attempt = 1) {
+  try {
+    return execFileSync(CURL, args, { encoding: 'utf8', maxBuffer: 50 * 1024 * 1024, timeout: 30000 });
+  } catch (e) {
+    if (attempt >= 4) throw new Error('curl fail');
+    return curlRaw(args, attempt + 1);
+  }
+}
+function curlJson(url, attempt = 1) {
+  return curlRaw(['-sL', '--max-time', '20', url], attempt);
+}
+function curlBinary(url, file) {
+  try { execFileSync(CURL, ['-sL', '--max-time', '25', '-o', file, url], { maxBuffer: 50 * 1024 * 1024, timeout: 35000 }); return true; }
+  catch { return false; }
+}
+
+async function rawgGet(path, attempt = 1) {
+  await sleep(1200);
+  const url = `${RAWG}${path}${path.includes('?') ? '&' : '?'}key=${KEY}`;
+  let txt;
+  try { txt = curlJson(url, attempt); }
+  catch (e) { if (attempt >= 3) throw e; await sleep(2000); return rawgGet(path, attempt + 1); }
+  if (txt.includes('"detail":"Too Many Requests"') || txt.includes('429')) {
+    if (attempt >= 8) throw new Error('RAWG 429 persistent');
+    const wait = 30000 + attempt * 15000;
+    console.log(`  RAWG 429, wait ${Math.round(wait/1000)}s (attempt ${attempt})...`); await sleep(wait); return rawgGet(path, attempt + 1);
+  }
+  try { return JSON.parse(txt); } catch { if (attempt >= 3) throw new Error('RAWG bad json'); await sleep(2000); return rawgGet(path, attempt + 1); }
+}
+
+async function resolveGame(name) {
+  if (resolved[name] !== undefined) return resolved[name];
+  const q = encodeURIComponent(name);
+  const data = await rawgGet(`/games?search=${q}&page_size=1`);
+  const g = data.results?.[0];
+  if (!g) { resolved[name] = null; saveResolve(); return null; }
+  resolved[name] = g; saveResolve(); return g;
+}
+
+async function fetchCover(url, id) {
+  if (!url) return null;
+  const file = join(IMG_DIR, `game-${id}.webp`);
+  return curlBinary(url, file) ? `/images/games/game-${id}.webp` : null;
+}
+
+// 并发控制
+async function mapLimit(tasks, limit, fn) {
+  const results = [];
+  let i = 0;
+  async function worker() {
+    while (i < tasks.length) {
+      const idx = i++;
+      results[idx] = await fn(tasks[idx], idx);
+    }
+  }
+  const workers = Array.from({ length: Math.min(limit, tasks.length) }, () => worker());
+  await Promise.all(workers);
+  return results;
+}
+
+async function main() {
+  const { GAME_THEMES } = await import('../lib/media/seeds-games.ts');
+  const names = [];
+  const seen = new Set();
+  const themeOf = {};
+  for (const theme of GAME_THEMES) {
+    for (const name of theme.items) {
+      if (seen.has(name)) continue;
+      seen.add(name);
+      names.push(name);
+      themeOf[name] = theme;
+    }
+  }
+  console.log(`Game names to resolve: ${names.length} (cached: ${Object.keys(resolved).length})`);
+
+  const itemsMap = {};
+  // 串行 + 基础延迟，避免触发 RAWG 免费层速率限制（并发会瞬间 429）
+  for (const name of names) {
+    try {
+      const g = await resolveGame(name);
+      if (!g) { console.log(`  ✗ unresolved: ${name}`); continue; }
+      const cover = await fetchCover(g.background_image, g.id);
+      itemsMap[name] = {
+        source: 'game', refId: String(g.id), title: g.name, seedName: name,
+        creator: (g.genres || []).map((x) => x.name).join(', ') || '',
+        year: g.released?.slice(0, 4) || '',
+        tags: [...(g.genres || []).map((x) => x.slug), ...(g.platforms || []).map((x) => x.platform.slug)].slice(0, 8),
+        cover: cover || null, url: `/games/${themeOf[name]?.slug || ''}`,
+      };
+      console.log(`  ✓ ${name} → ${g.name} (${g.released || '?'}) ${cover ? 'cover' : 'no-cover'}`);
+    } catch (e) { console.log(`  ✗ error ${name}: ${e.message}`); }
+  }
+
+  const items = Object.values(itemsMap);
+  wf(join(DATA_DIR, 'game-items.json'), JSON.stringify(items, null, 2));
+  const ts = `// AUTO-GENERATED by scripts/fetch-rawg.mjs — do not edit\nimport type { CurationItem } from './musicbrainz';\nexport const GAME_ITEMS: CurationItem[] = ${JSON.stringify(items, null, 2)};\n`;
+  wf(join(ROOT, 'lib', 'media', 'generated-games.ts'), ts);
+  console.log(`\nDone. ${items.length} game items → generated-games.ts + game-items.json`);
+}
+
+main().catch((e) => { console.error(e); process.exit(1); });

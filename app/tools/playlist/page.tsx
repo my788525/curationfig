@@ -14,13 +14,13 @@ export default function PlaylistToolPage() {
     <section className="section">
       <div className="wrap">
         <div className="crumbs">
-          <Link href="/">Home</Link> / <Link href="/tools/playlist/">Playlist Generator</Link>
+          <Link href="/">Home</Link> / <Link href="/tools/playlist/">Generator</Link>
         </div>
-        <h1>Playlist Generator</h1>
+        <h1>Personalized Generator</h1>
         <p className="muted" style={{ maxWidth: 680 }}>
           The anti-algorithm tool. Tell us the mood you&apos;re in and we&apos;ll argue for a
-          list — not just show you what&apos;s popular. This is the part a search engine
-          overview can&apos;t hand you; you have to come in.
+          list — not just show you what&apos;s popular. Works for music and games. This is the
+          part a search engine overview can&apos;t hand you; you have to come in.
         </p>
 
         <div style={{ maxWidth: 560, marginTop: 18 }}>

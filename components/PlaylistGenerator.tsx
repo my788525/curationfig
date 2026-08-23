@@ -1,70 +1,69 @@
 'use client';
 import { useState } from 'react';
-
-// 轻量候选池（静态演示；后续接 public/data/music-artists-2026.json 真实元数据）
-// 字段：refId, title(artist), creator, year, tags, mood
-type Cand = {
-  refId: string;
-  title: string;
-  creator: string;
-  year: string;
-  tags: string[];
-};
-
-const POOL: Cand[] = [
-  { refId: 'beatles', title: 'The Beatles', creator: 'The Beatles', year: '1960s', tags: ['rock', 'british', '1960s', 'melancholy'] },
-  { refId: 'stones', title: 'The Rolling Stones', creator: 'The Rolling Stones', year: '1960s', tags: ['rock', 'british', '1960s', 'energetic'] },
-  { refId: 'floyd', title: 'Pink Floyd', creator: 'Pink Floyd', year: '1970s', tags: ['rock', '1970s', 'focused', 'melancholy'] },
-  { refId: 'queen', title: 'Queen', creator: 'Queen', year: '1970s', tags: ['rock', '1970s', 'energetic'] },
-  { refId: 'radiohead', title: 'Radiohead', creator: 'Radiohead', year: '1990s', tags: ['indie', 'rock', '1990s', 'melancholy', 'british'] },
-  { refId: 'nirvana', title: 'Nirvana', creator: 'Nirvana', year: '1990s', tags: ['indie', 'rock', '1990s', 'energetic'] },
-  { refId: 'daft', title: 'Daft Punk', creator: 'Daft Punk', year: '2000s', tags: ['electronic', '2000s', 'focused', 'party'] },
-  { refId: 'aphex', title: 'Aphex Twin', creator: 'Aphex Twin', year: '1990s', tags: ['electronic', '1990s', 'focused', 'ambient'] },
-  { refId: 'kdot', title: 'Kendrick Lamar', creator: 'Kendrick Lamar', year: '2010s', tags: ['hiphop', '2010s', 'lyrical', 'energetic'] },
-  { refId: 'miles', title: 'Miles Davis', creator: 'Miles Davis', year: '1970s', tags: ['jazz', '1970s', 'instrumental', 'focused'] },
-  { refId: 'beethoven', title: 'Ludwig van Beethoven', creator: 'Beethoven', year: '1800s', tags: ['classical', 'piano', 'romantic', 'melancholy', 'focused'] },
-];
+import { MUSIC_ITEMS } from '@/lib/media/generated-music';
+import { GAME_ITEMS } from '@/lib/media/generated-games';
+import type { CurationItem } from '@/lib/media/musicbrainz';
 
 const MOODS = ['relaxed', 'focused', 'energetic', 'melancholy', 'party'];
-const DECADES = ['1960s', '1970s', '1990s', '2000s', '2010s'];
-const GENRES = ['rock', 'electronic', 'jazz', 'hiphop', 'classical', 'indie'];
+const DECADES = ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s'];
+const GENRES = ['rock', 'electronic', 'jazz', 'hiphop', 'classical', 'indie', 'ambient', 'soul'];
 
 export function PlaylistGenerator() {
+  const [mode, setMode] = useState<'music' | 'game'>('music');
   const [mood, setMood] = useState('relaxed');
   const [decade, setDecade] = useState('');
   const [genre, setGenre] = useState('');
-  const [result, setResult] = useState<Cand[] | null>(null);
+  const [result, setResult] = useState<CurationItem[] | null>(null);
+
+  const pool = mode === 'music' ? MUSIC_ITEMS : GAME_ITEMS;
 
   function build() {
-    const scored = POOL.map((c) => {
-      let s = 0;
-      const tags = c.tags.map((t) => t.toLowerCase());
-      if (mood && tags.includes(mood)) s += 3;
-      if (genre && tags.includes(genre)) s += 2;
-      if (decade && c.year.startsWith(decade.slice(0, 3))) s += 1;
-      return { c, s };
-    })
+    const scored = pool
+      .map((it) => {
+        let s = 0;
+        const tags = (it.tags || []).map((t) => t.toLowerCase());
+        if (mood && tags.includes(mood)) s += 3;
+        if (genre && tags.includes(genre)) s += 2;
+        if (decade && it.year && it.year.startsWith(decade.slice(0, 3))) s += 1;
+        return { it, s };
+      })
       .filter((x) => x.s > 0)
       .sort((a, b) => b.s - a.s)
-      .slice(0, 12)
-      .map((x) => x.c);
+      .slice(0, 20)
+      .map((x) => x.it);
     setResult(scored);
   }
 
   return (
     <div className="gen-box">
-      <h3 style={{ marginTop: 0 }}>Build your playlist</h3>
+      <h3 style={{ marginTop: 0 }}>Build your {mode === 'music' ? 'playlist' : 'gamelist'}</h3>
       <p className="muted" style={{ marginBottom: 4 }}>
-        Pick a mood and optionally a decade or genre. We&apos;ll assemble a starter list from
-        our curated pool — the full generator connects to MusicBrainz metadata on launch.
+        Pick a mood and optionally a decade or genre. We assemble a starter list from our
+        curated catalog with real metadata.
+        {pool.length === 0 && ' (catalog populating — demo mode active)'}
       </p>
+
+      <div style={{ display: 'flex', gap: 8, margin: '8px 0 4px' }}>
+        <button
+          onClick={() => setMode('music')}
+          className="gen-btn"
+          style={{ background: mode === 'music' ? 'var(--violet-600)' : 'var(--line-strong)', margin: 0 }}
+        >
+          🎵 Music
+        </button>
+        <button
+          onClick={() => setMode('game')}
+          className="gen-btn"
+          style={{ background: mode === 'game' ? 'var(--violet-600)' : 'var(--line-strong)', margin: 0 }}
+        >
+          🎮 Games
+        </button>
+      </div>
 
       <label>Mood *</label>
       <select value={mood} onChange={(e) => setMood(e.target.value)}>
         {MOODS.map((m) => (
-          <option key={m} value={m}>
-            {m}
-          </option>
+          <option key={m} value={m}>{m}</option>
         ))}
       </select>
 
@@ -72,9 +71,7 @@ export function PlaylistGenerator() {
       <select value={decade} onChange={(e) => setDecade(e.target.value)}>
         <option value="">any</option>
         {DECADES.map((d) => (
-          <option key={d} value={d}>
-            {d}
-          </option>
+          <option key={d} value={d}>{d}</option>
         ))}
       </select>
 
@@ -82,15 +79,11 @@ export function PlaylistGenerator() {
       <select value={genre} onChange={(e) => setGenre(e.target.value)}>
         <option value="">any</option>
         {GENRES.map((g) => (
-          <option key={g} value={g}>
-            {g}
-          </option>
+          <option key={g} value={g}>{g}</option>
         ))}
       </select>
 
-      <button className="gen-btn" onClick={build}>
-        Generate playlist
-      </button>
+      <button className="gen-btn" onClick={build}>Generate</button>
 
       {result && (
         <div className="playlist-out">
@@ -103,22 +96,16 @@ export function PlaylistGenerator() {
               <div>
                 <div style={{ fontWeight: 700 }}>{c.title}</div>
                 <div className="muted" style={{ fontSize: 12.5 }}>
-                  {c.creator} · {c.year}
+                  {c.creator}{c.year ? ` · ${c.year}` : ''}
                 </div>
                 <div style={{ marginTop: 3 }}>
-                  {c.tags.map((t) => (
-                    <span key={t} className="tag-chip">
-                      {t}
-                    </span>
+                  {c.tags.slice(0, 5).map((t) => (
+                    <span key={t} className="tag-chip">{t}</span>
                   ))}
                 </div>
               </div>
             </div>
           ))}
-          <p className="muted" style={{ marginTop: 10 }}>
-            This is a demo pool. The production generator scores against the full MusicBrainz
-            catalog with real release metadata.
-          </p>
         </div>
       )}
     </div>
