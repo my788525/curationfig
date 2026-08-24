@@ -2,9 +2,9 @@
 import { useState } from 'react';
 
 // 轻量邮件订阅钩子（Web3Forms，无需后端）。
-// access_key 为 Web3Forms 免费前端 key；替换为你自己在 web3forms.com 注册的 key 即可接收订阅邮件。
+// access_key 为 Web3Forms 免费前端 key（用户已在 web3forms.com 注册）。
 // 提供复访理由：新策展清单 / pillar 指南上线时通知订阅者。
-const ACCESS_KEY = 'curationfig_newsletter_placeholder';
+const ACCESS_KEY = '72efa0d6-c588-452d-9732-1097c2e89c8a';
 
 export function Newsletter() {
   const [email, setEmail] = useState('');
