@@ -69,6 +69,7 @@ p { margin: 0 0 1em; }
 .hero { color: #fff; padding: 72px 0 60px; position: relative; overflow: hidden; background: linear-gradient(135deg, #2a1f3d 0%, #4a2a6e 55%, #6f3aa0 100%); }
 .hero.has-bg { background-image: linear-gradient(rgba(22,19,31,.74), rgba(22,19,31,.62)), var(--hero-img); background-size: cover; background-position: center; }
 .hero-inner { position: relative; z-index: 1; }
+.eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 600; color: var(--violet-200, #d8c7f5); margin: 0 0 10px; opacity: .92; }
 .hero h1 { color: #fff; max-width: 760px; text-shadow: 0 2px 18px rgba(0,0,0,.35); }
 .hero p { color: #ece6f5; font-size: 18px; max-width: 660px; text-shadow: 0 1px 10px rgba(0,0,0,.3); }
 .hero .pill-row { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }

@@ -31,6 +31,15 @@ const orgLd = {
       url: SITE.domain,
       description: SITE.description,
       sameAs: [SITE.org],
+      brand: { '@id': `${SITE.domain}/#brand` },
+    },
+    {
+      '@type': 'Brand',
+      '@id': `${SITE.domain}/#brand`,
+      name: SITE.name,
+      url: SITE.domain,
+      slogan: 'A point of view, not a database.',
+      logo: `${SITE.domain}/favicon.svg`,
     },
     {
       '@type': 'WebSite',

@@ -39,12 +39,14 @@ export default function HomePage() {
     <>
       <section className="hero has-bg" style={{ ['--hero-img' as string]: "url('/images/hero/hero-home.webp')" } as React.CSSProperties}>
         <div className="wrap hero-inner">
+          <p className="eyebrow">CurationFig · editorial discovery</p>
           <h1 className="grad-text">Find media by mood &amp; theme.</h1>
           <p>
-            One filter for the things you watch, play, and listen to. Tell us the feeling
-            you&apos;re chasing — lonely Tuesday, golden-hour drive, midnight dread — and we
-            connect the film, the series, the game, and the record that fit it. Not four
-            separate apps. One mood, four mediums.
+            CurationFig is one filter for the things you watch, play, and listen to. Tell us the
+            feeling you&apos;re chasing — lonely Tuesday, golden-hour drive, midnight dread — and
+            we connect the film, the series, the game, and the record that fit it. Not four
+            separate apps. One mood, four mediums. Every list carries a point of view, not just a
+            database dump.
           </p>
           <div className="pill-row">
             <Reveal className="pill-row" itemClassName="reveal-item">
