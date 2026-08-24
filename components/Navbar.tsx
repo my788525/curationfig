@@ -20,7 +20,7 @@ export function Navbar() {
               {c.label}{c.live ? '' : ' · soon'}
             </Link>
           ))}
-          <Link href="/tools/playlist/">Generator</Link>
+          <Link href="/tools/">Tools</Link>
           <Link href="/data/">Data & Sources</Link>
           <Link href="/about/">About</Link>
         </nav>

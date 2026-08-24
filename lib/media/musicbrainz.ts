@@ -36,6 +36,7 @@ export type CurationItem = {
   cover?: string | null; // 本地化封面路径
   url: string; // 站内条目卡路径
   seedName?: string; // 种子名（用于专题页精确匹配，避免规范名变体导致漏匹配）
+  why?: string; // 手写 editorial 推荐理由（可选；缺省时用 itemBlurb 程序化生成）
 };
 
 export const MB_API = 'https://musicbrainz.org/ws/2';

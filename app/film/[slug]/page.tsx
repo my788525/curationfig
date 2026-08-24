@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { FILM_THEMES } from '@/lib/media/curation';
+import { FILM_THEMES, itemBlurb } from '@/lib/media/curation';
 import { FILM_ITEMS } from '@/lib/media/generated-film';
 import type { CurationItem } from '@/lib/media/musicbrainz';
+import { CopyListButton } from '@/components/CopyListButton';
 
 export function generateStaticParams() {
   return FILM_THEMES.map((t) => ({ slug: t.slug }));
@@ -87,18 +88,35 @@ export default function FilmThemePage({ params }: { params: { slug: string } }) 
 
         {items.length > 0 && (
           <div style={{ marginTop: 26 }}>
-            <h2 style={{ fontSize: '1.2rem' }}>The list</h2>
-            <div className="grid grid-3">
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 12 }}>
+              <h2 style={{ fontSize: '1.2rem', margin: 0 }}>The list</h2>
+              <CopyListButton
+                titles={items.map((it) => it.title)}
+                meta={items.map((it) => `${it.creator}${it.year ? ` (${it.year})` : ''}`)}
+                label="Copy titles"
+              />
+            </div>
+            <div className="item-rows">
               {items.map((it) => (
-                <div key={it.refId} className="item-card">
-                  {it.cover ? (
-                    <img src={it.cover} alt={`${it.title} poster`} loading="lazy" />
-                  ) : (
-                    <div style={{ aspectRatio: 1, background: 'var(--bg-soft)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--ink-300)', fontSize: 13 }}>no art</div>
-                  )}
-                  <div className="body">
+                <div key={it.refId} className="item-row">
+                  <div className="thumb">
+                    {it.cover ? (
+                      <img src={it.cover} alt={`${it.title} poster`} loading="lazy" />
+                    ) : (
+                      <div className="thumb-empty">no art</div>
+                    )}
+                  </div>
+                  <div className="meta">
                     <div className="name">{it.title}</div>
                     <div className="sub">{it.creator}{it.year ? ` · ${it.year}` : ''}</div>
+                    {it.tags.length > 0 && (
+                      <div className="row-tags">
+                        {it.tags.slice(0, 4).map((tag) => (
+                          <span key={tag} className="tag-chip">{tag}</span>
+                        ))}
+                      </div>
+                    )}
+                    <p className="why">{itemBlurb(it, t.thesis)}</p>
                   </div>
                 </div>
               ))}

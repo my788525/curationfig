@@ -29,7 +29,10 @@ export function Footer() {
           <div>
             <h4>Tools</h4>
             <ul>
+              <li><Link href="/tools/">All tools</Link></li>
               <li><Link href="/tools/playlist/">Playlist Generator</Link></li>
+              <li><Link href="/tools/tastetwin/">Taste Twin</Link></li>
+              <li><Link href="/tools/wheretogo/">Where to find it</Link></li>
               <li><Link href="/data/">Data &amp; Sources</Link></li>
             </ul>
           </div>

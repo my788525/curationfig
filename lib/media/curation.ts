@@ -42,6 +42,51 @@ export function generateList(items: CurationItem[], input: GeneratorInput): Cura
     .map((s) => s.it);
 }
 
+// ===== 条目 editorial 解释（抗 AIO 武器：为什么推荐这条） =====
+// 优先用种子手写 why；缺省时由真实元数据 + 专题 thesis 程序化派生 1-2 句解释。
+// 真实信息（creator/year/tags）来自数据源，thesis 来自 editorial 定义——组合后非空泛。
+const CHANNEL_NOUN: Record<Channel, string> = {
+  music: 'record',
+  game: 'game',
+  film: 'film',
+  tv: 'series',
+};
+
+export function itemBlurb(item: CurationItem, thesis?: string): string {
+  if (item.why && item.why.trim()) return item.why.trim();
+
+  const noun = CHANNEL_NOUN[item.source];
+  const year = item.year ? ` (${item.year})` : '';
+  const lead = `${item.title}${year} by ${item.creator}`;
+  const tags = (item.tags || []).filter(Boolean);
+  const tagPhrase =
+    tags.length > 0
+      ? tags.slice(0, 3).join(', ')
+      : noun;
+
+  const openers = [
+    `A ${tagPhrase} ${noun} that earns its place`,
+    `What makes this ${noun} worth your time`,
+    `The case for this ${tagPhrase} ${noun}`,
+    `Why this ${noun} belongs on the list`,
+  ];
+  const opener = openers[Math.abs(hashStr(item.refId)) % openers.length];
+
+  let tail = '';
+  if (thesis && thesis.trim()) {
+    tail = ` — ${thesis.replace(/\.$/, '')}, and this entry is the clearest proof of that argument.`;
+  } else {
+    tail = ` — its ${tagPhrase} character is exactly what this curation is built to surface, not the stats a wiki already lists.`;
+  }
+  return `${opener}: ${lead}${tail}`;
+}
+
+function hashStr(s: string): number {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
+  return h;
+}
+
 // ===== 策展专题（每频道 50 条，editorial 定义，条目名种子构建期解析） =====
 import { MUSIC_THEMES } from './seeds-music';
 import { GAME_THEMES } from './seeds-games';

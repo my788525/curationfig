@@ -5,7 +5,7 @@ import { MUSIC_THEMES, GAME_THEMES, FILM_THEMES, TV_THEMES } from '@/lib/media/c
 const base = SITE.domain; // 无尾斜杠（baseUrl 铁律）
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ['', '/music/', '/games/', '/film/', '/tv/', '/tools/playlist/', '/data/', '/about/'];
+  const staticRoutes = ['', '/music/', '/games/', '/film/', '/tv/', '/tools/', '/tools/playlist/', '/tools/tastetwin/', '/tools/wheretogo/', '/data/', '/about/'];
   const musicThemeRoutes = MUSIC_THEMES.map((t) => `/music/${t.slug}/`);
   const gameThemeRoutes = GAME_THEMES.map((t) => `/games/${t.slug}/`);
   const filmThemeRoutes = FILM_THEMES.map((t) => `/film/${t.slug}/`);
