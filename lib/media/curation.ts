@@ -11,6 +11,8 @@ export type CurationTheme = {
   // editorial 主观逻辑——这是 AI 摘不了的核心价值（护城河）
   thesis: string; // "为什么这些该放一起"
   intro: string;
+  // 跨频道情绪专题专用：口语化"为什么这四种媒介能串成一个情绪"的对比说明
+  compare?: string;
   tags: string[]; // 用于生成器匹配
   // 关联的策展条目（名称种子，构建期由数据源解析为元数据）
   items: string[];
@@ -92,11 +94,13 @@ import { MUSIC_THEMES } from './seeds-music';
 import { GAME_THEMES } from './seeds-games';
 import { FILM_THEMES } from './seeds-film';
 import { TV_THEMES } from './seeds-tv';
+import { MOOD_THEMES } from './seeds-moods';
 
-export { MUSIC_THEMES, GAME_THEMES, FILM_THEMES, TV_THEMES };
+export { MUSIC_THEMES, GAME_THEMES, FILM_THEMES, TV_THEMES, MOOD_THEMES };
 
 // 合并生成器候选池（四个频道全部并入）
 export const ALL_THEMES: CurationTheme[] = [
+  ...MOOD_THEMES, // 情绪中枢放最前，作为"按情绪/氛围"定位的门面
   ...MUSIC_THEMES,
   ...GAME_THEMES,
   ...FILM_THEMES,

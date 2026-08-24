@@ -87,6 +87,13 @@ export default function GameThemePage({ params }: { params: { slug: string } }) 
           </div>
         </div>
 
+        {t.compare && (
+          <div className="card" style={{ marginTop: 14, borderLeft: '4px solid var(--violet-500)' }}>
+            <h2 style={{ fontSize: '1.15rem' }}>Why these four mediums, one mood</h2>
+            <p style={{ fontSize: 16 }}>{t.compare}</p>
+          </div>
+        )}
+
         {items.length > 0 && (
           <div style={{ marginTop: 26 }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>

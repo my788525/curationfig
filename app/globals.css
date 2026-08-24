@@ -84,7 +84,28 @@ p { margin: 0 0 1em; }
 .grid { display: grid; gap: 16px; }
 .grid-2 { grid-template-columns: 1fr 1fr; }
 .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
-@media (max-width: 820px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1060px) { .grid-4 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 820px) { .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; } }
+
+/* 情绪中枢入口卡 */
+.mood-chip { display: block; text-decoration: none; color: inherit; transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+.mood-chip:hover { transform: translateY(-4px); box-shadow: 0 14px 32px rgba(111,58,160,.18); border-color: var(--violet-500); text-decoration: none; }
+.mood-chip h3 { color: var(--violet-700); margin-bottom: 7px; font-size: 1.02rem; }
+.mood-chip .thesis { color: var(--ink-500); font-size: 13px; }
+
+/* 首页四频道展示卡 */
+.channel-showcase { display: flex; flex-direction: column; gap: 14px; }
+.cs-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.cs-label { font-weight: 800; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--violet-600); }
+.cs-feature { display: block; text-decoration: none; color: inherit; padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--bg-soft); transition: border-color .15s ease, background .15s ease; }
+.cs-feature:hover { border-color: var(--violet-500); background: var(--violet-50); text-decoration: none; }
+.cs-feature h3 { color: var(--violet-700); margin: 0 0 6px; }
+.cs-foot { margin-top: auto; display: flex; }
+
+/* Marquee 跑马灯区 */
+.marquee-band { padding: 26px 0 30px; background: linear-gradient(180deg, rgba(111,58,160,.05), rgba(201,64,127,.04)); }
+.marquee-band-h { font-size: 1.25rem; margin: 0 0 14px; padding-left: 4px; }
 
 .theme-card { display: block; transition: transform .12s ease, box-shadow .12s ease; }
 .theme-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(22,19,31,.12); text-decoration: none; }

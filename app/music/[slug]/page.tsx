@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { MUSIC_THEMES, itemBlurb } from '@/lib/media/curation';
+import { MUSIC_THEMES, MOOD_THEMES, itemBlurb } from '@/lib/media/curation';
 import { MUSIC_ITEMS } from '@/lib/media/generated-music';
 import type { CurationItem } from '@/lib/media/musicbrainz';
 import { CopyListButton } from '@/components/CopyListButton';
 import Reveal from '@/components/Reveal';
 
 export function generateStaticParams() {
-  return MUSIC_THEMES.map((t) => ({ slug: t.slug }));
+  return [...MUSIC_THEMES, ...MOOD_THEMES].map((t) => ({ slug: t.slug }));
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
@@ -87,6 +87,13 @@ export default function MusicThemePage({ params }: { params: { slug: string } })
             ))}
           </div>
         </div>
+
+        {t.compare && (
+          <div className="card" style={{ marginTop: 14, borderLeft: '4px solid var(--violet-500)' }}>
+            <h2 style={{ fontSize: '1.15rem' }}>Why these four mediums, one mood</h2>
+            <p style={{ fontSize: 16 }}>{t.compare}</p>
+          </div>
+        )}
 
         {items.length > 0 && (
           <div style={{ marginTop: 26 }}>

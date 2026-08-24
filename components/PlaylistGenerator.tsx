@@ -106,7 +106,7 @@ export function PlaylistGenerator() {
       {/* Right: result */}
       <div className="gen-result">
         {result ? (
-          <div className="card" style={{ padding: 18 }}>
+          <div className="card gen-pop" key={result.length + mode} style={{ padding: 18 }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 10 }}>
               <h3 style={{ margin: 0, fontSize: '1.05rem' }}>Your starter list ({result.length})</h3>
               <CopyListButton

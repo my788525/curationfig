@@ -164,3 +164,74 @@
     transform: none !important;
   }
 }
+
+/* ---------- 7. 3D tilt 卡片 ---------- */
+.tilt-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform .25s cubic-bezier(.22,.61,.36,1);
+  will-change: transform;
+}
+.tilt-glare {
+  position: absolute; inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .25s ease;
+  mix-blend-mode: screen;
+  z-index: 2;
+}
+/* hover 时给卡片容器一点 perspective 兜底（父未设时仍立体） */
+.grid .tilt-card:hover,
+.item-row:hover { perspective: 900px; }
+
+/* ---------- 8. 横向无缝跑马灯 ---------- */
+.marquee { width: 100%; overflow: hidden; }
+.marquee-lane { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.marquee-label {
+  flex: 0 0 64px;
+  font-size: 12px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase;
+  color: var(--violet-600);
+  text-align: right; padding-right: 8px;
+}
+.marquee-track-wrap { flex: 1 1 auto; overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); }
+.marquee-track {
+  display: flex; gap: 12px; width: max-content;
+  animation: marqueeScroll 38s linear infinite;
+}
+.marquee-track.slow { animation-duration: 60s; }
+.marquee-track.paused { animation-play-state: paused; }
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.mq-card { flex: 0 0 150px; width: 150px; border-radius: var(--radius-sm); }
+.mq-link { display: block; text-decoration: none; color: inherit; }
+.mq-cover { width: 100%; aspect-ratio: 1; border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-soft); border: 1px solid var(--line); }
+.mq-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mq-cover-empty {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--violet-600), var(--pink-600));
+  color: #fff; font-weight: 800; font-size: 12px; letter-spacing: .06em; text-transform: uppercase;
+}
+.mq-meta { padding: 7px 2px 2px; }
+.mq-title { font-weight: 700; font-size: 13px; line-height: 1.25; color: var(--ink-900); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mq-sub { font-size: 11.5px; color: var(--ink-500); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 1px; }
+
+/* ---------- 9. 生成器结果弹入 ---------- */
+.gen-pop { animation: popIn .42s cubic-bezier(.22,1.2,.36,1) both; transform-origin: top center; }
+@keyframes popIn {
+  0%   { opacity: 0; transform: translateY(14px) scale(.96); }
+  60%  { opacity: 1; transform: translateY(-2px) scale(1.01); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ---------- 无障碍：扩展降级（含新增动画） ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none !important; }
+  .marquee-track-wrap { overflow-x: auto; }
+  .tilt-card { transition: none !important; transform: none !important; }
+  .tilt-glare { display: none !important; }
+  .gen-pop { animation: none !important; }
+}
