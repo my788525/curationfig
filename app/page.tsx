@@ -75,10 +75,10 @@ export default function HomePage() {
         </div>
         <Marquee
           lanes={[
-            { label: 'Music', cards: marqueeByChannel.music },
-            { label: 'Games', cards: marqueeByChannel.game },
-            { label: 'Film', cards: marqueeByChannel.film },
-            { label: 'TV', cards: marqueeByChannel.tv },
+            { label: 'Music', href: '/music/', cards: marqueeByChannel.music },
+            { label: 'Games', href: '/games/', cards: marqueeByChannel.game },
+            { label: 'Film', href: '/film/', cards: marqueeByChannel.film },
+            { label: 'TV', href: '/tv/', cards: marqueeByChannel.tv },
           ]}
         />
       </section>

@@ -40,7 +40,7 @@ export default function FilmHub() {
         <div className="wrap">
           <h2 className="marquee-band-h">Popular right now</h2>
         </div>
-        <Marquee lanes={[{ label: 'Film', cards: cards(FILM_ITEMS) }]} />
+        <Marquee lanes={[{ label: 'Film', href: '/film/', cards: cards(FILM_ITEMS) }]} />
       </section>
 
       <section className="section">

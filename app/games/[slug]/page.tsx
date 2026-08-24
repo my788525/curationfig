@@ -13,6 +13,7 @@ import {
   channelHref,
 } from '@/lib/media/curation';
 import { GAME_ITEMS } from '@/lib/media/generated-games';
+import { STEAM_REVIEWS } from '@/lib/media/steam-reviews';
 import type { CurationItem } from '@/lib/media/musicbrainz';
 import { CopyListButton } from '@/components/CopyListButton';
 import Reveal from '@/components/Reveal';
@@ -43,7 +44,14 @@ export default function GameThemePage({ params }: { params: { slug: string } }) 
   const missing: string[] = [];
   for (const name of t.items) {
     const hit = itemsBySeed.get(name.toLowerCase());
-    if (hit) items.push({ ...hit, editorialNote: t.editorialNotes?.[name] });
+    if (hit) {
+      const sr = STEAM_REVIEWS[hit.refId];
+      const steamTake = sr && sr.scoreDesc
+        ? `Steam players rate this "${sr.scoreDesc}" — ${sr.pct}% of ${sr.total.toLocaleString()} reviews are positive.` +
+          (sr.topReview ? ` One player summed it up: "${sr.topReview}" (👍 ${sr.topVotes.toLocaleString()} found this helpful)` : '')
+        : t.editorialNotes?.[name];
+      items.push({ ...hit, editorialNote: steamTake });
+    }
     else missing.push(name);
   }
 

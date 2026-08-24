@@ -40,7 +40,7 @@ export default function GamesHub() {
         <div className="wrap">
           <h2 className="marquee-band-h">Popular right now</h2>
         </div>
-        <Marquee lanes={[{ label: 'Games', cards: cards(GAME_ITEMS) }]} />
+        <Marquee lanes={[{ label: 'Games', href: '/games/', cards: cards(GAME_ITEMS) }]} />
       </section>
 
       <section className="section">

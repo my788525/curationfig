@@ -40,7 +40,7 @@ export default function MusicHub() {
         <div className="wrap">
           <h2 className="marquee-band-h">Popular right now</h2>
         </div>
-        <Marquee lanes={[{ label: 'Music', cards: cards(MUSIC_ITEMS) }]} />
+        <Marquee lanes={[{ label: 'Music', href: '/music/', cards: cards(MUSIC_ITEMS) }]} />
       </section>
 
       <section className="section">

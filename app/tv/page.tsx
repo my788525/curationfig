@@ -43,7 +43,7 @@ export default function TvHub() {
         <div className="wrap">
           <h2 className="marquee-band-h">Popular right now</h2>
         </div>
-        <Marquee lanes={[{ label: 'TV', cards: TV_ITEMS.filter((i) => i.cover).length ? [] : tvCards() }]} />
+        <Marquee lanes={[{ label: 'TV', href: '/tv/', cards: TV_ITEMS.filter((i) => i.cover).length ? [] : tvCards() }]} />
       </section>
 
       <section className="section">

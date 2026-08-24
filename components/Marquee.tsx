@@ -13,6 +13,7 @@ export type MarqueeCard = {
 
 export type MarqueeLane = {
   label: string;
+  href?: string;
   cards: MarqueeCard[];
 };
 
@@ -28,14 +29,20 @@ export default function Marquee({ lanes }: { lanes: MarqueeLane[] }) {
 
   return (
     <div className="marquee" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-      {lanes.map((lane) => (
+      {lanes.map((lane, li) => (
         <div className="marquee-lane" key={lane.label}>
-          <div className="marquee-label">{lane.label}</div>
+          {lane.href ? (
+            <Link href={lane.href} className="marquee-label marquee-label-link">
+              {lane.label}
+            </Link>
+          ) : (
+            <div className="marquee-label">{lane.label}</div>
+          )}
           <div className="marquee-track-wrap">
             <div
               className={`marquee-track ${paused ? 'paused' : ''} ${
                 lane.cards.length < 8 ? 'slow' : ''
-              }`}
+              } ${li % 2 === 1 ? 'reverse' : ''}`}
             >
               {[...lane.cards, ...lane.cards].map((c, i) => (
                 <TiltCard key={`${lane.label}-${i}`} as="div" className="mq-card">
