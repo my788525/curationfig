@@ -1,6 +1,6 @@
-// ===== RAWG 类型 + API 常量（游戏数据源，替代 IGDB） =====
-// 数据源：RAWG.io（免费层 45k req/月，邮箱注册即发 key，无手机验证）
-// 授权：署名即可（构建期拉取元数据 + 封面，不热链 → 本地化 WebP）
+// ===== RAWG 类型 + API 常量（游戏数据源，已弃用） =====
+// 历史：RAWG.io 免费层严重限流（429 频繁，wait 超 100s），2026-08-24 起 games 管道迁 Steam Store API（无需 key、无限流）。
+// 现有类型保留供参考；实际数据由 scripts/fetch-steam.mjs 经 Steam 生成 generated-games.ts。
 // 红线：只策展不攻略（不拉取数值/配装/速通数据）
 
 export type RAWGGame = {

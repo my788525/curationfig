@@ -10,7 +10,7 @@
     "lint": "next lint",
     "search:index": "pagefind --site out",
     "fetch:music": "node scripts/fetch-musicbrainz.mjs",
-    "fetch:games": "node scripts/fetch-rawg.mjs",
+    "fetch:games": "node scripts/fetch-steam.mjs",
     "fetch:tmdb": "node scripts/fetch-tmdb.mjs",
     "gen:music-seed": "node scripts/gen-music-seed.mjs"
   },

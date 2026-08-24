@@ -23,9 +23,9 @@ async function loadThemes(channel, file) {
 function shapeTheme(channel, t) {
   const sources = {
     music: 'MusicBrainz (CC0)',
-    games: 'RAWG (attribution required)',
-    film: 'TMDB (attribution required)',
-    tv: 'TMDB (attribution required)',
+    games: 'Steam Store API (attribution required)',
+    film: 'OMDb API (attribution required)',
+    tv: 'TVmaze API (attribution required)',
   }[channel];
   return {
     channel,

@@ -3,8 +3,9 @@
 // 生成 public/data/film-items.json + public/data/tv-items.json + lib/media/generated-film.ts + lib/media/generated-tv.ts
 //
 // ⚠️ 2026-08-24 迁移说明：film 已迁 OMDb (scripts/fetch-omdb.mjs)，TV 已迁 TVmaze (scripts/fetch-tvmaze.mjs)。
-// 本脚本仅保留作历史参考 / RAWG 限流解除后 games 续跑用（见 fetch-rawg.mjs）。
-// 当前站点数据：film=OMDb, tv=TVmaze, music=MusicBrainz, games=RAWG(部分,限流中)。
+// games 已迁 Steam Store API (scripts/fetch-steam.mjs) — RAWG 免费层严重限流，弃用。
+// 当前站点数据源：film=OMDb, tv=TVmaze, music=MusicBrainz, games=Steam。
+// 本脚本仅保留作历史参考，不再用于生产管道。
 import { execFileSync } from 'node:child_process';
 import { writeFileSync as wf, mkdirSync as mk, existsSync as ex, readFileSync as rf } from 'node:fs';
 import { join, dirname } from 'node:path';
