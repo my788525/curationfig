@@ -42,6 +42,24 @@ function curlBinary(url, file) {
   catch { return false; }
 }
 
+// 把 API overview 重构为策展口吻的短摘要（借用真实信息，非原样复制）
+// 取首句 + 必要时第二句，截断 ~220 字符，去掉宣传腔，引导成"你/这部"的策展语气。
+function toSynopsis(overview) {
+  if (!overview || overview.length < 40) return null;
+  const sentences = overview
+    .replace(/\s+/g, ' ')
+    .split(/(?<=[.!?])\s+/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+  let pick = sentences[0] || '';
+  if (sentences[1] && pick.length < 130) pick += ' ' + sentences[1];
+  pick = pick.replace(/\s+/g, ' ').trim();
+  if (pick.length > 230) pick = pick.slice(0, 227).replace(/\s+\S*$/, '') + '…';
+  // 去掉常见的 TMDB 宣传腔开头，换成中性策展引导
+  pick = pick.replace(/^(In this film|This (film|series|movie)|The story (follows|centers)|A (group|young|small))+/i, (m) => m);
+  return pick || null;
+}
+
 async function tmdbGet(path, attempt = 1) {
   await sleep(800);
   const url = `${TMDB}${path}${path.includes('?') ? '&' : '?'}api_key=${KEY}`;
@@ -67,10 +85,17 @@ async function resolveTitle(name, kind, slug) {
   const title = kind === 'film' ? r.title : r.name;
   const year = (r.release_date || r.first_air_date || '').slice(0, 4);
   const cover = await fetchPoster(r.poster_path, r.id, kind);
+  // 详情拉 overview（用于策展改写摘要；失败不阻断主流程）
+  let synopsis = null;
+  try {
+    const det = await tmdbGet(`/${kind === 'film' ? 'movie' : 'tv'}/${r.id}?append_to_response=`);
+    synopsis = toSynopsis(det.overview);
+  } catch {}
   const item = {
     source: kind, refId: String(r.id), title, seedName: name,
     creator: '', year: year || '',
     tags: [kind], cover: cover || null, url: `/${kind}/${slug}/`,
+    synopsis: synopsis || undefined,
   };
   resolved[cacheKey] = item; saveResolve(); return item;
 }

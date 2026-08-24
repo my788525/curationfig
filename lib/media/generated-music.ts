@@ -106,7 +106,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1970s",
       "instrumental"
     ],
-    "cover": "/images/music/music-db58d2a9.webp",
+    "cover": null,
     "url": "/music/cosmic-jazz"
   },
   {
@@ -121,7 +121,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1970s",
       "instrumental"
     ],
-    "cover": "/images/music/music-c35e782d.webp",
+    "cover": null,
     "url": "/music/cosmic-jazz"
   },
   {
@@ -151,7 +151,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1970s",
       "instrumental"
     ],
-    "cover": "/images/music/music-2029015a.webp",
+    "cover": null,
     "url": "/music/cosmic-jazz"
   },
   {
@@ -345,7 +345,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "2010s",
       "lyrical"
     ],
-    "cover": "/images/music/music-5c1b80d3.webp",
+    "cover": null,
     "url": "/music/hiphop-storytelling"
   },
   {
@@ -375,7 +375,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "piano",
       "romantic"
     ],
-    "cover": "/images/music/music-d4aad049.webp",
+    "cover": null,
     "url": "/music/classical-rainy-window"
   },
   {
@@ -434,7 +434,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "piano",
       "romantic"
     ],
-    "cover": "/images/music/music-46e86c38.webp",
+    "cover": null,
     "url": "/music/classical-rainy-window"
   },
   {
@@ -497,7 +497,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1980s",
       "detroit"
     ],
-    "cover": "/images/music/music-3c35110d.webp",
+    "cover": null,
     "url": "/music/detroit-techno-origin"
   },
   {
@@ -528,7 +528,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1980s",
       "detroit"
     ],
-    "cover": "/images/music/music-0440807c.webp",
+    "cover": null,
     "url": "/music/detroit-techno-origin"
   },
   {
@@ -620,7 +620,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1960s",
       "acoustic"
     ],
-    "cover": "/images/music/music-a78036db.webp",
+    "cover": null,
     "url": "/music/brazilian-bossa"
   },
   {
@@ -726,7 +726,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1980s",
       "uk"
     ],
-    "cover": "/images/music/music-39bcf836.webp",
+    "cover": null,
     "url": "/music/post-punk-uk"
   },
   {
@@ -773,7 +773,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1980s",
       "uk"
     ],
-    "cover": "/images/music/music-8148b492.webp",
+    "cover": null,
     "url": "/music/post-punk-uk"
   },
   {
@@ -807,7 +807,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1980s",
       "uk"
     ],
-    "cover": "/images/music/music-4136267a.webp",
+    "cover": null,
     "url": "/music/post-punk-uk"
   },
   {
@@ -981,7 +981,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1960s",
       "vocal"
     ],
-    "cover": "/images/music/music-ab778e7e.webp",
+    "cover": null,
     "url": "/music/soul-stax-motown"
   },
   {
@@ -1045,7 +1045,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1960s",
       "vocal"
     ],
-    "cover": "/images/music/music-b284c7ee.webp",
+    "cover": null,
     "url": "/music/soul-stax-motown"
   },
   {
@@ -1061,7 +1061,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "electronic",
       "modern classical"
     ],
-    "cover": "/images/music/music-abb53be8.webp",
+    "cover": null,
     "url": "/music/soul-stax-motown"
   },
   {
@@ -1144,7 +1144,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "2000s",
       "indie"
     ],
-    "cover": "/images/music/music-1d0b31fa.webp",
+    "cover": null,
     "url": "/music/math-rock"
   },
   {
@@ -1160,7 +1160,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "2000s",
       "indie"
     ],
-    "cover": "/images/music/music-b8eeca57.webp",
+    "cover": null,
     "url": "/music/math-rock"
   },
   {
@@ -1176,7 +1176,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "2000s",
       "indie"
     ],
-    "cover": "/images/music/music-63ea2ac2.webp",
+    "cover": null,
     "url": "/music/math-rock"
   },
   {
@@ -1221,7 +1221,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "electro",
       "progressive rock"
     ],
-    "cover": "/images/music/music-0314a08c.webp",
+    "cover": null,
     "url": "/music/math-rock"
   },
   {
@@ -1237,7 +1237,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "2010s",
       "acoustic"
     ],
-    "cover": "/images/music/music-52ec4add.webp",
+    "cover": null,
     "url": "/music/korea-indie-city"
   },
   {
@@ -1253,7 +1253,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "2010s",
       "acoustic"
     ],
-    "cover": "/images/music/music-d2a5401e.webp",
+    "cover": null,
     "url": "/music/korea-indie-city"
   },
   {
@@ -1328,7 +1328,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
     "tags": [
       "non-album single"
     ],
-    "cover": "/images/music/music-ec4d7f75.webp",
+    "cover": null,
     "url": "/music/korea-indie-city"
   },
   {
@@ -1527,7 +1527,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "chanson",
       "pop"
     ],
-    "cover": "/images/music/music-a1239438.webp",
+    "cover": null,
     "url": "/music/french-chanson"
   },
   {
@@ -1806,7 +1806,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "electronic",
       "jungle"
     ],
-    "cover": "/images/music/music-cee9200d.webp",
+    "cover": null,
     "url": "/music/reggae-roots"
   },
   {
@@ -1924,7 +1924,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "minimal",
       "instrumental"
     ],
-    "cover": "/images/music/music-577f9a9e.webp",
+    "cover": null,
     "url": "/music/minimal-piano"
   },
   {
@@ -1939,7 +1939,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "funk metal",
       "rock"
     ],
-    "cover": "/images/music/music-59af7c7e.webp",
+    "cover": null,
     "url": "/music/grunge-seattle"
   },
   {
@@ -2004,7 +2004,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1990s",
       "seattle"
     ],
-    "cover": "/images/music/music-c40f73f3.webp",
+    "cover": null,
     "url": "/music/grunge-seattle"
   },
   {
@@ -2052,7 +2052,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1990s",
       "seattle"
     ],
-    "cover": "/images/music/music-056353d4.webp",
+    "cover": null,
     "url": "/music/grunge-seattle"
   },
   {
@@ -2100,7 +2100,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1970s",
       "nigerian"
     ],
-    "cover": "/images/music/music-1944813e.webp",
+    "cover": null,
     "url": "/music/afrobeat-pioneers"
   },
   {
@@ -2116,7 +2116,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1970s",
       "nigerian"
     ],
-    "cover": "/images/music/music-24581446.webp",
+    "cover": null,
     "url": "/music/afrobeat-pioneers"
   },
   {
@@ -2146,7 +2146,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "new wave",
       "rock"
     ],
-    "cover": "/images/music/music-5c48491d.webp",
+    "cover": null,
     "url": "/music/afrobeat-pioneers"
   },
   {
@@ -2228,7 +2228,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1980s",
       "ethereal"
     ],
-    "cover": "/images/music/music-8d64b21e.webp",
+    "cover": null,
     "url": "/music/dream-pop"
   },
   {
@@ -2309,7 +2309,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1970s",
       "dance"
     ],
-    "cover": "/images/music/music-7351168a.webp",
+    "cover": null,
     "url": "/music/funk-70s"
   },
   {
@@ -2339,7 +2339,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
     "tags": [
       "hip hop"
     ],
-    "cover": "/images/music/music-d6ab4932.webp",
+    "cover": null,
     "url": "/music/funk-70s"
   },
   {
@@ -2352,7 +2352,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
     "tags": [
       "game"
     ],
-    "cover": "/images/music/music-df81c5fb.webp",
+    "cover": null,
     "url": "/music/funk-70s"
   },
   {
@@ -2381,7 +2381,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "pop",
       "rock"
     ],
-    "cover": "/images/music/music-b73d4d84.webp",
+    "cover": null,
     "url": "/music/funk-70s"
   },
   {
@@ -2424,7 +2424,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "free improvisation",
       "jazz"
     ],
-    "cover": "/images/music/music-77ce058c.webp",
+    "cover": null,
     "url": "/music/noise-rock"
   },
   {
@@ -2437,7 +2437,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
     "tags": [
       "touhou"
     ],
-    "cover": "/images/music/music-1442632f.webp",
+    "cover": null,
     "url": "/music/noise-rock"
   },
   {
@@ -2530,7 +2530,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1980s",
       "noise"
     ],
-    "cover": "/images/music/music-fad87634.webp",
+    "cover": null,
     "url": "/music/noise-rock"
   },
   {
@@ -2546,7 +2546,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1990s",
       "uk"
     ],
-    "cover": "/images/music/music-f9e5bad8.webp",
+    "cover": null,
     "url": "/music/trip-hop-bristol"
   },
   {
@@ -2631,7 +2631,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1990s",
       "uk"
     ],
-    "cover": "/images/music/music-a2d5a152.webp",
+    "cover": null,
     "url": "/music/trip-hop-bristol"
   },
   {
@@ -2680,7 +2680,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "acoustic",
       "folk"
     ],
-    "cover": "/images/music/music-5406b23e.webp",
+    "cover": null,
     "url": "/music/bluegrass-acoustic"
   },
   {
@@ -2712,7 +2712,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "acoustic",
       "folk"
     ],
-    "cover": "/images/music/music-fae60eeb.webp",
+    "cover": null,
     "url": "/music/bluegrass-acoustic"
   },
   {
@@ -2833,7 +2833,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1980s",
       "chicago"
     ],
-    "cover": "/images/music/music-17aef710.webp",
+    "cover": null,
     "url": "/music/house-chicago"
   },
   {
@@ -2849,7 +2849,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1980s",
       "chicago"
     ],
-    "cover": "/images/music/music-51ace0c2.webp",
+    "cover": null,
     "url": "/music/house-chicago"
   },
   {
@@ -2863,7 +2863,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "acid jazz",
       "jazz"
     ],
-    "cover": "/images/music/music-059d0319.webp",
+    "cover": null,
     "url": "/music/house-chicago"
   },
   {
@@ -2942,7 +2942,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1970s",
       "vocal"
     ],
-    "cover": "/images/music/music-ef32d843.webp",
+    "cover": null,
     "url": "/music/singer-songwriter-70s"
   },
   {
@@ -2986,7 +2986,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "classical",
       "pop"
     ],
-    "cover": "/images/music/music-4baa5e3f.webp",
+    "cover": null,
     "url": "/music/singer-songwriter-70s"
   },
   {
@@ -3014,7 +3014,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "deep house",
       "electronic"
     ],
-    "cover": "/images/music/music-8db4202e.webp",
+    "cover": null,
     "url": "/music/singer-songwriter-70s"
   },
   {
@@ -3074,7 +3074,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1980s",
       "pop"
     ],
-    "cover": "/images/music/music-093bb976.webp",
+    "cover": null,
     "url": "/music/japanese-citypop"
   },
   {
@@ -3090,7 +3090,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1980s",
       "pop"
     ],
-    "cover": "/images/music/music-92020736.webp",
+    "cover": null,
     "url": "/music/japanese-citypop"
   },
   {
@@ -3217,7 +3217,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "punk",
       "punk rock"
     ],
-    "cover": "/images/music/music-70889ae8.webp",
+    "cover": null,
     "url": "/music/hardcore-punk-80s"
   },
   {
@@ -3248,7 +3248,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1980s",
       "fast"
     ],
-    "cover": "/images/music/music-86cf45ff.webp",
+    "cover": null,
     "url": "/music/hardcore-punk-80s"
   },
   {
@@ -3264,7 +3264,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1980s",
       "fast"
     ],
-    "cover": "/images/music/music-ca555391.webp",
+    "cover": null,
     "url": "/music/hardcore-punk-80s"
   },
   {
@@ -3280,7 +3280,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "vocal",
       "dramatic"
     ],
-    "cover": "/images/music/music-0519ebdd.webp",
+    "cover": null,
     "url": "/music/opera-aria"
   },
   {
@@ -3296,7 +3296,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "vocal",
       "dramatic"
     ],
-    "cover": "/images/music/music-4db175f0.webp",
+    "cover": null,
     "url": "/music/opera-aria"
   },
   {
@@ -3342,7 +3342,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "jazz",
       "latin"
     ],
-    "cover": "/images/music/music-fc22422d.webp",
+    "cover": null,
     "url": "/music/opera-aria"
   },
   {
@@ -3447,7 +3447,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "new wave",
       "rock"
     ],
-    "cover": "/images/music/music-c96ddea9.webp",
+    "cover": null,
     "url": "/music/idm-breaks"
   },
   {
@@ -3542,7 +3542,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1970s",
       "american"
     ],
-    "cover": "/images/music/music-a31410c4.webp",
+    "cover": null,
     "url": "/music/country-outlaw"
   },
   {
@@ -3571,7 +3571,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
     "tags": [
       "instrumental pop"
     ],
-    "cover": "/images/music/music-2e4dfaaf.webp",
+    "cover": null,
     "url": "/music/country-outlaw"
   },
   {
@@ -3617,7 +3617,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1970s",
       "american"
     ],
-    "cover": "/images/music/music-e268e53a.webp",
+    "cover": null,
     "url": "/music/country-outlaw"
   },
   {
@@ -3633,7 +3633,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1970s",
       "american"
     ],
-    "cover": "/images/music/music-d4cbc46f.webp",
+    "cover": null,
     "url": "/music/country-outlaw"
   },
   {
@@ -3665,7 +3665,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "vocal",
       "church"
     ],
-    "cover": "/images/music/music-ac2f432d.webp",
+    "cover": null,
     "url": "/music/gospel-choir"
   },
   {
@@ -3681,7 +3681,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "vocal",
       "church"
     ],
-    "cover": "/images/music/music-ca05d618.webp",
+    "cover": null,
     "url": "/music/gospel-choir"
   },
   {
@@ -3729,7 +3729,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "vocal",
       "church"
     ],
-    "cover": "/images/music/music-80d146f4.webp",
+    "cover": null,
     "url": "/music/gospel-choir"
   },
   {
@@ -3745,7 +3745,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "vocal",
       "church"
     ],
-    "cover": "/images/music/music-862dd6b1.webp",
+    "cover": null,
     "url": "/music/gospel-choir"
   },
   {
@@ -3810,7 +3810,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "electronic",
       "jazz"
     ],
-    "cover": "/images/music/music-b00bd7e6.webp",
+    "cover": null,
     "url": "/music/shoegaze-revival"
   },
   {
@@ -3824,7 +3824,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "indie rock",
       "rock"
     ],
-    "cover": "/images/music/music-1fcfa753.webp",
+    "cover": null,
     "url": "/music/shoegaze-revival"
   },
   {
@@ -3856,7 +3856,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "2010s",
       "noise"
     ],
-    "cover": "/images/music/music-de61f1f7.webp",
+    "cover": null,
     "url": "/music/shoegaze-revival"
   },
   {
@@ -3934,7 +3934,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1970s",
       "strings"
     ],
-    "cover": "/images/music/music-d6b72aa5.webp",
+    "cover": null,
     "url": "/music/disco-era"
   },
   {
@@ -4075,7 +4075,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "electronic",
       "experimental"
     ],
-    "cover": "/images/music/music-74edf7a8.webp",
+    "cover": null,
     "url": "/music/ambient-drone"
   },
   {
@@ -4106,7 +4106,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "instrumental",
       "minimal"
     ],
-    "cover": "/images/music/music-dd8d0f08.webp",
+    "cover": null,
     "url": "/music/ambient-drone"
   },
   {
@@ -4136,7 +4136,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "instrumental",
       "minimal"
     ],
-    "cover": "/images/music/music-8643400a.webp",
+    "cover": null,
     "url": "/music/ambient-drone"
   },
   {
@@ -4151,7 +4151,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "hard trance",
       "techno"
     ],
-    "cover": "/images/music/music-87fb5b23.webp",
+    "cover": null,
     "url": "/music/punk-77"
   },
   {
@@ -4182,7 +4182,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1977",
       "uk"
     ],
-    "cover": "/images/music/music-45891df1.webp",
+    "cover": null,
     "url": "/music/punk-77"
   },
   {
@@ -4198,7 +4198,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1977",
       "uk"
     ],
-    "cover": "/images/music/music-42a74fe3.webp",
+    "cover": null,
     "url": "/music/punk-77"
   },
   {
@@ -4259,7 +4259,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "punk",
       "rock"
     ],
-    "cover": "/images/music/music-79407480.webp",
+    "cover": null,
     "url": "/music/punk-77"
   },
   {
@@ -4307,7 +4307,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "acoustic",
       "vocal"
     ],
-    "cover": "/images/music/music-4fd98b83.webp",
+    "cover": null,
     "url": "/music/flamenco-deep"
   },
   {
@@ -4323,7 +4323,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "acoustic",
       "vocal"
     ],
-    "cover": "/images/music/music-a7f03836.webp",
+    "cover": null,
     "url": "/music/flamenco-deep"
   },
   {
@@ -4336,7 +4336,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
     "tags": [
       "reggae"
     ],
-    "cover": "/images/music/music-4e3dd6a1.webp",
+    "cover": null,
     "url": "/music/flamenco-deep"
   },
   {
@@ -4352,7 +4352,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "acoustic",
       "vocal"
     ],
-    "cover": "/images/music/music-d77e2b8c.webp",
+    "cover": null,
     "url": "/music/flamenco-deep"
   },
   {
@@ -4384,7 +4384,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "acoustic",
       "vocal"
     ],
-    "cover": "/images/music/music-6f452b84.webp",
+    "cover": null,
     "url": "/music/flamenco-deep"
   },
   {
@@ -4416,7 +4416,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1960s",
       "experimental"
     ],
-    "cover": "/images/music/music-42b58158.webp",
+    "cover": null,
     "url": "/music/psychedelic-60s"
   },
   {
@@ -4432,7 +4432,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1960s",
       "experimental"
     ],
-    "cover": "/images/music/music-d10f2d9c.webp",
+    "cover": null,
     "url": "/music/psychedelic-60s"
   },
   {
@@ -4449,7 +4449,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "minimal",
       "tech house"
     ],
-    "cover": "/images/music/music-b43b6ff3.webp",
+    "cover": null,
     "url": "/music/psychedelic-60s"
   },
   {
@@ -4609,7 +4609,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "hip hop",
       "hip-hop"
     ],
-    "cover": "/images/music/music-d3bc5873.webp",
+    "cover": null,
     "url": "/music/trap-modern"
   },
   {
@@ -4669,7 +4669,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "instrumental",
       "harpsichord"
     ],
-    "cover": "/images/music/music-e812a7e0.webp",
+    "cover": null,
     "url": "/music/baroque-court"
   },
   {
@@ -4700,7 +4700,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "instrumental",
       "harpsichord"
     ],
-    "cover": "/images/music/music-61a1bd31.webp",
+    "cover": null,
     "url": "/music/baroque-court"
   },
   {
@@ -4764,7 +4764,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "2000s",
       "confessional"
     ],
-    "cover": "/images/music/music-1794d1ca.webp",
+    "cover": null,
     "url": "/music/emo-second-wave"
   },
   {
@@ -4857,7 +4857,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "punk",
       "rock"
     ],
-    "cover": "/images/music/music-b1338876.webp",
+    "cover": null,
     "url": "/music/emo-second-wave"
   },
   {
@@ -4870,7 +4870,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
     "tags": [
       "hard rock"
     ],
-    "cover": "/images/music/music-62851557.webp",
+    "cover": null,
     "url": "/music/emo-second-wave"
   },
   {
@@ -4918,7 +4918,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "mambo",
       "salsa"
     ],
-    "cover": "/images/music/music-fadf5df4.webp",
+    "cover": null,
     "url": "/music/salsa-newyork"
   },
   {
@@ -4934,7 +4934,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1970s",
       "dance"
     ],
-    "cover": "/images/music/music-adcd4e43.webp",
+    "cover": null,
     "url": "/music/salsa-newyork"
   },
   {
@@ -5136,7 +5136,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "disco",
       "soul"
     ],
-    "cover": "/images/music/music-199f456e.webp",
+    "cover": null,
     "url": "/music/spiritual-jazz"
   },
   {
@@ -5274,7 +5274,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
     "tags": [
       "hard rock"
     ],
-    "cover": "/images/music/music-0a369e85.webp",
+    "cover": null,
     "url": "/music/synth-pop-80s"
   },
   {
@@ -5419,7 +5419,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "country",
       "roots"
     ],
-    "cover": "/images/music/music-0b77c28e.webp",
+    "cover": null,
     "url": "/music/americana-roots"
   },
   {
@@ -5452,7 +5452,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "country",
       "roots"
     ],
-    "cover": "/images/music/music-a0aeb1f6.webp",
+    "cover": null,
     "url": "/music/americana-roots"
   },
   {
@@ -5468,7 +5468,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "country",
       "roots"
     ],
-    "cover": "/images/music/music-dc98320a.webp",
+    "cover": null,
     "url": "/music/americana-roots"
   },
   {
@@ -5484,7 +5484,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "country",
       "roots"
     ],
-    "cover": "/images/music/music-5bb1a59b.webp",
+    "cover": null,
     "url": "/music/americana-roots"
   },
   {
@@ -5500,7 +5500,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "country",
       "roots"
     ],
-    "cover": "/images/music/music-a576ab16.webp",
+    "cover": null,
     "url": "/music/americana-roots"
   },
   {
@@ -5577,7 +5577,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1980s",
       "dark"
     ],
-    "cover": "/images/music/music-6612adff.webp",
+    "cover": null,
     "url": "/music/gothic-postpunk"
   },
   {
@@ -5593,7 +5593,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1980s",
       "dark"
     ],
-    "cover": "/images/music/music-3fd88fb7.webp",
+    "cover": null,
     "url": "/music/gothic-postpunk"
   },
   {
@@ -5638,7 +5638,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "guitar",
       "dance"
     ],
-    "cover": "/images/music/music-d02c00e9.webp",
+    "cover": null,
     "url": "/music/highlife-ghana"
   },
   {
@@ -5683,7 +5683,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
     "tags": [
       "hip hop"
     ],
-    "cover": "/images/music/music-2e85e79a.webp",
+    "cover": null,
     "url": "/music/highlife-ghana"
   },
   {
@@ -5715,7 +5715,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "guitar",
       "dance"
     ],
-    "cover": "/images/music/music-89d30fa9.webp",
+    "cover": null,
     "url": "/music/highlife-ghana"
   },
   {
@@ -5747,7 +5747,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "2000s",
       "fast"
     ],
-    "cover": "/images/music/music-a7d7f358.webp",
+    "cover": null,
     "url": "/music/breakcore"
   },
   {
@@ -5811,7 +5811,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "indie rock",
       "rock"
     ],
-    "cover": "/images/music/music-f491987d.webp",
+    "cover": null,
     "url": "/music/breakcore"
   },
   {
@@ -5843,7 +5843,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "electronic",
       "rock"
     ],
-    "cover": "/images/music/music-73d874ef.webp",
+    "cover": null,
     "url": "/music/breakcore"
   },
   {
@@ -5861,7 +5861,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "postrock",
       "rock"
     ],
-    "cover": "/images/music/music-3b084653.webp",
+    "cover": null,
     "url": "/music/breakcore"
   },
   {
@@ -5877,7 +5877,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "2010s",
       "chill"
     ],
-    "cover": "/images/music/music-909dec4b.webp",
+    "cover": null,
     "url": "/music/lofi-hiphop"
   },
   {
@@ -5974,7 +5974,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "chillwave",
       "dance"
     ],
-    "cover": "/images/music/music-5805fedc.webp",
+    "cover": null,
     "url": "/music/lofi-hiphop"
   },
   {
@@ -6008,7 +6008,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1980s",
       "pop"
     ],
-    "cover": "/images/music/music-546d6611.webp",
+    "cover": null,
     "url": "/music/new-wave"
   },
   {
@@ -6105,7 +6105,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "1980s",
       "pop"
     ],
-    "cover": "/images/music/music-24bfef54.webp",
+    "cover": null,
     "url": "/music/new-wave"
   },
   {
@@ -6166,7 +6166,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "middleeastern",
       "vocal"
     ],
-    "cover": "/images/music/music-e5670ca4.webp",
+    "cover": null,
     "url": "/music/sufi-devotional"
   },
   {
@@ -6195,7 +6195,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "middleeastern",
       "vocal"
     ],
-    "cover": "/images/music/music-f0ad8564.webp",
+    "cover": null,
     "url": "/music/sufi-devotional"
   },
   {
@@ -6302,7 +6302,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "2010s",
       "ironic"
     ],
-    "cover": "/images/music/music-59dc1112.webp",
+    "cover": null,
     "url": "/music/vaporwave"
   },
   {
@@ -6401,7 +6401,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
     "tags": [
       "rock"
     ],
-    "cover": "/images/music/music-f85e1a93.webp",
+    "cover": null,
     "url": "/music/bluegrass-women"
   },
   {
@@ -6448,7 +6448,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "women",
       "acoustic"
     ],
-    "cover": "/images/music/music-9c607787.webp",
+    "cover": null,
     "url": "/music/bluegrass-women"
   },
   {
@@ -6495,7 +6495,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "electronic",
       "industrial"
     ],
-    "cover": "/images/music/music-e157a967.webp",
+    "cover": null,
     "url": "/music/post-rock"
   },
   {
@@ -6509,7 +6509,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "ambient",
       "electronic"
     ],
-    "cover": "/images/music/music-239dc545.webp",
+    "cover": null,
     "url": "/music/post-rock"
   },
   {
@@ -6572,7 +6572,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "dance",
       "political"
     ],
-    "cover": "/images/music/music-c15094e0.webp",
+    "cover": null,
     "url": "/music/calypso-soca"
   },
   {
@@ -6620,7 +6620,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "dance",
       "political"
     ],
-    "cover": "/images/music/music-5115f640.webp",
+    "cover": null,
     "url": "/music/calypso-soca"
   },
   {
@@ -6758,7 +6758,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "2010s",
       "lofi"
     ],
-    "cover": "/images/music/music-f40272f8.webp",
+    "cover": null,
     "url": "/music/tape-lofi"
   },
   {
@@ -6771,7 +6771,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
     "tags": [
       "rock"
     ],
-    "cover": "/images/music/music-a5dfbd8d.webp",
+    "cover": null,
     "url": "/music/tape-lofi"
   },
   {
@@ -6817,7 +6817,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "instrumental",
       "classical"
     ],
-    "cover": "/images/music/music-191590b1.webp",
+    "cover": null,
     "url": "/music/middle-east-oud"
   },
   {
@@ -6863,7 +6863,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "instrumental",
       "classical"
     ],
-    "cover": "/images/music/music-6b4267b9.webp",
+    "cover": null,
     "url": "/music/middle-east-oud"
   },
   {
@@ -6924,7 +6924,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "2000s",
       "raw"
     ],
-    "cover": "/images/music/music-e14180f6.webp",
+    "cover": null,
     "url": "/music/garage-rock-revival"
   },
   {
@@ -6956,7 +6956,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "2000s",
       "raw"
     ],
-    "cover": "/images/music/music-fda9102c.webp",
+    "cover": null,
     "url": "/music/garage-rock-revival"
   },
   {
@@ -6972,7 +6972,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "2000s",
       "raw"
     ],
-    "cover": "/images/music/music-b7fabee7.webp",
+    "cover": null,
     "url": "/music/garage-rock-revival"
   },
   {
@@ -7004,7 +7004,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "footwork",
       "juke"
     ],
-    "cover": "/images/music/music-cbd7709b.webp",
+    "cover": null,
     "url": "/music/garage-rock-revival"
   },
   {
@@ -7019,7 +7019,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "pop",
       "synth-pop"
     ],
-    "cover": "/images/music/music-3d8fde54.webp",
+    "cover": null,
     "url": "/music/experimental-vocal"
   },
   {
@@ -7092,7 +7092,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "electronic",
       "experimental"
     ],
-    "cover": "/images/music/music-05cb8ec8.webp",
+    "cover": null,
     "url": "/music/experimental-vocal"
   },
   {
@@ -7108,7 +7108,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "avant",
       "instrumental"
     ],
-    "cover": "/images/music/music-89f75e74.webp",
+    "cover": null,
     "url": "/music/experimental-vocal"
   },
   {
@@ -7167,7 +7167,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "hello project",
       "j-pop"
     ],
-    "cover": "/images/music/music-aec33c40.webp",
+    "cover": null,
     "url": "/music/dreampop-shoegaze-2020s"
   },
   {
@@ -7215,7 +7215,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "house",
       "pop"
     ],
-    "cover": "/images/music/music-af3a3375.webp",
+    "cover": null,
     "url": "/music/dreampop-shoegaze-2020s"
   },
   {
@@ -7245,7 +7245,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "jazz",
       "post-bop"
     ],
-    "cover": "/images/music/music-c8a92330.webp",
+    "cover": null,
     "url": "/music/latin-jazz"
   },
   {
@@ -7274,7 +7274,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "afrocuban",
       "dance"
     ],
-    "cover": "/images/music/music-21e9df2b.webp",
+    "cover": null,
     "url": "/music/latin-jazz"
   },
   {
@@ -7290,7 +7290,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "afrocuban",
       "dance"
     ],
-    "cover": "/images/music/music-a81d6354.webp",
+    "cover": null,
     "url": "/music/latin-jazz"
   },
   {
@@ -7304,7 +7304,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "cool jazz",
       "jazz"
     ],
-    "cover": "/images/music/music-60721e52.webp",
+    "cover": null,
     "url": "/music/latin-jazz"
   },
   {
@@ -7498,7 +7498,7 @@ export const MUSIC_ITEMS: CurationItem[] = [
       "electronic",
       "experimental"
     ],
-    "cover": "/images/music/music-f313c403.webp",
+    "cover": null,
     "url": "/music/black-metal-atmosphere"
   }
 ];

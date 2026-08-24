@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import {
   GAME_THEMES,
   itemBlurb,
+  consumptionTip,
   themeAudience,
   themeCriteria,
   themeAlternatives,
@@ -15,6 +16,9 @@ import { GAME_ITEMS } from '@/lib/media/generated-games';
 import type { CurationItem } from '@/lib/media/musicbrainz';
 import { CopyListButton } from '@/components/CopyListButton';
 import Reveal from '@/components/Reveal';
+import Cover from '@/components/Cover';
+import StyleCards from '@/components/StyleCard';
+import { stylesForTags } from '@/lib/media/style-glossary';
 
 export function generateStaticParams() {
   return GAME_THEMES.map((t) => ({ slug: t.slug }));
@@ -97,6 +101,9 @@ export default function GameThemePage({ params }: { params: { slug: string } }) 
           </div>
         </div>
 
+        {/* 风格定义小卡片（API 拿不到的策展知识） */}
+        <StyleCards styles={stylesForTags(t.tags)} />
+
         {t.compare && (
           <div className="card editorial" style={{ marginTop: 14, borderLeft: '4px solid var(--violet-500)' }}>
             <h2 className="ed-h">Why these four mediums, one mood</h2>
@@ -118,16 +125,13 @@ export default function GameThemePage({ params }: { params: { slug: string } }) 
               {items.map((it) => (
                 <div key={it.refId} className="item-row">
                   <div className="thumb">
-                    {it.cover ? (
-                      <img src={it.cover} alt={`${it.title} cover`} loading="lazy" />
-                    ) : (
-                      <div className="thumb-empty">no art</div>
-                    )}
+                    <Cover src={it.cover} alt={`${it.title} cover`} />
                   </div>
                   <div className="meta">
                     <div className="name">{it.title}</div>
                     <div className="sub">{it.creator}{it.year ? ` · ${it.year}` : ''}</div>
                     <p className="why">{itemBlurb(it, t.thesis)}</p>
+                    <p className="consume-tip">🕯 {consumptionTip(it)}</p>
                     <div className="tags">
                       {it.tags.slice(0, 5).map((tg) => (
                         <span key={tg} className="tag-chip">{tg}</span>

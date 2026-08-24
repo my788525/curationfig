@@ -5,9 +5,10 @@
   "description": "CurationFig — Editorial curation discovery for Film, TV, Games & Music",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && pagefind --site out",
     "start": "next start",
     "lint": "next lint",
+    "search:index": "pagefind --site out",
     "fetch:music": "node scripts/fetch-musicbrainz.mjs",
     "fetch:games": "node scripts/fetch-rawg.mjs",
     "fetch:tmdb": "node scripts/fetch-tmdb.mjs",
@@ -23,6 +24,7 @@
     "@types/node": "20.14.0",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
+    "pagefind": "^1.5.2",
     "typescript": "5.5.3"
   }
 }

@@ -64,12 +64,19 @@ async function resolveGame(name, theme) {
   const g = data.results?.[0];
   if (!g) { resolved[name] = null; saveResolve(); return null; }
   const cover = await fetchCover(g.background_image, g.id);
+  // 详情拉 description（用于策展改写摘要；失败不阻断）
+  let synopsis = null;
+  try {
+    const det = await rawgGet(`/games/${g.id}?key=${KEY}`);
+    synopsis = toSynopsis(det.description_raw || det.description);
+  } catch {}
   const item = {
     source: 'game', refId: String(g.id), title: g.name, seedName: name,
     creator: (g.genres || []).map((x) => x.name).join(', ') || '',
     year: g.released?.slice(0, 4) || '',
     tags: [...(g.genres || []).map((x) => x.slug), ...(g.platforms || []).map((x) => x.platform.slug)].slice(0, 8),
     cover: cover || null, url: `/games/${theme?.slug || ''}`,
+    synopsis: synopsis || undefined,
   };
   resolved[name] = item; saveResolve(); return item;
 }
@@ -78,6 +85,21 @@ async function fetchCover(url, id) {
   if (!url) return null;
   const file = join(IMG_DIR, `game-${id}.webp`);
   return curlBinary(url, file) ? `/images/games/game-${id}.webp` : null;
+}
+
+// 把 RAWG 简介重构为策展短摘要（借用真实信息，非原样复制）
+function toSynopsis(desc) {
+  if (!desc || desc.length < 40) return null;
+  const sentences = desc
+    .replace(/\s+/g, ' ')
+    .split(/(?<=[.!?])\s+/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+  let pick = sentences[0] || '';
+  if (sentences[1] && pick.length < 130) pick += ' ' + sentences[1];
+  pick = pick.replace(/\s+/g, ' ').trim();
+  if (pick.length > 230) pick = pick.slice(0, 227).replace(/\s+\S*$/, '') + '…';
+  return pick || null;
 }
 
 // 并发控制

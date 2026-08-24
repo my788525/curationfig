@@ -37,6 +37,7 @@ export type CurationItem = {
   url: string; // 站内条目卡路径
   seedName?: string; // 种子名（用于专题页精确匹配，避免规范名变体导致漏匹配）
   why?: string; // 手写 editorial 推荐理由（可选；缺省时用 itemBlurb 程序化生成）
+  synopsis?: string; // API 简介的策展改写摘要（film/tv/games 由 overview 重构而来，非原样复制；music 通常无）
 };
 
 export const MB_API = 'https://musicbrainz.org/ws/2';

@@ -159,6 +159,15 @@ p { margin: 0 0 1em; }
 .ed-h { font-size: 1.12rem; margin: 0 0 8px; color: var(--ink-900); letter-spacing: -.01em; }
 .ed-p { font-size: 15.5px; line-height: 1.66; color: var(--ink-700); margin: 0; }
 
+/* 风格定义小卡片（API 拿不到的策展知识） */
+.style-cards { display: flex; flex-direction: column; gap: 10px; }
+.style-card { padding: 14px 18px; border-left: 4px solid var(--violet-500); background: var(--violet-50); }
+.style-tag { font-size: 12.5px; font-weight: 800; color: var(--violet-700); text-transform: none; letter-spacing: .01em; margin-bottom: 5px; }
+.style-blurb { font-size: 14px; line-height: 1.6; color: var(--ink-700); margin: 0; }
+
+/* 消费场景提示（策展独有：何时体验最好） */
+.consume-tip { font-size: 12.5px; color: var(--teal-700); margin: 4px 0 6px; font-style: italic; }
+
 /* Pillar article links（清单页 → 支柱长文） */
 .pillar-links {
   margin-top: 28px;
@@ -196,6 +205,32 @@ p { margin: 0 0 1em; }
 /* banner */
 .banner { background: var(--teal-50); border: 1px solid #bfe6df; border-left: 4px solid var(--teal-600); border-radius: 10px; padding: 12px 16px; margin: 16px 0; font-size: 13.5px; color: var(--ink-700); }
 .warn-banner { background: #fbeef0; border: 1px solid #f3c9cf; border-left: 4px solid var(--red-600); border-radius: 10px; padding: 12px 16px; margin: 16px 0; font-size: 13.5px; }
+
+/* About — 策展方法论 */
+.method-rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 14px 0 6px; }
+.method-rule { padding: 18px 18px 16px; border-top: 3px solid var(--violet-500); }
+.method-rule .rule-num { font-size: 1.8rem; font-weight: 800; color: var(--violet-400); line-height: 1; margin-bottom: 6px; }
+.method-rule h3 { font-size: 1.05rem; margin: 0 0 6px; }
+.method-rule p { font-size: 13.5px; line-height: 1.6; color: var(--ink-700); margin: 0; }
+@media (max-width: 820px) { .method-rules { grid-template-columns: 1fr; } }
+
+/* 站内搜索（Pagefind） */
+.searchbox { position: relative; margin-left: 8px; }
+.search-input { width: 220px; padding: 8px 12px; border: 1px solid var(--line-strong); border-radius: 999px; font-size: 13.5px; font-family: inherit; background: var(--paper); }
+.search-input.wide { width: 100%; max-width: 520px; border-radius: 12px; padding: 12px 16px; font-size: 15px; }
+.search-input:focus { outline: 2px solid var(--violet-400); border-color: var(--violet-400); }
+.search-pop { position: absolute; top: 42px; right: 0; width: 320px; max-height: 420px; overflow-y: auto; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 40px rgba(20,12,40,.18); z-index: 50; padding: 6px; }
+.search-hint { padding: 10px 12px; font-size: 13px; color: var(--ink-500); }
+.search-item { display: block; width: 100%; text-align: left; background: none; border: none; padding: 9px 10px; border-radius: 8px; cursor: pointer; }
+.search-item:hover { background: var(--violet-50); }
+.si-title { display: block; font-size: 14px; font-weight: 700; color: var(--ink-900); }
+.si-excerpt { display: block; font-size: 12px; color: var(--ink-500); margin-top: 2px; line-height: 1.45; }
+.search-all { display: block; width: 100%; text-align: center; padding: 9px; font-size: 13px; font-weight: 700; color: var(--violet-700); background: var(--violet-50); border: none; border-radius: 8px; cursor: pointer; margin-top: 4px; }
+.search-results { display: flex; flex-direction: column; gap: 10px; }
+.search-result { display: block; padding: 14px 16px; text-decoration: none; }
+.sr-title { font-size: 15.5px; font-weight: 700; color: var(--violet-700); }
+.sr-excerpt { font-size: 13px; color: var(--ink-600); margin-top: 4px; line-height: 1.5; }
+@media (max-width: 820px) { .search-input { width: 150px; } .search-pop { width: 260px; } .searchbox { margin-left: 0; } }
 
 /* ===== motion & energy layer ===== */
 @import './animations.css';

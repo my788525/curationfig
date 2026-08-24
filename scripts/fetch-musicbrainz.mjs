@@ -74,9 +74,31 @@ function curlBinary(url, file) {
   catch { return false; }
 }
 
+function isValidImageFile(file) {
+  try {
+    const buf = execFileSync('C:/Windows/system32/cmd.exe', ['/c', 'more', '<', file], { encoding: 'buffer', maxBuffer: 512 }).buffer;
+    // 真实 webp 以 RIFF....WEBP 开头；CAA 404 是 HTML（<!doctype）
+    if (buf.length < 12) return false;
+    const head = buf.subarray(0, 4).toString('latin1');
+    return head === 'RIFF';
+  } catch {
+    try {
+      const fs = require('fs');
+      const b = Buffer.from(fs.readFileSync(file)).subarray(0, 4).toString('latin1');
+      return b === 'RIFF';
+    } catch { return false; }
+  }
+}
+
 async function fetchCover(mbid) {
   const file = join(IMG_DIR, `music-${mbid.slice(0, 8)}.webp`);
-  return curlBinary(`${CAA}/release-group/${mbid}/front-500`, file) ? `/images/music/music-${mbid.slice(0, 8)}.webp` : null;
+  const ok = curlBinary(`${CAA}/release-group/${mbid}/front-500`, file);
+  if (!ok || !isValidImageFile(file)) {
+    // CAA 常对无封面 release 返回 404 HTML —— 删除伪文件，避免写出坏 cover 路径
+    try { require('fs').unlinkSync(file); } catch {}
+    return null;
+  }
+  return `/images/music/music-${mbid.slice(0, 8)}.webp`;
 }
 
 async function mapLimit(tasks, limit, fn) {

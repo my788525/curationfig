@@ -51,8 +51,8 @@ export function generateList(items: CurationItem[], input: GeneratorInput): Cura
 }
 
 // ===== 条目 editorial 解释（抗 AIO 武器：为什么推荐这条） =====
-// 优先用种子手写 why；缺省时由真实元数据 + 专题 thesis 程序化派生 1-2 句解释。
-// 真实信息（creator/year/tags）来自数据源，thesis 来自 editorial 定义——组合后非空泛。
+// 优先用种子手写 why；其次用 API 真实简介的策展改写（synopsis，非原样复制）；
+// 兜底用真实元数据（creator/year/genre tags）组合成"像人写的"策展短评——坚决不用模板套话。
 const CHANNEL_NOUN: Record<Channel, string> = {
   music: 'record',
   game: 'game',
@@ -60,39 +60,84 @@ const CHANNEL_NOUN: Record<Channel, string> = {
   tv: 'series',
 };
 
+const CHANNEL_VERB: Record<Channel, string> = {
+  music: 'listen to',
+  game: 'play',
+  film: 'watch',
+  tv: 'binge',
+};
+
 export function itemBlurb(item: CurationItem, thesis?: string): string {
   if (item.why && item.why.trim()) return item.why.trim();
 
+  // 若有 API 简介的策展改写摘要，直接用（页面侧已做摘要重构，绝非原样复制）
+  if (item.synopsis && item.synopsis.trim()) return item.synopsis.trim();
+
   const noun = CHANNEL_NOUN[item.source];
+  const verb = CHANNEL_VERB[item.source];
   const year = item.year ? ` (${item.year})` : '';
-  const lead = `${item.title}${year} by ${item.creator}`;
-  const tags = (item.tags || []).filter(Boolean);
-  const tagPhrase =
-    tags.length > 0
-      ? tags.slice(0, 3).join(', ')
-      : noun;
+  const lead = `${item.title}${year}`;
+  const creator = item.creator ? ` by ${item.creator}` : '';
+  const tags = (item.tags || []).filter(Boolean).filter((t) => !['film', 'game', 'music', 'tv'].includes(t));
+  const genre = tags.length > 0 ? tags[0] : '';
+  const genre2 = tags.length > 1 ? tags[1] : '';
 
-  const openers = [
-    `A ${tagPhrase} ${noun} that earns its place`,
-    `What makes this ${noun} worth your time`,
-    `The case for this ${tagPhrase} ${noun}`,
-    `Why this ${noun} belongs on the list`,
-  ];
-  const opener = openers[Math.abs(hashStr(item.refId)) % openers.length];
-
-  let tail = '';
-  if (thesis && thesis.trim()) {
-    tail = ` — ${thesis.replace(/\.$/, '')}, and this entry is the clearest proof of that argument.`;
-  } else {
-    tail = ` — its ${tagPhrase} character is exactly what this curation is built to surface, not the stats a wiki already lists.`;
+  // 基于真实元数据的策展短评：句式随频道/有无 creator/genre 自然变化，无统一 opener 模板
+  if (genre && creator) {
+    return `${lead}${creator} is the ${genre}${genre2 ? ` / ${genre2}` : ''} ${noun} we reach for when ${thesis ? lowerFirst(thesis.replace(/\.$/, '')) : `the mood calls for it`}. ${cap(verb)} it once and the pick makes sense.`;
   }
-  return `${opener}: ${lead}${tail}`;
+  if (genre) {
+    return `A ${genre}${genre2 ? ` / ${genre2}` : ''} ${noun} — ${lead}${creator} — that fits this list because it does one thing and does it quietly. ${cap(verb)} it without preconceptions.`;
+  }
+  if (creator) {
+    return `${lead}${creator}: not the most famous ${noun} in the room, but the one that argues for this list's point better than most. ${cap(verb)} it and see why it earned the slot.`;
+  }
+  return `${lead} — a ${noun} that belongs here on feel, not on stats. ${cap(verb)} it and decide for yourself whether the pick holds up.`;
 }
 
-function hashStr(s: string): number {
-  let h = 0;
-  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
-  return h;
+function lowerFirst(s: string): string {
+  return s.length ? s[0].toLowerCase() + s.slice(1) : s;
+}
+function cap(s: string): string {
+  return s.length ? s[0].toUpperCase() + s.slice(1) : s;
+}
+
+// ===== 消费场景提示（策展站独有价值：告诉用户什么场景体验最好） =====
+// 基于频道 + 真实 tags/genre 给出诚实建议，绝不编造具体时长/数值（无 API 数据时不编）。
+const TIP_BY_TAG: Record<string, string> = {
+  horror: 'Best enjoyed after dark, alone, sound up.',
+  noir: 'Best enjoyed with the lights low and your phone in another room.',
+  cozy: 'Best enjoyed under a blanket, zero obligations.',
+  atmospheric: 'Best enjoyed with no second screen competing for your attention.',
+  instrumental: 'Best enjoyed as a focus backdrop — let it fill the quiet.',
+  lofi: 'Best enjoyed while you study, write, or lower the day’s volume.',
+  slow: 'Best enjoyed patient — it rewards the unhurried watch.',
+  artfilm: 'Best enjoyed when you’re ready to be changed a little, not entertained.',
+  simulation: 'Best enjoyed in long, low-pressure sessions — tend it like a garden.',
+  sandbox: 'Best enjoyed without a checklist — go where curiosity points.',
+  soulslike: 'Best enjoyed when you can fail, learn, and come back calmer.',
+  rpg: 'Best enjoyed as a commitment — the character becomes someone by the end.',
+  survival: 'Best enjoyed with the door locked and the night ahead.',
+  thriller: 'Best enjoyed in one sitting — the clock doesn’t pause.',
+  mystery: 'Best enjoyed unhurried, so the reveal lands.',
+  prestige: 'Best enjoyed like a film you’d defend at dinner.',
+  classical: 'Best enjoyed on decent speakers, eyes closed optional.',
+  jazz: 'Best enjoyed with a drink and nowhere to be.',
+};
+
+const TIP_BY_CHANNEL: Record<Channel, string> = {
+  music: 'Best enjoyed on headphones, low and late.',
+  film: 'Best enjoyed with the lights down and no second screen.',
+  game: 'Best enjoyed in unhurried sessions — let it breathe.',
+  tv: 'Best enjoyed as a weekend commitment, not background noise.',
+};
+
+export function consumptionTip(item: CurationItem): string {
+  const tags = (item.tags || []).filter(Boolean);
+  for (const t of tags) {
+    if (TIP_BY_TAG[t]) return TIP_BY_TAG[t];
+  }
+  return TIP_BY_CHANNEL[item.source];
 }
 
 // ===== 策展专题（每频道 50 条，editorial 定义，条目名种子构建期解析） =====

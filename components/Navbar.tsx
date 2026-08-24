@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE, CHANNELS } from '@/lib/site';
+import SearchBox from '@/components/SearchBox';
 
 export function Navbar() {
   return (
@@ -25,6 +26,7 @@ export function Navbar() {
           <Link href="/data/">Data & Sources</Link>
           <Link href="/about/">About</Link>
         </nav>
+        <SearchBox />
       </div>
     </header>
   );
