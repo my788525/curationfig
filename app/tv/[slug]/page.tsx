@@ -152,6 +152,26 @@ export default function TvThemePage({ params }: { params: { slug: string } }) {
           </div>
         )}
 
+        {items.length === 0 && t.items.length > 0 && (
+          <div style={{ marginTop: 28 }}>
+            <h2 style={{ fontSize: '1.2rem', margin: 0 }}>The list ({t.items.length})</h2>
+            <p className="muted" style={{ marginTop: 6, marginBottom: 12 }}>
+              Full metadata (cast, year, cover) is being resolved from TMDB. The curated titles:
+            </p>
+            <Reveal className="item-rows">
+              {t.items.map((name, i) => (
+                <div key={name} className="item-row">
+                  <div className="thumb thumb-empty">soon</div>
+                  <div className="meta">
+                    <div className="name">{i + 1}. {name}</div>
+                    <p className="why">{t.thesis}</p>
+                  </div>
+                </div>
+              ))}
+            </Reveal>
+          </div>
+        )}
+
         <div className="card editorial" style={{ marginTop: 28, borderLeft: '4px solid var(--amber-500)' }}>
           <h2 className="ed-h">If this list isn&apos;t quite your night</h2>
           <p className="ed-p">{alternatives}</p>
