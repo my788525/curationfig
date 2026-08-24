@@ -220,7 +220,7 @@ export const TV_ITEMS: CurationItem[] = [
     "tags": [
       "tv"
     ],
-    "cover": "/images/tv/fleabag.webp",
+    "cover": null,
     "url": "/tv/british-dry/",
     "synopsis": "A portrait into the mind of a dry-witted, sexual, angry, porn-watching, grief-riddled woman, trying to make sense of the world. As she hurls herself headlong at modern living, Fleabag is thrown roughly up against the walls of…"
   },
@@ -1538,5 +1538,158 @@ export const TV_ITEMS: CurationItem[] = [
     ],
     "cover": "/images/tv/tv-14658.webp",
     "url": "/tv/reality-game/"
+  },
+  {
+    "source": "tv",
+    "refId": "30957",
+    "title": "The Amazing Race",
+    "seedName": "The Amazing Race",
+    "creator": "",
+    "year": "2001",
+    "tags": [
+      "tv"
+    ],
+    "cover": "/images/tv/tv-30957.webp",
+    "url": "/tv/reality-game/"
+  },
+  {
+    "source": "tv",
+    "refId": "8514",
+    "title": "RuPaul's Drag Race",
+    "seedName": "RuPaul Drag Race",
+    "creator": "",
+    "year": "2009",
+    "tags": [
+      "tv"
+    ],
+    "cover": "/images/tv/tv-8514.webp",
+    "url": "/tv/reality-game/",
+    "synopsis": "Join RuPaul, the world's most famous drag queen, as the host, mentor and judge for the ultimate in drag queen competitions. The top drag queens in the U.S."
+  },
+  {
+    "source": "tv",
+    "refId": "87012",
+    "title": "The Great British Bake Off",
+    "seedName": "The Great British Bake Off",
+    "creator": "",
+    "year": "2017",
+    "tags": [
+      "tv"
+    ],
+    "cover": "/images/tv/tv-87012.webp",
+    "url": "/tv/reality-game/",
+    "synopsis": "Britain's best amateur bakers compete in the iconic white tent - all united in their aim to prove their baking skills and impress judges Paul Hollywood and Prue Leith."
+  },
+  {
+    "source": "tv",
+    "refId": "63404",
+    "title": "Taskmaster",
+    "seedName": "Taskmaster",
+    "creator": "",
+    "year": "2015",
+    "tags": [
+      "tv"
+    ],
+    "cover": "/images/tv/tv-63404.webp",
+    "url": "/tv/reality-game/",
+    "synopsis": "Greg Davies is the Taskmaster, and with the help of his ever-loyal assistant Alex Horne, they will set out to test the wiles, wit, wisdom and skills of five hyper-competitive comedians."
+  },
+  {
+    "source": "tv",
+    "refId": "58832",
+    "title": "Naked and Afraid",
+    "seedName": "Naked and Afraid",
+    "creator": "",
+    "year": "2013",
+    "tags": [
+      "tv"
+    ],
+    "cover": "/images/tv/tv-58832.webp",
+    "url": "/tv/reality-game/",
+    "synopsis": "What happens when you put two complete strangers - sans clothes - in some of the most extreme environments on Earth? Each male-female duo is left with no food, no water, no clothes, and only one survival item each as they…"
+  },
+  {
+    "source": "tv",
+    "refId": "41822",
+    "title": "Top Chef",
+    "seedName": "Top Chef",
+    "creator": "",
+    "year": "2006",
+    "tags": [
+      "tv"
+    ],
+    "cover": "/images/tv/tv-41822.webp",
+    "url": "/tv/reality-game/",
+    "synopsis": "An American reality competition show in which chefs compete against each other in culinary challenges and are judged by a panel of professional chefs and other notables from the food and wine industry with one or more…"
+  },
+  {
+    "source": "tv",
+    "refId": "215943",
+    "title": "The Traitors",
+    "seedName": "The Traitors",
+    "creator": "",
+    "year": "2023",
+    "tags": [
+      "tv"
+    ],
+    "cover": "/images/tv/tv-215943.webp",
+    "url": "/tv/reality-game/",
+    "synopsis": "The entertainment industry’s most competitive reality stars and famous faces play the ultimate murder mystery game. Hosted by award-winning actor Alan Cumming at an ancient castle set deep in the Scottish Highlands,…"
+  },
+  {
+    "source": "tv",
+    "refId": "79788",
+    "title": "Watchmen",
+    "seedName": "Watchmen",
+    "creator": "",
+    "year": "2019",
+    "tags": [
+      "tv"
+    ],
+    "cover": "/images/tv/tv-79788.webp",
+    "url": "/tv/superhero-deconstructed/",
+    "synopsis": "Set in an alternate history where “superheroes” are treated as outlaws, “Watchmen” embraces the nostalgia of the original groundbreaking graphic novel while attempting to break new ground of its own."
+  },
+  {
+    "source": "tv",
+    "refId": "76479",
+    "title": "The Boys",
+    "seedName": "The Boys",
+    "creator": "",
+    "year": "2019",
+    "tags": [
+      "tv"
+    ],
+    "cover": "/images/tv/tv-76479.webp",
+    "url": "/tv/superhero-deconstructed/",
+    "synopsis": "A group of vigilantes known informally as “The Boys” set out to take down corrupt superheroes with no more than blue-collar grit and a willingness to fight dirty."
+  },
+  {
+    "source": "tv",
+    "refId": "202555",
+    "title": "Daredevil: Born Again",
+    "seedName": "Daredevil",
+    "creator": "",
+    "year": "2025",
+    "tags": [
+      "tv"
+    ],
+    "cover": "/images/tv/tv-202555.webp",
+    "url": "/tv/superhero-deconstructed/",
+    "synopsis": "Matt Murdock, a blind lawyer with heightened abilities, is fighting for justice through his bustling law firm, while former mob boss Wilson Fisk pursues his own political endeavors in New York."
+  },
+  {
+    "source": "tv",
+    "refId": "38472",
+    "title": "Marvel's Jessica Jones",
+    "seedName": "Jessica Jones",
+    "creator": "",
+    "year": "2015",
+    "tags": [
+      "tv"
+    ],
+    "cover": "/images/tv/tv-38472.webp",
+    "url": "/tv/superhero-deconstructed/",
+    "synopsis": "After a tragic ending to her short-lived super hero stint, Jessica Jones is rebuilding her personal life and career as a detective who gets pulled into cases involving people with extraordinary abilities in New York City."
   }
 ];
