@@ -23,6 +23,9 @@ export type CurationTheme = {
   // 关联的策展条目（名称种子，构建期由数据源解析为元数据）
   items: string[];
   mood?: string[]; // 用于歌单/清单生成器匹配（氛围/场景）
+  // 真人体验层：以"编辑部"为署名主体的策展判断（基于作品客观特征+公开评价共识，不伪造第一身经历）
+  // key = seedName（与 items 中的名字一致），value = 80-140 词的编辑部视角短评
+  editorialNotes?: Record<string, string>;
 };
 
 // ===== 个性化生成器（纯函数，无后端，client 组件调用） =====

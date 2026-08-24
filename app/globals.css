@@ -130,6 +130,7 @@ p { margin: 0 0 1em; }
 .item-row .sub { font-size: 13px; color: var(--ink-500); margin: 2px 0 4px; }
 .item-row .row-tags { margin: 2px 0 5px; }
 .item-row .why { font-size: 13.5px; color: var(--ink-700); margin: 0; line-height: 1.5; overflow: hidden; }
+.item-row .editorial-note { font-size: 13px; color: var(--ink-800); margin: 6px 0 0; line-height: 1.5; padding: 8px 10px; background: var(--bg-soft); border-left: 3px solid var(--amber-500); border-radius: 0 6px 6px 0; }
 @media (max-width: 560px) { .item-row .thumb { flex-basis: 56px; width: 56px; height: 56px; } .item-row .thumb img { width: 56px; height: 56px; } .item-row .name { font-size: 14.5px; } }
 
 /* Footer */

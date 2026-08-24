@@ -38,6 +38,7 @@ export type CurationItem = {
   seedName?: string; // 种子名（用于专题页精确匹配，避免规范名变体导致漏匹配）
   why?: string; // 手写 editorial 推荐理由（可选；缺省时用 itemBlurb 程序化生成）
   synopsis?: string; // API 简介的策展改写摘要（film/tv/games 由 overview 重构而来，非原样复制；music 通常无）
+  editorialNote?: string; // 真人体验层：编辑部视角短评（构建期由 seeds.editorialNotes 按 seedName 注入）
 };
 
 export const MB_API = 'https://musicbrainz.org/ws/2';

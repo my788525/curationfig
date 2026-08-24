@@ -45,7 +45,7 @@ export default function MusicThemePage({ params }: { params: { slug: string } })
   const missing: string[] = [];
   for (const name of t.items) {
     const hit = itemsBySeed.get(name.toLowerCase()) || itemsBySeed.get(name.toLowerCase().replace(/"/g, ''));
-    if (hit) items.push(hit);
+    if (hit) items.push({ ...hit, editorialNote: t.editorialNotes?.[name] });
     else missing.push(name);
   }
 
@@ -138,6 +138,9 @@ export default function MusicThemePage({ params }: { params: { slug: string } })
                     <div className="name">{it.title}</div>
                     <div className="sub">{it.creator}{it.year ? ` · ${it.year}` : ''}</div>
                     <p className="why">{itemBlurb(it, t.thesis)}</p>
+                    {it.editorialNote && it.editorialNote.trim() && (
+                      <p className="editorial-note">💬 Our take: {it.editorialNote}</p>
+                    )}
                     <p className="consume-tip">🕯 {consumptionTip(it)}</p>
                     <div className="tags">
                       {it.tags.slice(0, 5).map((tg) => (
