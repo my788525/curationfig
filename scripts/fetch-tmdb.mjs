@@ -44,10 +44,19 @@ function curlBinary(url, file) {
 
 // 把 API overview 重构为策展口吻的短摘要（借用真实信息，非原样复制）
 // 取首句 + 必要时第二句，截断 ~220 字符，去掉宣传腔，引导成"你/这部"的策展语气。
+function cleanRaw(raw) {
+  return (raw || '')
+    .replace(/<[^>]+>/g, ' ')            // 去 HTML 标签
+    .replace(/[#*_>`~]+/g, ' ')          // 去 Markdown 符号
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function toSynopsis(overview) {
   if (!overview || overview.length < 40) return null;
-  const sentences = overview
-    .replace(/\s+/g, ' ')
+  const cleaned = cleanRaw(overview);
+  if (cleaned.length < 40) return null;
+  const sentences = cleaned
     .split(/(?<=[.!?])\s+/)
     .map((s) => s.trim())
     .filter(Boolean);
@@ -55,8 +64,6 @@ function toSynopsis(overview) {
   if (sentences[1] && pick.length < 130) pick += ' ' + sentences[1];
   pick = pick.replace(/\s+/g, ' ').trim();
   if (pick.length > 230) pick = pick.slice(0, 227).replace(/\s+\S*$/, '') + '…';
-  // 去掉常见的 TMDB 宣传腔开头，换成中性策展引导
-  pick = pick.replace(/^(In this film|This (film|series|movie)|The story (follows|centers)|A (group|young|small))+/i, (m) => m);
   return pick || null;
 }
 
@@ -74,7 +81,7 @@ async function tmdbGet(path, attempt = 1) {
   try { return JSON.parse(txt); } catch { if (attempt >= 3) throw new Error('TMDB bad json'); await sleep(2000); return tmdbGet(path, attempt + 1); }
 }
 
-async function resolveTitle(name, kind, slug) {
+async function resolveTitle(name, kind, slug, moods = []) {
   const cacheKey = `${kind}:${name}`;
   if (resolved[cacheKey] !== undefined) return resolved[cacheKey];
   const q = encodeURIComponent(name);
@@ -94,7 +101,7 @@ async function resolveTitle(name, kind, slug) {
   const item = {
     source: kind, refId: String(r.id), title, seedName: name,
     creator: '', year: year || '',
-    tags: [kind], cover: cover || null, url: `/${kind}/${slug}/`,
+    tags: [kind], moods, cover: cover || null, url: `/${kind}/${slug}/`,
     synopsis: synopsis || undefined,
   };
   resolved[cacheKey] = item; saveResolve(); return item;
@@ -128,17 +135,20 @@ async function main() {
   const tasks = [];
   for (const theme of [...FILM_THEMES, ...TV_THEMES]) {
     for (const name of theme.items) {
-      tasks.push({ name, kind: theme.channel, slug: theme.slug });
+      tasks.push({ name, kind: theme.channel, slug: theme.slug, moods: theme.mood || [] });
     }
   }
   console.log(`TMDB names to resolve: ${tasks.length} (cached: ${Object.keys(resolved).length})`);
 
   // 预填充：已是 CurationItem（含 refId）的直接用；旧中间态删掉重跑
   const itemsMap = {};
-  for (const { name, kind, slug } of tasks) {
+  for (const { name, kind, slug, moods } of tasks) {
     const key = `${kind}:${name}`;
     const c = resolved[key];
-    if (c && c !== null && c.refId) itemsMap[key] = c;
+    if (c && c !== null && c.refId) {
+      if (!c.moods || c.moods.length === 0) c.moods = moods; // 回填 mood（旧缓存缺字段）
+      itemsMap[key] = c;
+    }
     else if (c && !c.refId) delete resolved[key];
   }
   const persist = () => {
@@ -159,7 +169,7 @@ async function main() {
     const key = `${kind}:${name}`;
     if (resolved[key] !== undefined) continue;
     try {
-      const item = await resolveTitle(name, kind, slug);
+      const item = await resolveTitle(name, kind, slug, moods);
       if (!item) { console.log(`  ✗ unresolved: ${name} [${kind}]`); continue; }
       itemsMap[key] = item;
       persist();

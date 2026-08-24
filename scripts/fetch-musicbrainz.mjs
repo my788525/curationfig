@@ -60,7 +60,7 @@ async function resolveReleaseGroup(name, theme) {
   const item = {
     source: 'music', refId: rg.id, title: detail.title || rg.title, seedName: name,
     creator: detail['artist-credit']?.[0]?.name || rg['artist-credit']?.[0]?.name || '', year,
-    tags: tags.length ? tags : theme.tags, cover: cover || null, url: `/music/${theme.slug}`,
+    tags: tags.length ? tags : theme.tags, moods: theme.mood || [], cover: cover || null, url: `/music/${theme.slug}`,
   };
   resolved[name] = item; saveResolve(); return item;
 }
@@ -134,7 +134,10 @@ async function main() {
   const itemsMap = {};
   for (const name of names) {
     const c = resolved[name];
-    if (c && c !== null && c.refId) itemsMap[name] = c;
+    if (c && c !== null && c.refId) {
+      if (!c.moods || c.moods.length === 0) c.moods = themeOf[name]?.mood || []; // 回填 mood（旧缓存缺字段）
+      itemsMap[name] = c;
+    }
     else if (c && !c.refId) delete resolved[name]; // 旧中间态，丢弃重跑
   }
   const persist = () => {

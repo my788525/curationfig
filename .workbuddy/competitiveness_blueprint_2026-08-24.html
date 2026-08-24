@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CurationFig 竞争力改造蓝图 · 2026-08-24</title>
+<style>
+  :root{
+    --bg:#0f1115; --card:#171a21; --card2:#1d212b; --ink:#e8eaf0; --mut:#9aa3b2;
+    --line:#2a2f3a; --good:#3fb950; --warn:#e3b341; --bad:#f85149; --acc:#6ea8fe; --vio:#a78bfa;
+  }
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:980px;margin:0 auto;padding:34px 22px 70px}
+  h1{font-size:27px;margin:0 0 4px}
+  .sub{color:var(--mut);margin:0 0 26px;font-size:14px}
+  h2{font-size:19px;margin:34px 0 12px}
+  h3{font-size:15.5px;margin:18px 0 6px;color:var(--acc)}
+  .verdict{border:1px solid var(--line);background:linear-gradient(180deg,#1b2030,#14171e);border-radius:14px;padding:20px 22px;margin:0 0 26px}
+  .verdict h2{margin:0 0 8px;font-size:17px;color:var(--vio)}
+  .pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;margin:0 6px 6px 0;border:1px solid var(--line)}
+  .pill.g{background:#11321c;color:#7ee2a8;border-color:#1f5132}
+  .pill.w{background:#332b12;color:#f0d28a;border-color:#5a4a1c}
+  .pill.b{background:#33181a;color:#f5a3a8;border-color:#5a2429}
+  .pill.v{background:#241a3a;color:#cbb4ff;border-color:#3c2c5e}
+  .kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 26px}
+  .kpi .b{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .kpi .n{font-size:24px;font-weight:800;color:#fff}
+  .kpi .l{font-size:12px;color:var(--mut);margin-top:2px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 14px}
+  .card h3{margin-top:0}
+  table{width:100%;border-collapse:collapse;margin:8px 0 22px;font-size:14px}
+  th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--mut);font-weight:600;font-size:12.5px;text-transform:uppercase;letter-spacing:.03em}
+  .good{color:var(--good)} .warn{color:var(--warn)} .bad{color:var(--bad)} .vio{color:var(--vio)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;color:#cdd3df;overflow:auto}
+  .foot{color:var(--mut);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:16px}
+  ul{margin:6px 0 6px;padding-left:20px} li{margin:3px 0}
+  .done{color:var(--good);font-weight:600} .todo{color:var(--warn);font-weight:600}
+  @media(max-width:720px){.kpi{grid-template-columns:repeat(2,1fr)}.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>CurationFig 竞争力改造蓝图</h1>
+  <p class="sub">诊断日期 2026-08-24 · 站群 SEO Expert · 决策型策展赛道 · 状态：本轮三项已全部落地</p>
+
+  <div class="verdict">
+    <h2>核心结论：赛道没问题，纯 AI 罗列才是死路</h2>
+    <p style="margin:0 0 10px">你的焦虑根源不是「AI 不能做这个赛道」，而是<strong>「无差别 AI 罗列」被谷歌判定为薄内容、被 AIO 零点击截流</strong>。决策型查询（「我该看什么/从哪入坑」）AIO 触发率仅 5–8%，恰恰需要编辑立场才能活。你已具备 202 个专题的策展论点 + 60 条编辑部 take，方向正确。</p>
+    <p style="margin:0">真正的护城河 = <span class="pill v">论点驱动</span><span class="pill v">风格 glossary</span><span class="pill v">真人体验层</span><span class="pill v">决策工具</span><span class="pill v">编辑部实体署名</span>。本轮把后三项从「缺」补到「有」。</p>
+  </div>
+
+  <div class="kpi">
+    <div class="b"><div class="n">202</div><div class="l">四频道策展专题（已手写 editorial）</div></div>
+    <div class="b"><div class="n">60</div><div class="l">前排 editorialNotes 真人体验层</div></div>
+    <div class="b"><div class="n">482</div><div class="l">music items 已补 mood 匹配</div></div>
+    <div class="b"><div class="n">0→20</div><div class="l">工具 mood 命中/查询（修复前为 0）</div></div>
+  </div>
+
+  <h2>一、本轮已落地（三项 + 工具修复）</h2>
+  <div class="card">
+    <h3>① E-E-A-T 信任层收口 <span class="done">✓ 完成</span></h3>
+    <ul>
+      <li>新增 <code>app/privacy/page.tsx</code>：无账号/无追踪/无售卖 + 开源数据归属声明（MusicBrainz/RAWG/TMDB）。</li>
+      <li>About 注入 <code>NewsMediaOrganization + EditorialOrganization + Person</code> JSON-LD（editorialTeam + Editorial Lead 署名），让「谁在推荐」可被谷歌识别。</li>
+      <li>Footer 增加 Privacy 链接；site.ts 已有 org（GitHub）+ email 实体。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>② 选择工具修复（「按心情选片」真正可用） <span class="done">✓ 完成</span></h3>
+    <ul>
+      <li><strong>根因</strong>：PlaylistGenerator 用 <code>item.tags.includes(mood)</code> 匹配，但 mood 词（relaxed/focused）不在 slug tags 里 → 命中率 0。</li>
+      <li><strong>修复</strong>：给 <code>CurationItem</code> 加 <code>moods?: string[]</code>；三个 fetch 脚本生成时注入所属 theme.mood；<code>backfill-moods.mjs</code> 一次性回填 music 482 条。</li>
+      <li><strong>结果</strong>：mood 筛选现每类命中 20 条（之前 0）。结果卡新增紫色 <code>tag-mood</code> 高亮，决策效用可见。</li>
+      <li>这是 AIO 抢不走的「必须进站」效用——现已真正生效。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>③ 竞争力改造蓝图（本 HTML） <span class="done">✓ 完成</span></h3>
+    <ul>
+      <li>整合诊断 + ROI 排序 + 落地清单，供后续执行追踪。</li>
+    </ul>
+  </div>
+
+  <h2>二、进行中：fetch 续跑补全 synopsis</h2>
+  <div class="card">
+    <h3>rawg / tmdb 断点续传 <span class="todo">⟳ 后台运行中</span></h3>
+    <ul>
+      <li>已重启（代理 3067 + .env.local key），增量落盘、断点续传。</li>
+      <li>games 待解析 339、film 待解析 335（RAWG/TMDB 限流严重，预计数小时）。</li>
+      <li>清洗逻辑已增强（去 HTML/MD 残留、Story: 小标题），脏数据 Sekiro/Nioh/Dead Cells 已删。</li>
+      <li>跑完用 <code>audit-synopsis.mjs</code> 审查 → 通过后提交 generated-*.ts + fetch 脚本。</li>
+    </ul>
+  </div>
+
+  <h2>三、竞争力 ROI 排序（剩余杠杆，按需推进）</h2>
+  <table>
+    <thead><tr><th>杠杆</th><th>作用</th><th>优先级</th><th>状态</th></tr></thead>
+    <tbody>
+      <tr><td>编辑部实体署名 + Privacy</td><td>E-E-A-T 核心「谁在推荐」</td><td class="good">高</td><td class="done">已落地</td></tr>
+      <tr><td>选择工具 mood 命中</td><td>决策效用，AIO 抢不走</td><td class="good">高</td><td class="done">已落地</td></tr>
+      <tr><td>synopsis 真实元数据补全</td><td>每条有可溯源简介，抗薄内容</td><td class="good">高</td><td class="todo">续跑中</td></tr>
+      <tr><td>商业联盟闭环</td><td>film/tv→streaming, games→Steam, music→Bandcamp，赛道变收入</td><td class="warn">中</td><td class="todo">待做</td></tr>
+      <tr><td>邮件 / 社区飞轮</td><td>「你看过几个」清单、周报，脱离纯 SEO 依赖</td><td class="warn">中</td><td class="todo">待做</td></tr>
+      <tr><td>原创数据集开放</td><td>cc0 策展矩阵，被 AIO 引用成信源</td><td class="warn">中</td><td class="todo">待做</td></tr>
+      <tr><td>品牌词建设</td><td>「CurationFig」直接召回，降低对通用词依赖</td><td class="vio">低</td><td class="todo">待做</td></tr>
+    </tbody>
+  </table>
+
+  <h2>四、关键认知校准</h2>
+  <div class="row">
+    <div class="card">
+      <h3>你不需要手写每一个作品的评价</h3>
+      <p style="margin:0;color:var(--mut)">长尾交给差异化生成器（基于真实 tags/theme/generative 改写）；前排高流量专题做深（真实数据源 + 选择工具 + 署名）。混合模型在决策型查询能活。</p>
+    </div>
+    <div class="card">
+      <h3>诚信是 E-E-A-T 红线</h3>
+      <p style="margin:0;color:var(--mut)">禁用伪第一身「我玩过/看过」。已用「编辑部视角 + 客观特征 + 公开评价共识」替代，AI味重且违规的风险已规避。</p>
+    </div>
+  </div>
+
+  <h2>五、本轮改动文件清单</h2>
+  <div class="code">
+lib/media/musicbrainz.ts          + moods?: string[]
+scripts/fetch-rawg.mjs             item 注入 moods + 预填充回填
+scripts/fetch-tmdb.mjs             resolveTitle 注入 moods + tasks 带 mood
+scripts/fetch-musicbrainz.mjs      item 注入 moods + 预填充回填
+scripts/backfill-moods.mjs         （新）一次性回填 482 music items
+components/PlaylistGenerator.tsx   mood 匹配 it.moods + tag-mood 展示
+app/globals.css                    .tag-mood 紫色高亮
+app/privacy/page.tsx               （新）Privacy & Data
+app/about/page.tsx                 EditorialTeam/Person JSON-LD
+components/Footer.tsx              + Privacy 链接
+.workbuddy/competitiveness_blueprint_2026-08-24.html  （新）本蓝图
+  </div>
+
+  <div class="foot">
+    执行：站群 SEO Expert · 2026-08-24 · 待 fetch 续跑完成后提交 generated-*.ts + 审查报告 · 蓝海定位 = 决策型策展（AIO 触发率 5–8%），非事实罗列（86–91% 零点击死区）。
+  </div>
+</div>
+</body>
+</html>

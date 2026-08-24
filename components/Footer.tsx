@@ -40,6 +40,7 @@ export function Footer() {
             <h4>About</h4>
             <ul>
               <li><Link href="/about/">About {SITE.name}</Link></li>
+              <li><Link href="/privacy/">Privacy &amp; Data</Link></li>
               <li><a href="https://curationfig.com/llms.txt">llms.txt</a></li>
             </ul>
           </div>

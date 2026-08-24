@@ -75,6 +75,7 @@ async function resolveGame(name, theme) {
     creator: (g.genres || []).map((x) => x.name).join(', ') || '',
     year: g.released?.slice(0, 4) || '',
     tags: [...(g.genres || []).map((x) => x.slug), ...(g.platforms || []).map((x) => x.platform.slug)].slice(0, 8),
+    moods: theme?.mood || [],
     cover: cover || null, url: `/games/${theme?.slug || ''}`,
     synopsis: synopsis || undefined,
   };
@@ -88,10 +89,20 @@ async function fetchCover(url, id) {
 }
 
 // 把 RAWG 简介重构为策展短摘要（借用真实信息，非原样复制）
+function cleanRaw(raw) {
+  return (raw || '')
+    .replace(/<[^>]+>/g, ' ')            // 去 HTML 标签（<p> 等）
+    .replace(/[#*_>`~]+/g, ' ')          // 去 Markdown 符号
+    .replace(/\b(Story|Plot|Overview|Description|Synopsis)\b[:.]?/gi, ' ') // 去 "Story:" 小标题
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function toSynopsis(desc) {
   if (!desc || desc.length < 40) return null;
-  const sentences = desc
-    .replace(/\s+/g, ' ')
+  const cleaned = cleanRaw(desc);
+  if (cleaned.length < 40) return null;
+  const sentences = cleaned
     .split(/(?<=[.!?])\s+/)
     .map((s) => s.trim())
     .filter(Boolean);
@@ -136,7 +147,11 @@ async function main() {
   // 从已有 resolve 缓存预填充 itemsMap（重启续跑，避免重复请求 + 不丢数据）
   const itemsMap = {};
   for (const name of names) {
-    if (resolved[name] && resolved[name] !== null) itemsMap[name] = resolved[name];
+    const c = resolved[name];
+    if (c && c !== null) {
+      if (!c.moods || c.moods.length === 0) c.moods = themeOf[name]?.mood || []; // 回填 mood（旧缓存缺字段）
+      itemsMap[name] = c;
+    }
   }
   const persist = () => {
     const items = Object.values(itemsMap);

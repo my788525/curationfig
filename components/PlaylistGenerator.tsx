@@ -37,7 +37,8 @@ export function PlaylistGenerator() {
       .map((it) => {
         let s = 0;
         const tags = (it.tags || []).map((t) => t.toLowerCase());
-        if (mood && tags.includes(mood)) s += 3;
+        const moods = (it.moods || []).map((t) => t.toLowerCase());
+        if (mood && moods.includes(mood)) s += 3;
         if (genre && tags.includes(genre)) s += 2;
         if (decade && it.year && it.year.startsWith(decade.slice(0, 3))) s += 1;
         return { it, s };
@@ -133,7 +134,10 @@ export function PlaylistGenerator() {
                     <div className="sub">{c.creator}{c.year ? ` · ${c.year}` : ''}</div>
                     {c.tags.length > 0 && (
                       <div className="row-tags">
-                        {c.tags.slice(0, 5).map((t) => (
+                        {(c.moods && c.moods.length > 0 ? c.moods.slice(0, 2) : []).map((t) => (
+                          <span key={`m-${t}`} className="tag-chip tag-mood">{t}</span>
+                        ))}
+                        {c.tags.slice(0, 4).map((t) => (
                           <span key={t} className="tag-chip">{t}</span>
                         ))}
                       </div>

@@ -33,6 +33,7 @@ export type CurationItem = {
   creator: string; // artist / studio / director
   year?: string;
   tags: string[];
+  moods?: string[]; // 所属策展专题的氛围标签（focused/relaxed/...），供生成器 mood 筛选命中
   cover?: string | null; // 本地化封面路径
   url: string; // 站内条目卡路径
   seedName?: string; // 种子名（用于专题页精确匹配，避免规范名变体导致漏匹配）

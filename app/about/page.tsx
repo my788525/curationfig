@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { SITE } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Our Curation Method — About CurationFig',
@@ -8,9 +9,44 @@ export const metadata: Metadata = {
   alternates: { canonical: '/about/' },
 };
 
+const EDITORIAL_LD = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'NewsMediaOrganization',
+      '@id': `${SITE.domain}/#organization`,
+      name: SITE.name,
+      url: SITE.domain,
+      description: SITE.description,
+      email: SITE.email,
+      sameAs: [SITE.org],
+      foundingDate: '2025',
+      editorialTeam: {
+        '@type': 'EditorialOrganization',
+        name: `${SITE.name} Editorial`,
+        description:
+          'A small editorial team that writes the arguments binding each curated list together and attributes all metadata to open sources.',
+      },
+    },
+    {
+      '@type': 'Person',
+      '@id': `${SITE.domain}/#editorial-lead`,
+      name: 'CurationFig Editorial Lead',
+      jobTitle: 'Editorial Lead',
+      worksFor: { '@id': `${SITE.domain}/#organization` },
+      description:
+        'Owns the curation method, selection criteria, and the "why this belongs" notes across film, TV, games, and music.',
+    },
+  ],
+};
+
 export default function AboutPage() {
   return (
     <section className="section">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(EDITORIAL_LD) }}
+      />
       <div className="wrap article">
         <div className="crumbs">
           <Link href="/">Home</Link> / About
