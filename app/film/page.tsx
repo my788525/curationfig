@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { FILM_THEMES } from '@/lib/media/curation';
 import { FILM_ITEMS } from '@/lib/media/generated-film';
+import Reveal from '@/components/Reveal';
 
 export const metadata: Metadata = {
   title: 'Film Curation',
@@ -29,7 +30,7 @@ export default function FilmHub() {
 
       <section className="section">
         <div className="wrap">
-          <div className="grid grid-2">
+          <Reveal className="grid grid-2">
             {FILM_THEMES.map((t) => (
               <Link key={t.slug} href={`/film/${t.slug}/`} className="card theme-card">
                 <h3>{t.title}</h3>
@@ -41,7 +42,7 @@ export default function FilmHub() {
                 </div>
               </Link>
             ))}
-          </div>
+          </Reveal>
 
           <div className="warn-banner" style={{ marginTop: 26 }}>
             <strong>Data &amp; licensing:</strong> Film metadata from The Movie Database (TMDB),

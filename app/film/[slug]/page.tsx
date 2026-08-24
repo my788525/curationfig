@@ -5,6 +5,7 @@ import { FILM_THEMES, itemBlurb } from '@/lib/media/curation';
 import { FILM_ITEMS } from '@/lib/media/generated-film';
 import type { CurationItem } from '@/lib/media/musicbrainz';
 import { CopyListButton } from '@/components/CopyListButton';
+import Reveal from '@/components/Reveal';
 
 export function generateStaticParams() {
   return FILM_THEMES.map((t) => ({ slug: t.slug }));
@@ -96,7 +97,7 @@ export default function FilmThemePage({ params }: { params: { slug: string } }) 
                 label="Copy titles"
               />
             </div>
-            <div className="item-rows">
+            <Reveal className="item-rows">
               {items.map((it) => (
                 <div key={it.refId} className="item-row">
                   <div className="thumb">
@@ -120,7 +121,7 @@ export default function FilmThemePage({ params }: { params: { slug: string } }) 
                   </div>
                 </div>
               ))}
-            </div>
+            </Reveal>
             {missing.length > 0 && (
               <p className="muted" style={{ marginTop: 10 }}>
                 {missing.length} entries pending metadata resolution from TMDB.

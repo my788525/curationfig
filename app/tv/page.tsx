@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { TV_THEMES } from '@/lib/media/curation';
 import { TV_ITEMS } from '@/lib/media/generated-tv';
+import Reveal from '@/components/Reveal';
 
 export const metadata: Metadata = {
   title: 'TV Curation',
@@ -29,7 +30,7 @@ export default function TvHub() {
 
       <section className="section">
         <div className="wrap">
-          <div className="grid grid-2">
+          <Reveal className="grid grid-2">
             {TV_THEMES.map((t) => (
               <Link key={t.slug} href={`/tv/${t.slug}/`} className="card theme-card">
                 <h3>{t.title}</h3>
@@ -41,7 +42,7 @@ export default function TvHub() {
                 </div>
               </Link>
             ))}
-          </div>
+          </Reveal>
 
           <div className="warn-banner" style={{ marginTop: 26 }}>
             <strong>Data &amp; licensing:</strong> TV metadata from The Movie Database (TMDB),

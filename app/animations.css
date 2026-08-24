@@ -1,0 +1,166 @@
+/* ============================================================
+   curationfig — motion & energy layer
+   年轻 / 活力 / 娱乐站定位。纯 CSS 为主，零运行时依赖。
+   所有动画在 prefers-reduced-motion 下自动降级为静止。
+   ============================================================ */
+
+/* ---------- 1. Hero 动态流光 + 浮动光斑 ---------- */
+.hero {
+  background: linear-gradient(125deg, #2a1f3d 0%, #4a2a6e 38%, #6f3aa0 64%, #c9407f 100%);
+  background-size: 280% 280%;
+  animation: heroShift 16s ease infinite;
+}
+@keyframes heroShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+/* 浮动光斑：两层径向渐变缓慢漂移，增加纵深与活力 */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: .5;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero::before {
+  width: 380px; height: 380px;
+  top: -120px; right: -80px;
+  background: radial-gradient(circle at center, rgba(201,64,127,.65), transparent 70%);
+  animation: floatA 13s ease-in-out infinite;
+}
+.hero::after {
+  width: 300px; height: 300px;
+  bottom: -130px; left: 8%;
+  background: radial-gradient(circle at center, rgba(138,79,192,.6), transparent 70%);
+  animation: floatB 17s ease-in-out infinite;
+}
+@keyframes floatA {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50%     { transform: translate(-40px,30px) scale(1.12); }
+}
+@keyframes floatB {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50%     { transform: translate(50px,-26px) scale(1.08); }
+}
+.hero.has-bg { background-image: linear-gradient(rgba(22,19,31,.72), rgba(22,19,31,.58)), var(--hero-img); }
+.hero.has-bg::before,
+.hero.has-bg::after { mix-blend-mode: screen; }
+
+/* ---------- 2. 霓虹渐变标题 ---------- */
+.grad-text {
+  background: linear-gradient(100deg, #fff 0%, #f3c4e6 30%, #c9a6ef 60%, #8ad8cf 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradFlow 7s linear infinite;
+}
+@keyframes gradFlow { to { background-position: 200% center; } }
+
+/* ---------- 3. 入场动画（配合 Reveal 容器） ----------
+   关键：初始隐藏只作用于 JS 已启用 (data-reveal="on") 的容器直接子元素，
+   保证无 JS / SEO 抓取 / reduced-motion 时内容始终完整可见，不会被藏起来。 */
+[data-reveal="on"] > * {
+  opacity: 0;
+  transform: translateY(18px);
+}
+[data-reveal="on"] > .reveal-item {
+  animation: rise .6s cubic-bezier(.22,.61,.36,1) forwards;
+}
+@keyframes rise {
+  to { opacity: 1; transform: translateY(0); }
+}
+/* stagger 错峰延迟由 Reveal 组件以内联 style.animationDelay 注入（循环 0–11），
+   避免 nth-child 上限导致第 13+ 项永久隐藏。此处不再写死。 */
+
+/* ---------- 4. 悬停活力反馈 ---------- */
+.theme-card {
+  position: relative;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.theme-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 34px rgba(111,58,160,.18);
+  border-color: var(--violet-500);
+}
+.theme-card:hover h3 {
+  background: linear-gradient(100deg, var(--violet-700), var(--pink-600));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+}
+
+.item-row {
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+.item-row:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 22px rgba(111,58,160,.13);
+  border-color: var(--violet-500);
+}
+.item-row:hover .thumb {
+  box-shadow: 0 0 0 3px var(--violet-50), 0 6px 14px rgba(111,58,160,.25);
+}
+
+.card { transition: transform .16s ease, box-shadow .16s ease; }
+.card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(22,19,31,.12); }
+
+/* ---------- 5. 按钮活力 ---------- */
+.gen-btn, .copy-btn {
+  transition: transform .12s ease, box-shadow .18s ease, background .18s ease;
+}
+.gen-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(111,58,160,.4);
+}
+.gen-btn:active { transform: translateY(0) scale(.97); }
+.copy-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(111,58,160,.22); }
+.copy-btn.copied {
+  background: var(--green-600); color: #fff; border-color: var(--green-600);
+}
+
+/* 主 CTA 脉冲 */
+.pulse-btn {
+  animation: pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(201,64,127,.5); }
+  50%     { box-shadow: 0 0 0 12px rgba(201,64,127,0); }
+}
+
+/* ---------- 6. pill-tag 微弹 ---------- */
+.pill-tag {
+  transition: transform .15s ease, background .15s ease;
+}
+.pill-tag:hover { transform: scale(1.06); }
+
+/* banner 轻微强调 */
+.banner, .warn-banner { animation: softIn .5s ease; }
+@keyframes softIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* ---------- 无障碍：尊重用户减少动态偏好 ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .hero,
+  .hero::before,
+  .hero::after,
+  .grad-text,
+  .pulse-btn,
+  .banner,
+  .warn-banner { animation: none !important; }
+  [data-reveal="on"] > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  [data-reveal="on"] > .reveal-item { animation: none !important; }
+  .theme-card, .item-row, .card, .gen-btn, .copy-btn, .pill-tag {
+    transition: none !important;
+  }
+  .theme-card:hover, .item-row:hover, .card:hover,
+  .gen-btn:hover, .copy-btn:hover, .pill-tag:hover {
+    transform: none !important;
+  }
+}

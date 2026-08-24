@@ -143,3 +143,6 @@ p { margin: 0 0 1em; }
 /* banner */
 .banner { background: var(--teal-50); border: 1px solid #bfe6df; border-left: 4px solid var(--teal-600); border-radius: 10px; padding: 12px 16px; margin: 16px 0; font-size: 13.5px; color: var(--ink-700); }
 .warn-banner { background: #fbeef0; border: 1px solid #f3c9cf; border-left: 4px solid var(--red-600); border-radius: 10px; padding: 12px 16px; margin: 16px 0; font-size: 13.5px; }
+
+/* ===== motion & energy layer ===== */
+@import './animations.css';

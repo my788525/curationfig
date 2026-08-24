@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { MUSIC_THEMES } from '@/lib/media/curation';
 import { MUSIC_ITEMS } from '@/lib/media/generated-music';
+import Reveal from '@/components/Reveal';
 
 export const metadata: Metadata = {
   title: 'Music Curation',
@@ -35,7 +36,7 @@ export default function MusicHub() {
             </Link>
           </div>
 
-          <div className="grid grid-2">
+          <Reveal className="grid grid-2">
             {MUSIC_THEMES.map((t) => (
               <Link key={t.slug} href={`/music/${t.slug}/`} className="card theme-card">
                 <h3>{t.title}</h3>
@@ -49,7 +50,7 @@ export default function MusicHub() {
                 </div>
               </Link>
             ))}
-          </div>
+          </Reveal>
 
           <div className="warn-banner" style={{ marginTop: 26 }}>
             <strong>Data &amp; licensing:</strong> Artist &amp; release metadata from MusicBrainz
