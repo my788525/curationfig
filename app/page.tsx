@@ -5,11 +5,19 @@ import {
   GAME_THEMES,
   FILM_THEMES,
   TV_THEMES,
+  BOOKS_THEMES,
+  ANIMATION_THEMES,
+  PODCASTS_THEMES,
+  COMICS_THEMES,
 } from '@/lib/media/curation';
 import { MUSIC_ITEMS } from '@/lib/media/generated-music';
 import { GAME_ITEMS } from '@/lib/media/generated-games';
 import { FILM_ITEMS } from '@/lib/media/generated-film';
 import { TV_ITEMS } from '@/lib/media/generated-tv';
+import { BOOKS_ITEMS } from '@/lib/media/generated-books';
+import { ANIMATION_ITEMS } from '@/lib/media/generated-animation';
+import { PODCASTS_ITEMS } from '@/lib/media/generated-podcasts';
+import { COMICS_ITEMS } from '@/lib/media/generated-comics';
 import Reveal from '@/components/Reveal';
 import Marquee from '@/components/Marquee';
 import TiltCard from '@/components/TiltCard';
@@ -20,6 +28,10 @@ const FEATURED: Record<string, { themes: typeof MUSIC_THEMES; items: typeof MUSI
   game: { themes: GAME_THEMES, items: GAME_ITEMS, hub: '/games/' },
   film: { themes: FILM_THEMES, items: FILM_ITEMS, hub: '/film/' },
   tv: { themes: TV_THEMES, items: TV_ITEMS, hub: '/tv/' },
+  books: { themes: BOOKS_THEMES, items: BOOKS_ITEMS, hub: '/books/' },
+  animation: { themes: ANIMATION_THEMES, items: ANIMATION_ITEMS, hub: '/animation/' },
+  podcasts: { themes: PODCASTS_THEMES, items: PODCASTS_ITEMS, hub: '/podcasts/' },
+  comics: { themes: COMICS_THEMES, items: COMICS_ITEMS, hub: '/comics/' },
 };
 
 export default function HomePage() {
@@ -33,6 +45,10 @@ export default function HomePage() {
     tv: TV_ITEMS.filter((i) => i.cover).length
       ? coverCards(TV_ITEMS, '/tv/')
       : THEME_THEMES_TO_CARDS(TV_THEMES, '/tv/'),
+    books: allCards(BOOKS_ITEMS, '/books/'),
+    animation: allCards(ANIMATION_ITEMS, '/animation/'),
+    podcasts: allCards(PODCASTS_ITEMS, '/podcasts/'),
+    comics: allCards(COMICS_ITEMS, '/comics/'),
   };
 
   return (
@@ -79,6 +95,10 @@ export default function HomePage() {
             { label: 'Games', href: '/games/', cards: marqueeByChannel.game },
             { label: 'Film', href: '/film/', cards: marqueeByChannel.film },
             { label: 'TV', href: '/tv/', cards: marqueeByChannel.tv },
+            { label: 'Books', href: '/books/', cards: marqueeByChannel.books },
+            { label: 'Animation', href: '/animation/', cards: marqueeByChannel.animation },
+            { label: 'Podcasts', href: '/podcasts/', cards: marqueeByChannel.podcasts },
+            { label: 'Comics', href: '/comics/', cards: marqueeByChannel.comics },
           ]}
         />
       </section>
@@ -174,6 +194,20 @@ function coverCards(
       cover: i.cover,
       href: i.url || hub,
     }));
+}
+
+// 新频道无封面（cover=null）：仍展示条目卡（无封面降级样式），不丢内容
+function allCards(
+  items: { title: string; creator?: string; cover?: string | null; url: string }[],
+  hub: string,
+  n = 12
+) {
+  return items.slice(0, n).map((i) => ({
+    title: i.title,
+    subtitle: i.creator || '',
+    cover: i.cover,
+    href: i.url || hub,
+  }));
 }
 
 // tv 无条目时：把专题本身做成"策展精选"卡（不编造元数据）

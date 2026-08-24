@@ -12,11 +12,15 @@ export const SITE = {
   email: 'admin@curationfig.com',
 };
 
-export type Channel = 'music' | 'game' | 'film' | 'tv';
+export type Channel = 'music' | 'game' | 'film' | 'tv' | 'books' | 'animation' | 'podcasts' | 'comics';
 
 export const CHANNELS: { key: Channel; label: string; tagline: string; live: boolean }[] = [
   { key: 'music', label: 'Music', tagline: 'Playlists & artist curation', live: true },
   { key: 'game', label: 'Games', tagline: 'Gamelists & studio curation', live: true },
   { key: 'film', label: 'Film', tagline: 'Watchlists & director curation', live: true },
   { key: 'tv', label: 'TV', tagline: 'Binge guides & show curation', live: true },
+  { key: 'books', label: 'Books', tagline: 'Literary curation & book lists', live: true },
+  { key: 'animation', label: 'Animation', tagline: 'Anime & animation curation', live: true },
+  { key: 'podcasts', label: 'Podcasts', tagline: 'Audio & podcast curation', live: true },
+  { key: 'comics', label: 'Comics', tagline: 'Comics & graphic novel curation', live: true },
 ];

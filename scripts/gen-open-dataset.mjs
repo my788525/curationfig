@@ -16,7 +16,7 @@ const RETRIEVED = '2026-08-24';
 
 async function loadThemes(channel, file) {
   const mod = await import(pathToFileURL(resolve(ROOT, file)).href);
-  const key = { music: 'MUSIC_THEMES', games: 'GAME_THEMES', film: 'FILM_THEMES', tv: 'TV_THEMES' }[channel];
+  const key = { music: 'MUSIC_THEMES', games: 'GAME_THEMES', film: 'FILM_THEMES', tv: 'TV_THEMES', books: 'BOOKS_THEMES', animation: 'ANIMATION_THEMES', podcasts: 'PODCASTS_THEMES', comics: 'COMICS_THEMES' }[channel];
   return (mod[key] || []).map((t) => shapeTheme(channel, t));
 }
 
@@ -26,6 +26,10 @@ function shapeTheme(channel, t) {
     games: 'Steam Store API (attribution required)',
     film: 'OMDb API (attribution required)',
     tv: 'TVmaze API (attribution required)',
+    books: 'Public bibliographic records (author / first-publish year / publisher)',
+    animation: 'AniList GraphQL API (community scores) + public bibliographic facts for Western animation',
+    podcasts: 'iTunes Search API (show name / host / genre)',
+    comics: 'AniList (manga) + public bibliographic records (Western comics & graphic novels)',
   }[channel];
   return {
     channel,
@@ -54,6 +58,10 @@ async function main() {
     ...(await loadThemes('games', 'lib/media/seeds-games.ts')),
     ...(await loadThemes('film', 'lib/media/seeds-film.ts')),
     ...(await loadThemes('tv', 'lib/media/seeds-tv.ts')),
+    ...(await loadThemes('books', 'lib/media/seeds-books.ts')),
+    ...(await loadThemes('animation', 'lib/media/seeds-animation.ts')),
+    ...(await loadThemes('podcasts', 'lib/media/seeds-podcasts.ts')),
+    ...(await loadThemes('comics', 'lib/media/seeds-comics.ts')),
   ];
 
   const dataset = {

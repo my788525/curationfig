@@ -2,7 +2,7 @@
 // L4 抗 AIO 武器：输入偏好 → 输出定制清单（用户必须进站，AI 无法直接摘）
 import type { CurationItem } from './musicbrainz';
 
-export type Channel = 'music' | 'game' | 'film' | 'tv';
+export type Channel = 'music' | 'game' | 'film' | 'tv' | 'books' | 'animation' | 'podcasts' | 'comics';
 
 export type CurationTheme = {
   slug: string;
@@ -61,6 +61,10 @@ const CHANNEL_NOUN: Record<Channel, string> = {
   game: 'game',
   film: 'film',
   tv: 'series',
+  books: 'book',
+  animation: 'film',
+  podcasts: 'podcast',
+  comics: 'comic',
 };
 
 const CHANNEL_VERB: Record<Channel, string> = {
@@ -68,6 +72,10 @@ const CHANNEL_VERB: Record<Channel, string> = {
   game: 'play',
   film: 'watch',
   tv: 'binge',
+  books: 'read',
+  animation: 'watch',
+  podcasts: 'listen to',
+  comics: 'read',
 };
 
 export function itemBlurb(item: CurationItem, thesis?: string): string {
@@ -133,6 +141,10 @@ const TIP_BY_CHANNEL: Record<Channel, string> = {
   film: 'Best enjoyed with the lights down and no second screen.',
   game: 'Best enjoyed in unhurried sessions — let it breathe.',
   tv: 'Best enjoyed as a weekend commitment, not background noise.',
+  books: 'Best enjoyed in a quiet hour with the phone in another room.',
+  animation: 'Best enjoyed with subtitles on and the phone face-down.',
+  podcasts: 'Best enjoyed on a walk, a commute, or while doing something with your hands.',
+  comics: 'Best enjoyed in one sitting, then flipped back through for the art.',
 };
 
 export function consumptionTip(item: CurationItem): string {
@@ -149,16 +161,24 @@ import { GAME_THEMES } from './seeds-games';
 import { FILM_THEMES } from './seeds-film';
 import { TV_THEMES } from './seeds-tv';
 import { MOOD_THEMES } from './seeds-moods';
+import { BOOKS_THEMES } from './seeds-books';
+import { ANIMATION_THEMES } from './seeds-animation';
+import { PODCASTS_THEMES } from './seeds-podcasts';
+import { COMICS_THEMES } from './seeds-comics';
 
-export { MUSIC_THEMES, GAME_THEMES, FILM_THEMES, TV_THEMES, MOOD_THEMES };
+export { MUSIC_THEMES, GAME_THEMES, FILM_THEMES, TV_THEMES, MOOD_THEMES, BOOKS_THEMES, ANIMATION_THEMES, PODCASTS_THEMES, COMICS_THEMES };
 
-// 合并生成器候选池（四个频道全部并入）
+// 合并生成器候选池（所有频道并入）
 export const ALL_THEMES: CurationTheme[] = [
   ...MOOD_THEMES, // 情绪中枢放最前，作为"按情绪/氛围"定位的门面
   ...MUSIC_THEMES,
   ...GAME_THEMES,
   ...FILM_THEMES,
   ...TV_THEMES,
+  ...BOOKS_THEMES,
+  ...ANIMATION_THEMES,
+  ...PODCASTS_THEMES,
+  ...COMICS_THEMES,
 ];
 
 export const THEME_TARGET = 50; // 每频道目标
@@ -172,6 +192,10 @@ const CHANNEL_LABEL: Record<Channel, { noun: string; verb: string; where: string
   game: { noun: 'games', verb: 'play', where: 'a relaxed evening session' },
   film: { noun: 'films', verb: 'watch', where: 'a darkened living room' },
   tv: { noun: 'series', verb: 'binge', where: 'a weekend on the couch' },
+  books: { noun: 'books', verb: 'read', where: 'a quiet hour with the phone away' },
+  animation: { noun: 'films', verb: 'watch', where: 'a darkened living room' },
+  podcasts: { noun: 'podcasts', verb: 'listen', where: 'a walk or a commute' },
+  comics: { noun: 'comics', verb: 'read', where: 'a slow afternoon with the art in hand' },
 };
 
 // 适合谁 / 场景（fallback：基于 intro + tags 组合，口语化）

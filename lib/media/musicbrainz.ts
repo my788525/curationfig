@@ -27,7 +27,7 @@ export type MBRelease = {
 
 // 策展条目（统一跨源接口，供 curation.ts 生成器使用）
 export type CurationItem = {
-  source: 'music' | 'game' | 'film' | 'tv';
+  source: 'music' | 'game' | 'film' | 'tv' | 'books' | 'animation' | 'podcasts' | 'comics';
   refId: string; // MBID / RAWG id / TMDB id
   title: string;
   creator: string; // artist / studio / director
