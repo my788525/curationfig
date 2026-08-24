@@ -142,6 +142,32 @@ export default function AboutPage() {
           part no API can generate.
         </p>
 
+        <h2>Cover images &amp; copyright</h2>
+        <p className="article-body" style={{ marginTop: 0 }}>
+          We display cover and key art only to identify a work and aid browsing. Rights belong to
+          their respective owners and are used here for identification / commentary under fair-use
+          principles, not as endorsed artwork:
+        </p>
+        <ul className="article-body" style={{ marginTop: 8 }}>
+          <li>
+            <strong>Podcasts</strong> — show artwork is served from the Apple iTunes Search API,
+            used as permitted for displaying podcast identity.
+          </li>
+          <li>
+            <strong>Animation &amp; Comics (manga)</strong> — key art is sourced from AniList and
+            remains the property of the original studios, publishers, and creators.
+          </li>
+          <li>
+            <strong>Books, Western comics &amp; graphic novels</strong> — where no licensable cover
+            API is reachable, we render a simple text placeholder (title on a brand background) that
+            carries no third-party imagery and creates no copyright exposure.
+          </li>
+        </ul>
+        <p className="article-body" style={{ marginTop: 8 }}>
+          If you are a rights holder and would like a specific image removed or credited differently,
+          contact us via the form on the <Link href="/contact/">contact page</Link>.
+        </p>
+
         <h2>What we are not</h2>
         <ul className="article-body" style={{ marginTop: 0 }}>
           <li>Not a streaming service — no playback, no login wall.</li>

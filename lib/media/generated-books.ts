@@ -12,22 +12,23 @@ export type GeneratedBook = {
   creator: string; // author
   year?: string; // first publication year (public bibliographic fact)
   tags: string[];
-  cover: null;
+  cover: string | null;
   url: string;
   seedName: string;
   synopsis?: string;
 };
 
 function b(title: string, author: string, year: string, tags: string[], note?: string): GeneratedBook {
+  const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
   return {
     source: 'books',
-    refId: `book:${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
+    refId: `book:${slug}`,
     title,
     creator: author,
     year,
     tags,
-    cover: null,
-    url: `/books/${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}/`,
+    cover: `/images/books/${slug}.webp`,
+    url: `/books/${slug}/`,
     seedName: title,
     synopsis: note,
   };

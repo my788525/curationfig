@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CurationFig 竞争力整改执行报告 · 2026-08-24</title>
+<style>
+  :root{
+    --bg:#0f0d17; --card:#1a1626; --card2:#221c33; --ink:#ece8f5; --muted:#9a90b0;
+    --violet:#8b5cf6; --teal:#2dd4bf; --amber:#fbbf24; --red:#f87171; --green:#34d399;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:linear-gradient(160deg,#0f0d17,#15111f);color:var(--ink);
+    font-family:-apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65;padding:32px 18px 60px;}
+  .wrap{max-width:960px;margin:0 auto;}
+  h1{font-size:28px;margin:0 0 6px;background:linear-gradient(90deg,var(--violet),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .sub{color:var(--muted);margin:0 0 26px;font-size:15px;}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:24px 0 30px;}
+  .kpi{background:var(--card);border:1px solid #2c2440;border-radius:var(--radius);padding:16px 18px;}
+  .kpi .n{font-size:26px;font-weight:800;color:var(--teal);}
+  .kpi .l{font-size:12.5px;color:var(--muted);margin-top:4px;}
+  .card{background:var(--card);border:1px solid #2c2440;border-radius:var(--radius);padding:20px 22px;margin:16px 0;}
+  .card h2{font-size:18px;margin:0 0 12px;color:#fff;display:flex;align-items:center;gap:8px;}
+  .pill{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;margin-right:6px;}
+  .p0{background:rgba(248,113,113,.16);color:var(--red);border:1px solid rgba(248,113,113,.4);}
+  .p1{background:rgba(251,191,36,.16);color:var(--amber);border:1px solid rgba(251,191,36,.4);}
+  .p2{background:rgba(45,212,191,.16);color:var(--teal);border:1px solid rgba(45,212,191,.4);}
+  .done{background:rgba(52,211,153,.16);color:var(--green);border:1px solid rgba(52,211,153,.4);}
+  ul{margin:8px 0;padding-left:20px;} li{margin:5px 0;}
+  code{background:#0c0a13;padding:2px 7px;border-radius:6px;font-size:13px;color:var(--violet);}
+  .good{border-left:4px solid var(--green);background:rgba(52,211,153,.08);padding:12px 16px;border-radius:8px;margin:12px 0;}
+  .warn{border-left:4px solid var(--amber);background:rgba(251,191,36,.08);padding:12px 16px;border-radius:8px;margin:12px 0;}
+  .bad{border-left:4px solid var(--red);background:rgba(248,113,113,.08);padding:12px 16px;border-radius:8px;margin:12px 0;}
+  .muted{color:var(--muted);font-size:13.5px;}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:13.5px;}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid #2c2440;}
+  th{color:var(--muted);font-weight:600;}
+  .tag{font-size:11px;color:var(--muted);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>CurationFig 竞争力整改执行报告</h1>
+  <p class="sub">基于现状评估的 5 项短板整改 · 全部执行 / 验证 / 提交 / 推送 · 2026-08-24</p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="n">5/5</div><div class="l">整改项全部完成</div></div>
+    <div class="kpi"><div class="n">13</div><div class="l">articles 长文（含 3 篇修死链）</div></div>
+    <div class="kpi"><div class="n">271</div><div class="l">构建产出 HTML 页</div></div>
+    <div class="kpi"><div class="n">0</div><div class="l">文章死链（全校验通过）</div></div>
+    <div class="kpi"><div class="n">9a84806</div><div class="l">已推送 commit</div></div>
+  </div>
+
+  <div class="card">
+    <h2>📊 评估期发现的认知纠正（重要）</h2>
+    <div class="warn">
+      <strong>此前评估的两处过时结论已更正：</strong>
+      <ul>
+        <li><b>games 数据量</b>：实际 generated-games.ts 含 <b>339</b> 条 refId（非此前误报的 54；54 是某一导出数组的精选子集）。games 频道并不薄。</li>
+        <li><b>games 封面</b>：本地已有 72 个 webp，54 条主条目中 53 条有 cover，仅 Baldur's Gate III 因 Steam CDN 经代理不可达而走默认降级 —— 并非"100% null"。</li>
+      </ul>
+    </div>
+    <div class="bad">
+      <strong>真实致命隐患（已当场修复）：</strong>工作区 <code>generated-film.ts</code>/<code>generated-tv.ts</code> 被本地误跑的 fetch 脚本残留污染（film 332→312 且 creator/synopsis 清空，tv 274→39）。线上 HEAD 完好，但误 build+push 会炸。已还原并加固。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="pill p0">P0</span><span class="pill done">✓ 完成</span> 构建保护机制</h2>
+    <p>新增 <code>scripts/protect-generated.mjs</code>（显式列举 9 个 generated 文件，跨平台安全 <code>git checkout HEAD</code>，不用 shell glob），<code>package.json</code> build 脚本接入为前置步骤。CF 从干净 commit 重建前先还原 generated，彻底杜绝本地 fetch 残留污染上线。</p>
+    <div class="good">已验证：本地 build 跑通，generated 污染文件被自动还原（exit=0）。</div>
+  </div>
+
+  <div class="card">
+    <h2><span class="pill p0">P0</span><span class="pill done">✓ 完成</span> film / tv / music Our take 去模板化</h2>
+    <p><code>lib/media/curation.ts</code> 新增 <code>editorialTake(item, thesis, fallbackNote)</code>：基于真实字段（title/year/creator/genre/synopsis）动态生成条目级 Our take，句式随数据分叉、无统一 opener 模板；内置 <code>TEMPLATE_MARKERS</code> 识别并丢弃旧复读模板（"Beside its neighbors" 等）。三频道 <code>[slug]</code> 页改用动态生成。</p>
+    <div class="good">逻辑测试 4 类分支（有/无 synopsis·creator·genre）输出均差异化；构建产物中已出现 "earns its slot because its actual premise" 动态句。</div>
+  </div>
+
+  <div class="card">
+    <h2><span class="pill p1">P1</span><span class="pill done">✓ 完成</span> games 封面本地化</h2>
+    <p>核查结论：封面本地化已基本完成（72 webp / 53 条有 cover），仅 BG3 因 Steam CDN（shared.cloudflare.steamstatic.com）经代理 3067 返回 000 不可达而走 <code>Cover</code> 组件默认降级（不破图）。不强行突破被封锁 CDN，避免不稳定与违背诚实护栏。</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="pill p1">P1</span><span class="pill done">✓ 完成</span> articles 真实长文 + 内链</h2>
+    <p><code>content/articles/</code> 新增 12 篇真实策展方法论长文（含 3 篇被首页/专题引用的 pillar：<code>how-mood-shapes-media-choice</code> / <code>mixing-media</code> / <code>cozy-media-defined</code> 修死链 + 9 篇新增），全部内链回真实专题 slug。并修复旧文 <code>streaming-fragmentation.md</code> 两处死链（bittersweet-endings→dream-pop、rainy-window→classical-rainy-window）。</p>
+    <div class="good">13 篇文章全部内链校验通过（含 <code>/tools/playlist/</code> 真实路由），构建产出 14 个 HTML（13 文 + index）。</div>
+  </div>
+
+  <div class="card">
+    <h2><span class="pill p2">P2</span><span class="pill done">✓ 完成</span> Newsletter 订阅钩子 + Footer</h2>
+    <p>新增 <code>components/Newsletter.tsx</code>（Web3Forms 无后端订阅，提供复访理由；access_key 为占位，待用户在 web3forms.com 注册后替换）+ <code>Footer</code> 接入 + <code>globals.css</code> 样式。</p>
+    <div class="warn"><strong>跨站 footer 网络条决策：</strong>curationfig 为独立策展站（不在站群域名矩阵内），按站群铁律"跨站外链必须 nofollow + 主题相关子集"且避免链接垃圾，<b>未加跨域外链</b>。Footer 现有 Channels 列已提供完整的站内频道导航（合规且有导航价值）。</div>
+  </div>
+
+  <div class="card">
+    <h2>🔧 提交与部署</h2>
+    <table>
+      <tr><th>项</th><th>值</th></tr>
+      <tr><td>Commit</td><td><code>9a84806</code></td></tr>
+      <tr><td>变更</td><td>63 文件，+759 / -177</td></tr>
+      <tr><td>推送</td><td><code>00af757..9a84806 main</code> → GitHub（PAT + 3067 代理）</td></tr>
+      <tr><td>构建</td><td>next build 成功，271 HTML，pagefind 索引 270 页</td></tr>
+      <tr><td>CF 部署</td><td>自动重建（用户豁免核查）</td></tr>
+    </table>
+    <p class="muted">注：generated-*.ts 的 git status "M" 为 Windows autocrlf 行尾噪音（内容等同 HEAD），未提交；games webp 真实资产质量改进已随提交带入。</p>
+  </div>
+
+  <div class="card">
+    <h2>📌 后续建议（未执行，供决策）</h2>
+    <ul>
+      <li><b>Newsletter access_key</b>：替换为真实 Web3Forms key 后方可接收订阅邮件（当前为占位）。</li>
+      <li><b>TV/Animation/Comics 薄频道</b>：tv 274 / animation 25 / comics 37，若需扩量可再跑对应 fetch 脚本（注意先隔离，避免污染 generated）。</li>
+      <li><b>定期审查</b>：建议每月用 <code>audit-synopsis.mjs</code> 类脚本复核长尾条目 synopsis 覆盖率。</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
