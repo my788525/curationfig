@@ -11,6 +11,20 @@ export const MUSIC_THEMES: CurationTheme[] = [
     thesis:
       'These records share one job — to disappear. We picked albums engineered for background concentration, where texture beats melody and nothing demands your attention.',
     intro: 'A curated descent into instrumental calm. Perfect for 1am deadlines and empty rooms.',
+    audience:
+      'This list is for the 1am worker, the insomniac who\'s productive, and anyone who needs sound that doesn\'t ask for attention. You\'ll like it if lyrics pull you out of your own thoughts, or if a silent room makes your brain louder. Skip it if you actually want to listen — this is wallpaper on purpose, and people who crave a chorus will find it frustrating. It\'s also a reliable tool for focus sessions where familiarity crowds out the urge to switch tabs.',
+    criteria:
+      'We excluded anything with a vocal hook that competes for language, any drop designed to jolt, and any track that "builds" toward a payoff you have to wait for. We kept records engineered to recede: ambient, lo-fi, and instrumental electronic where texture beats melody. A pick earned its place by disappearing behind your actual task. Where two made the same point, we kept the one least likely to interrupt a sentence.',
+    alternatives:
+      'If the calm is right but you want it warmer, Rain on the Window keeps you company while you work. If you want the same focus with more energy to start, Adrenaline Night is the wrong speed — this is the opposite. People who need a plot should look at the film and TV themes instead. For pure melancholy without the productivity angle, The Lonely Tuesday.',
+    faq: [
+      { q: 'Why no vocals?', a: 'Because sung words compete with the language centers you\'re using to work or read. Instrumental and ambient let the brain stay on the task.' },
+      { q: 'Is this the same as a "study playlist"?', a: 'Closer to a focus tool. We curated for disappearance, not for a vibe you\'d notice — the goal is that you forget it\'s on.' },
+      { q: 'Can I loop one album all night?', a: 'That\'s the ideal use. Music for Airports was literally designed to be ignorable for hours.' },
+      { q: 'What if I need energy to start?', a: 'Then start with Adrenaline Night, then land here once you\'re moving.' },
+      { q: 'Where does the metadata come from?', a: 'MusicBrainz (CC0) for real credits and covers; the "why this helps you focus" writing is ours.' },
+    ],
+    related: ['focus-flow', 'rainy-window', 'lonely-tuesday'],
     tags: ['ambient', 'lofi', 'electronic', 'focused'],
     mood: ['focused', 'relaxed'],
     items: ['Music for Airports', 'Selected Ambient Works 85-92', 'Dreamland', 'Innervisions', 'Teardrop', 'Weightless', 'Ambient 1', 'Blonde'],
@@ -22,6 +36,20 @@ export const MUSIC_THEMES: CurationTheme[] = [
     thesis:
       'Not Britpop-as-headline, but the quieter guitar bands that made melancholy sound like sunshine. A lineage from shoegaze to kitchen-sink romance.',
     intro: 'Baggy trousers, reverbed guitars, and a specific kind of northern sadness.',
+    audience:
+      'This list is for people who like their sadness with a melody, and their melodies with a little rain on them. You\'ll like it if you grew up on British guitar music, or if you discovered that melancholy sounds better with a northern accent and a reverb pedal. Skip it if you need uptempo energy — this is a list for grey days and longer drives, not the dancefloor. It\'s also a soft entry point for anyone exploring "indie" as a feeling rather than a genre tag.',
+    criteria:
+      'We excluded the headline Britpop singles everyone knows and kept the quieter lineage underneath: shoegaze, kitchen-sink romance, and the bands that made restraint sound like a virtue. We prioritized songs where the sadness is dressed as sunshine — the specific trick this scene perfected. A pick earned its place by sounding like a specific nowhere town at 4pm. Where two made the same point, we kept the more textural one.',
+    alternatives:
+      'If the melancholy is right but you want it colder, The Lonely Tuesday strips the warmth out. If you want the British feeling in another medium, the neo-noir and slow-burn TV themes carry the same grey light. People who find this "too polite" should try Adrenaline Night. For the cozy indoor version, Rain on the Window.',
+    faq: [
+      { q: 'Is this just Britpop?', a: 'Deliberately not. We skipped the big singles and kept the quieter guitar bands — shoegaze and kitchen-sink romance — that made the era\'s sadness sound like sunshine.' },
+      { q: 'Do I need to be British to like it?', a: 'Not at all. The feeling travels. If you like reverb, minor chords, and a sense of place, you\'re the audience.' },
+      { q: 'Why these specific bands over the famous ones?', a: 'Because fame is easy to find elsewhere. We curate for the argument a list makes, so lesser-known entries that prove the point outrank obvious hits.' },
+      { q: 'Where do the covers and credits come from?', a: 'MusicBrainz (CC0). The editorial reason each band belongs is ours.' },
+      { q: 'Can I generate a similar list?', a: 'Yes — the Playlist Generator lets you set mood and genre and assemble a starter set with the same logic.' },
+    ],
+    related: ['lonely-tuesday', 'rainy-window', 'golden-hour-drive'],
     tags: ['indie', 'rock', '1990s', 'british'],
     mood: ['melancholy', 'relaxed'],
     items: ['The Bends', 'His and Hers', 'The Queen Is Dead', 'Loveless', 'Parklife', 'Crooked Rain', 'Girls & Boys', 'Ride Nowhere'],

@@ -12,6 +12,20 @@ export const FILM_THEMES: CurationTheme[] = [
     thesis:
       'Films that refuse the cut. We gather directors who trust silence, the long take, and the viewer who is willing to wait for meaning.',
     intro: 'Where nothing happens, and everything does.',
+    audience:
+      'This list is for viewers who have made peace with the long take. You\'ll like it if a film that withholds plot feels generous rather than boring, or if you\'ve ever left a movie vaguely changed and unable to explain why. Skip it if you need a story to move — these films trust silence over incident, and impatience reads as the film\'s failure, not yours. It\'s also a useful list for anyone exploring "art cinema" as a feeling rather than a genre, and for people who find most modern films too loud.',
+    criteria:
+      'We excluded slow films that are slow out of laziness, and anything that mistakes length for depth. We kept directors who use restraint as argument: the held frame, the unbroken take, the meaning that arrives only if you wait. A pick earned its place by making patience feel like participation. Where two made the same point, we kept the one with the more confident silence. No plot summaries, no ratings — curation only.',
+    alternatives:
+      'If the contemplation is right but you need a little story, Coming-of-Age (Quiet) keeps the tenderness with more incident. If you want the "earned through waiting" feeling in another medium, the slow-burn TV themes do the same over weeks. People who want momentum should try Adrenaline Night. For the dark patience version, Midnight Dread.',
+    faq: [
+      { q: 'Are these films "boring"?', a: 'Only if you arrive expecting plot. They reward attention differently — the frame, the silence, the held moment. Patience is the ticket, not a flaw in the film.' },
+      { q: 'Why is slowness a mood?', a: 'Because the feeling of settling in and waiting for meaning is its own category — closer to a long piece of music than to a thriller.' },
+      { q: 'Do I need to know film theory?', a: 'Not at all. The list is an on-ramp, not a syllabus. Watch one and see if the quiet lands.' },
+      { q: 'Where do the posters and credits come from?', a: 'TMDB for real metadata and art; the editorial reason each film belongs is ours.' },
+      { q: 'Can I find these on common services?', a: 'A few are on major platforms; many are catalog titles best found via library streaming or boutique discs. The Data page lists our sources.' },
+    ],
+    related: ['neo-noir-shadows', 'lonely-tuesday', 'midnight-dread'],
     tags: ['slow', 'artfilm', 'contemplative', 'auteur'],
     items: ['Tokyo Story', 'Stalker', 'Werckmeister Harmonies', 'Colossal Youth', 'Goodbye to Language', 'The Tree of Life', 'Once Upon a Time in Anatolia', 'Sátántangó'],
   },
@@ -22,6 +36,20 @@ export const FILM_THEMES: CurationTheme[] = [
     thesis:
       'The moral fog of the postwar thriller, updated. We trace the films that turned rain-slick streets into a state of mind.',
     intro: 'Cynicism, the femme, and the cigarette that never goes out.',
+    audience:
+      'This list is for the night person, the rain-on-glass romantic, and anyone who thinks a city looks better when it\'s guilty. You\'ll like it if you\'ve ever stayed up for a thriller that trusts your intelligence, or if a wet street at 1am feels like a genre. Skip it if you need a happy ending or a clear hero — these films live in moral fog on purpose, and clarity would ruin them. It\'s also a strong pick for people exploring "noir" as a mood that outlasted its era.',
+    criteria:
+      'We excluded the lazy remake and anything that mistakes style for substance. We kept films where the darkness is argument, not decoration: the rain-slick street as state of mind, the cynicism as structure, the femme who is never just a plot device. A pick earned its place by turning atmosphere into meaning. Where two made the same point, we kept the one with sharper shadows. No spoilers, no score-ranking — curation only.',
+    alternatives:
+      'If the darkness is right but you want it slower, Slow Cinema keeps the patience without the crime. If you want the same mood in a game, Midnight Dread carries the dread interactively. People who need a hero should try Golden-Hour Drive. For the long-form version, the slow-burn crime TV themes.',
+    faq: [
+      { q: 'Is neo-noir just crime films?', a: 'It\'s crime filtered through mood — the moral fog, the city as psychology. The genre matters less than the feeling of a world that\'s guilty by default.' },
+      { q: 'Will I be lost without knowing classic noir?', a: 'No. These update the tropes; the list works as a standalone mood. The classics just add a layer if you go looking.' },
+      { q: 'Why no spoilers in the descriptions?', a: 'Because the point is the atmosphere, and a spoiled twist is a ruined mood. We curate the feeling, not the plot.' },
+      { q: 'Where do the posters come from?', a: 'TMDB for real metadata and art; the editorial framing is ours.' },
+      { q: 'Can I build a similar mood list?', a: 'The Playlist Generator works for film by mood and decade with the same editorial logic underneath.' },
+    ],
+    related: ['midnight-dread', 'slow-cinema-patience', 'adrenaline-night'],
     tags: ['noir', 'thriller', 'crime', 'dark'],
     items: ['Chinatown', 'Blade Runner', 'Se7en', 'Mulholland Drive', 'Drive', 'The Long Goodbye', 'Blood Simple', 'Kiss Me Deadly'],
   },

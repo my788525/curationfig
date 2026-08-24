@@ -21,6 +21,7 @@ export function Navbar() {
             </Link>
           ))}
           <Link href="/tools/">Tools</Link>
+          <Link href="/articles/">Articles</Link>
           <Link href="/data/">Data & Sources</Link>
           <Link href="/about/">About</Link>
         </nav>

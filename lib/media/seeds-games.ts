@@ -12,6 +12,20 @@ export const GAME_THEMES: CurationTheme[] = [
     thesis:
       'Not just hard games, but a philosophy of teaching through failure. We trace the studio decisions that made dying feel like learning.',
     intro: 'Bonfires, the hollow, and the level design that punishes impatience.',
+    audience:
+      'This list is for players who treat failure as feedback, not insult. You\'ll like it if a game that kills you in thirty seconds feels like a puzzle rather than a punishment, or if you\'ve ever learned a level by dying in every possible way. Skip it if you play to relax — these are demanding by design, and the satisfaction is earned through repetition, not handed to you. It\'s also a good read for people curious why a "difficult" genre became the most influential game design movement of the 2010s.',
+    criteria:
+      'We excluded difficulty-for-its-own-sake and anything that\'s just long. We kept games where the challenge is fair, legible, and teaches: the level design that punishes impatience, the combat that rewards reading, the world that withholds its story. A pick earned its place by making death feel like progress. Where two made the same point, we kept the one with the cleaner design logic. No walkthroughs, no builds — curation only.',
+    alternatives:
+      'If the atmosphere is right but the difficulty isn\'t, Midnight Dread carries the darkness without the dexterity tax. If you want the "earned through repetition" feeling in a calmer form, the cozy-games list is the gentle cousin. People who hate losing should absolutely avoid this — Rain on the Window is the no-stakes version. For the same intensity aimed at speed, Adrenaline Night.',
+    faq: [
+      { q: 'Do I need to be good at games to enjoy these?', a: 'You need to be willing to fail. They\'re demanding, but the design is fair — every death teaches the layout. Patience counts more than reflexes.' },
+      { q: 'Is this just Dark Souls and clones?', a: 'It starts there but traces the lineage outward — Sekiro\'s posture system, Hollow Knight\'s map, Lies of P\'s refinement — to show the design philosophy, not just the brand.' },
+      { q: 'Why is this on a mood site?', a: 'Because the feeling of "I finally got through it" is a mood. The dread-then-relief loop is its own emotional category.' },
+      { q: 'Where do the covers and credits come from?', a: 'RAWG for real metadata and art; the "why this belongs" writing is editorial.' },
+      { q: 'Can I build a similar challenge list?', a: 'The Playlist Generator covers music and games by mood and genre, though the hand-built lineage here goes deeper.' },
+    ],
+    related: ['midnight-dread', 'cozy-games', 'adrenaline-night'],
     tags: ['actionrpg', 'difficult', 'atmospheric', 'dark'],
     items: ['DARK SOULS III', 'Elden Ring', 'Bloodborne', 'Demon Souls', 'Sekiro', 'Lies of P', 'Nioh', 'Hollow Knight'],
   },
@@ -32,6 +46,20 @@ export const GAME_THEMES: CurationTheme[] = [
     thesis:
       'A genre built on the absence of pressure. We pick the titles that treat play as a rest, not a chore.',
     intro: 'Farming, the gentle day cycle, and the game that asks nothing of you.',
+    audience:
+      'This list is for people who are tired. You\'ll like it if your idea of a good game night is watering digital plants and going to bed, or if a "task" in a game feels like a relief rather than a chore. Skip it if you play to win, compete, or optimize — these games have no win state worth mentioning, and that\'s the entire appeal. It\'s also a quietly popular recommendation for new parents, burned-out workers, and anyone using games as rest rather than achievement.',
+    criteria:
+      'We excluded anything with a fail state, a timer that pressures, or a grind that punishes logging off. We kept titles that treat play as recovery: farming loops, gentle day cycles, the game that thanks you for showing up. A pick earned its place by asking nothing of you. Where two made the same point, we kept the one with the softer edges. No leaderboards appear on this list, ever.',
+    alternatives:
+      'If the comfort is right but you want a little story, Rain on the Window keeps the coziness with films and shows attached. If you want the calm aimed at getting work done, Deep Focus Flow is the productive cousin. People who need stakes should try soulslike-lineage — the exact opposite feeling. For the sunny outdoor version, Golden-Hour Drive.',
+    faq: [
+      { q: 'Are cozy games just for kids or casual players?', a: 'No — a huge share of the audience is adults using them as decompression. The lack of pressure is the point, not a simplicity tax.' },
+      { q: 'Do I need to play for hours?', a: 'The opposite. Most of these respect a ten-minute session. Stardew and Animal Crossing are built around showing up briefly and often.' },
+      { q: 'Why put games on a "mood" site at all?', a: 'Because a cozy game is a mood you step into. The feeling of safety and low stakes is the product, not the mechanics.' },
+      { q: 'Where do the covers come from?', a: 'RAWG for real metadata and art; the editorial reason each belongs is ours.' },
+      { q: 'What if I want cozy in other media?', a: 'Rain on the Window is the cross-medium cozy list — films, shows, and records for the same staying-in feeling.' },
+    ],
+    related: ['rainy-window', 'focus-flow', 'golden-hour-drive'],
     tags: ['cozy', 'simulation', 'relaxing', 'casual'],
     items: ['Stardew Valley', 'Animal Crossing', 'Spiritfarer', 'Unpacking', 'A Short Hike', 'Cozy Grove', 'Slime Rancher', 'Harvest Moon'],
   },

@@ -1,7 +1,16 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { TV_THEMES, itemBlurb } from '@/lib/media/curation';
+import {
+  TV_THEMES,
+  itemBlurb,
+  themeAudience,
+  themeCriteria,
+  themeAlternatives,
+  themeFaq,
+  relatedThemes,
+  channelHref,
+} from '@/lib/media/curation';
 import { TV_ITEMS } from '@/lib/media/generated-tv';
 import type { CurationItem } from '@/lib/media/musicbrainz';
 import { CopyListButton } from '@/components/CopyListButton';
@@ -34,20 +43,11 @@ export default function TvThemePage({ params }: { params: { slug: string } }) {
     else missing.push(name);
   }
 
-  const faq = [
-    {
-      q: `What is "${t.title}" about?`,
-      a: t.thesis,
-    },
-    {
-      q: 'Why no spoilers or episode-score tables?',
-      a: 'Those are commodity content an AI summary or a review aggregator already covers. We curate by argument — the reason these shows share a lineage — which no algorithm reproduces.',
-    },
-    {
-      q: 'Can I get a personalized list instead?',
-      a: 'Yes — use the Playlist Generator (TV mode) to build a list from your preferred mood and era.',
-    },
-  ];
+  const audience = themeAudience(t);
+  const criteria = themeCriteria(t);
+  const alternatives = themeAlternatives(t);
+  const faq = themeFaq(t);
+  const related = relatedThemes(t);
 
   const faqLd = {
     '@context': 'https://schema.org',
@@ -75,12 +75,22 @@ export default function TvThemePage({ params }: { params: { slug: string } }) {
           <Link href="/">Home</Link> / <Link href="/tv/">TV</Link> / {t.title}
         </div>
         <h1>{t.title}</h1>
-        <p style={{ fontSize: 18, maxWidth: 720 }}>{t.intro}</p>
+        <p style={{ fontSize: 18, maxWidth: 760, lineHeight: 1.62 }}>{t.intro}</p>
 
-        <div className="card" style={{ marginTop: 18 }}>
-          <h2 style={{ fontSize: '1.15rem' }}>The curation thesis</h2>
-          <p style={{ fontSize: 16.5 }}>{t.thesis}</p>
-          <div style={{ marginTop: 6 }}>
+        <div className="card editorial" style={{ marginTop: 18 }}>
+          <h2 className="ed-h">Who this list is for</h2>
+          <p className="ed-p">{audience}</p>
+        </div>
+
+        <div className="card editorial" style={{ marginTop: 14, borderLeft: '4px solid var(--teal-600)' }}>
+          <h2 className="ed-h">How we picked (our criteria)</h2>
+          <p className="ed-p">{criteria}</p>
+        </div>
+
+        <div className="card editorial" style={{ marginTop: 14 }}>
+          <h2 className="ed-h">The curation thesis</h2>
+          <p className="ed-p">{t.thesis}</p>
+          <div style={{ marginTop: 8 }}>
             {t.tags.map((tag) => (
               <span key={tag} className="tag-chip">{tag}</span>
             ))}
@@ -88,20 +98,20 @@ export default function TvThemePage({ params }: { params: { slug: string } }) {
         </div>
 
         {t.compare && (
-          <div className="card" style={{ marginTop: 14, borderLeft: '4px solid var(--violet-500)' }}>
-            <h2 style={{ fontSize: '1.15rem' }}>Why these four mediums, one mood</h2>
-            <p style={{ fontSize: 16 }}>{t.compare}</p>
+          <div className="card editorial" style={{ marginTop: 14, borderLeft: '4px solid var(--violet-500)' }}>
+            <h2 className="ed-h">Why these four mediums, one mood</h2>
+            <p className="ed-p">{t.compare}</p>
           </div>
         )}
 
         {items.length > 0 && (
-          <div style={{ marginTop: 26 }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 12 }}>
-              <h2 style={{ fontSize: '1.2rem', margin: 0 }}>The list</h2>
+          <div style={{ marginTop: 28 }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
+              <h2 style={{ fontSize: '1.2rem', margin: 0 }}>The list ({items.length})</h2>
               <CopyListButton
-                titles={items.map((it) => it.title)}
-                meta={items.map((it) => `${it.creator}${it.year ? ` (${it.year})` : ''}`)}
-                label="Copy titles"
+                text={items.map((it, i) => `${i + 1}. ${it.title}${it.year ? ` (${it.year})` : ''} — ${it.creator}`).join('\n')}
+                label="Copy title list"
+                className="copy-btn"
               />
             </div>
             <Reveal className="item-rows">
@@ -109,7 +119,7 @@ export default function TvThemePage({ params }: { params: { slug: string } }) {
                 <div key={it.refId} className="item-row">
                   <div className="thumb">
                     {it.cover ? (
-                      <img src={it.cover} alt={`${it.title} poster`} loading="lazy" />
+                      <img src={it.cover} alt={`${it.title} cover`} loading="lazy" />
                     ) : (
                       <div className="thumb-empty">no art</div>
                     )}
@@ -117,14 +127,12 @@ export default function TvThemePage({ params }: { params: { slug: string } }) {
                   <div className="meta">
                     <div className="name">{it.title}</div>
                     <div className="sub">{it.creator}{it.year ? ` · ${it.year}` : ''}</div>
-                    {it.tags.length > 0 && (
-                      <div className="row-tags">
-                        {it.tags.slice(0, 4).map((tag) => (
-                          <span key={tag} className="tag-chip">{tag}</span>
-                        ))}
-                      </div>
-                    )}
                     <p className="why">{itemBlurb(it, t.thesis)}</p>
+                    <div className="tags">
+                      {it.tags.slice(0, 5).map((tg) => (
+                        <span key={tg} className="tag-chip">{tg}</span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -137,11 +145,47 @@ export default function TvThemePage({ params }: { params: { slug: string } }) {
           </div>
         )}
 
+        <div className="card editorial" style={{ marginTop: 28, borderLeft: '4px solid var(--amber-500)' }}>
+          <h2 className="ed-h">If this list isn&apos;t quite your night</h2>
+          <p className="ed-p">{alternatives}</p>
+        </div>
+
+        {related.length > 0 && (
+          <div style={{ marginTop: 28 }}>
+            <h2 className="ed-h" style={{ marginBottom: 12 }}>Related curation lists</h2>
+            <div className="grid grid-2">
+              {related.map((r) => (
+                <Link key={r.slug} href={channelHref(r)} className="theme-card card" style={{ display: 'block' }}>
+                  <h3 style={{ color: 'var(--violet-700)', margin: '0 0 6px' }}>{r.title}</h3>
+                  <p className="muted" style={{ margin: 0, fontSize: 13.5 }}>{r.intro}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div style={{ marginTop: 22, display: 'flex', gap: 14, flexWrap: 'wrap' }}>
+          <Link href="/tools/playlist/" className="pill-tag" style={{ background: 'var(--violet-600)' }}>
+            📺 Generate your own list →
+          </Link>
           <Link href="/tv/" className="pill-tag">← All TV themes</Link>
         </div>
 
-        <h2 style={{ marginTop: 30, fontSize: '1.15rem' }}>Frequently asked</h2>
+        <div className="pillar-links">
+          <h2>Go deeper — the theory behind this list</h2>
+          <p>These pillar guides explain the mood-first method and link back to lists like this one.</p>
+          <div>
+            <Link href="/articles/how-mood-shapes-media-choice/">How Mood Shapes Media Choice →</Link>
+            {' · '}
+            <Link href="/articles/mixing-media/">A Beginner&apos;s Guide to Mixing Media →</Link>
+            {' · '}
+            <Link href="/articles/cozy-media-defined/">What Makes &quot;Cozy Media&quot;? →</Link>
+            {' · '}
+            <Link href="/articles/streaming-fragmentation/">Streaming Fragmentation in North America →</Link>
+          </div>
+        </div>
+
+        <h2 style={{ marginTop: 32, fontSize: '1.15rem' }}>Frequently asked</h2>
         <div className="grid grid-2">
           {faq.map((f) => (
             <div key={f.q} className="card">

@@ -12,6 +12,20 @@ export const TV_THEMES: CurationTheme[] = [
     thesis:
       'When the small screen stopped rewarding the good guy. We trace the shows that made the flawed central figure the whole point.',
     intro: 'The confession, the compromise, the slow rot.',
+    audience:
+      'This list is for viewers who got tired of rooting for the good guy. You\'ll like it if a protagonist you can\'t approve of is more interesting than one you can, or if you\'ve ever defended a terrible character by saying "but the writing." Skip it if you need someone to root for — these shows are built around the slow rot, and moral comfort is not on offer. It\'s also a useful lens on why "prestige TV" in the 2000s was a genuinely new kind of storytelling, not just better production.',
+    criteria:
+      'We excluded cartoon villains and any show that forgives its lead too easily. We kept series where the flawed central figure is the entire argument: the confession as structure, the compromise as plot, the rot as character development. A pick earned its place by making you complicit. Where two made the same point, we kept the one with the sharper writing. No finale spoilers, no episode ranking — curation only.',
+    alternatives:
+      'If the darkness is right but you want it contained, Limited Series keeps the prestige without the 60-hour commitment. If you want the same moral fog in a film, Neo-Noir carries it in two hours. People who need a hero should try Golden-Hour Drive. For the interactive version, Midnight Dread.',
+    faq: [
+      { q: 'Do I have to like the antihero?', a: 'No — you just have to find them interesting. The genre is built on complicity, not approval. The writing is the point, not the morality.' },
+      { q: 'Why is this a "mood"?', a: 'Because the feeling of watching someone slowly compromise is its own category — tense, fascinated, a little ashamed. That\'s the mood.' },
+      { q: 'Will the descriptions spoil the endings?', a: 'We avoid spoilers by design. The curation is about the feeling and the form, not the plot beats.' },
+      { q: 'Where do the posters come from?', a: 'TMDB for real metadata and art; the editorial framing is ours.' },
+      { q: 'Can I build a similar list?', a: 'The Playlist Generator covers film and TV by mood and decade with the same logic.' },
+    ],
+    related: ['limited-series-tight', 'midnight-dread', 'golden-hour-drive'],
     tags: ['drama', 'antihero', 'prestige', 'dark'],
     items: ['The Sopranos', 'Breaking Bad', 'Mad Men', 'The Wire', 'House of Cards', 'Dexter', 'Ozark', 'Succession'],
   },
@@ -22,6 +36,20 @@ export const TV_THEMES: CurationTheme[] = [
     thesis:
       'Restraint as a format. We collect shows that ended because the story ended, not because the ratings dropped.',
     intro: 'The arc, the conclusion, the respect for the viewer.',
+    audience:
+      'This list is for people who hate the drag. You\'ll like it if a show that ends because the story ended feels like respect, or if you\'ve been burned by a great season one and a pointless season six. Skip it if you want to live in a world for years — these are finite by design, and the closure is the feature, not a limitation. It\'s also the list for anyone who says "I don\'t have time for TV" but will absolutely watch seven perfect hours on a weekend.',
+    criteria:
+      'We excluded any series that clearly overstayed, and anything stretched to fill a slot. We kept shows where the format is the argument: the arc that arrives, the conclusion that lands, the trust that the viewer can handle an ending. A pick earned its place by knowing when to stop. Where two made the same point, we kept the tighter one. No episode ranking, no spoilers — curation only.',
+    alternatives:
+      'If the prestige is right but you want to stay longer, the Antihero Era runs for seasons and doesn\'t mind the rot. If you want the same "complete story" feeling in a film, Coming-of-Age (Quiet) lands in two hours. People who fear commitment should start here. For the sunny contained version, Golden-Hour Drive.',
+    faq: [
+      { q: 'Aren\'t limited series just short shows?', a: 'They\'re short on purpose. The point is that the story ends when it should — a format choice, not a length accident.' },
+      { q: 'Will I be lost if I haven\'t seen the "classics"?', a: 'No. Each is a self-contained story; the list works as a set of recommendations, not a canon to study.' },
+      { q: 'Why no spoilers in the descriptions?', a: 'Because a spoiled ending on a limited series is a spoiled mood. We curate the feeling and the form, not the twist.' },
+      { q: 'Where do the posters come from?', a: 'TMDB for real metadata and art; the editorial framing is ours.' },
+      { q: 'Can I build a similar list?', a: 'The Playlist Generator covers TV by mood and decade with the same editorial logic.' },
+    ],
+    related: ['antihero-golden', 'golden-hour-drive', 'bittersweet-endings'],
     tags: ['limited', 'prestige', 'complete', 'literary'],
     items: ['Chernobyl', 'The Queen Gambit', 'Olive Kitteridge', 'The Night Of', 'Sharp Objects', 'Mare of Easttown', 'The Underground Railroad', 'Normal People'],
   },

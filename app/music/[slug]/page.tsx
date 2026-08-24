@@ -1,7 +1,17 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { MUSIC_THEMES, MOOD_THEMES, itemBlurb } from '@/lib/media/curation';
+import {
+  MUSIC_THEMES,
+  MOOD_THEMES,
+  itemBlurb,
+  themeAudience,
+  themeCriteria,
+  themeAlternatives,
+  themeFaq,
+  relatedThemes,
+  channelHref,
+} from '@/lib/media/curation';
 import { MUSIC_ITEMS } from '@/lib/media/generated-music';
 import type { CurationItem } from '@/lib/media/musicbrainz';
 import { CopyListButton } from '@/components/CopyListButton';
@@ -12,7 +22,7 @@ export function generateStaticParams() {
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const t = MUSIC_THEMES.find((x) => x.slug === params.slug);
+  const t = [...MUSIC_THEMES, ...MOOD_THEMES].find((x) => x.slug === params.slug);
   if (!t) return { title: 'Music Curation' };
   return {
     title: t.title,
@@ -22,7 +32,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 }
 
 export default function MusicThemePage({ params }: { params: { slug: string } }) {
-  const t = MUSIC_THEMES.find((x) => x.slug === params.slug);
+  const t = [...MUSIC_THEMES, ...MOOD_THEMES].find((x) => x.slug === params.slug);
   if (!t) notFound();
 
   // 匹配本专题的真实条目（优先按 seedName 精确匹配，回退 title）
@@ -35,20 +45,11 @@ export default function MusicThemePage({ params }: { params: { slug: string } })
     else missing.push(name);
   }
 
-  const faq = [
-    {
-      q: `What is "${t.title}" about?`,
-      a: t.thesis,
-    },
-    {
-      q: 'How is this different from an algorithm playlist?',
-      a: 'Algorithm playlists optimize for engagement and familiarity. This is a curated argument — a human chose these records for a reason you can read.',
-    },
-    {
-      q: 'Can I get a personalized list instead?',
-      a: 'Yes — use the Playlist Generator to build a list from your mood, decade, and genre.',
-    },
-  ];
+  const audience = themeAudience(t);
+  const criteria = themeCriteria(t);
+  const alternatives = themeAlternatives(t);
+  const faq = themeFaq(t);
+  const related = relatedThemes(t);
 
   const faqLd = {
     '@context': 'https://schema.org',
@@ -76,27 +77,42 @@ export default function MusicThemePage({ params }: { params: { slug: string } })
           <Link href="/">Home</Link> / <Link href="/music/">Music</Link> / {t.title}
         </div>
         <h1>{t.title}</h1>
-        <p style={{ fontSize: 18, maxWidth: 720 }}>{t.intro}</p>
+        <p style={{ fontSize: 18, maxWidth: 760, lineHeight: 1.62 }}>{t.intro}</p>
 
-        <div className="card" style={{ marginTop: 18 }}>
-          <h2 style={{ fontSize: '1.15rem' }}>The curation thesis</h2>
-          <p style={{ fontSize: 16.5 }}>{t.thesis}</p>
-          <div style={{ marginTop: 6 }}>
+        {/* 适合谁 / 场景 */}
+        <div className="card editorial" style={{ marginTop: 18 }}>
+          <h2 className="ed-h">Who this list is for</h2>
+          <p className="ed-p">{audience}</p>
+        </div>
+
+        {/* 筛选标准（editorial 独有） */}
+        <div className="card editorial" style={{ marginTop: 14, borderLeft: '4px solid var(--teal-600)' }}>
+          <h2 className="ed-h">How we picked (our criteria)</h2>
+          <p className="ed-p">{criteria}</p>
+        </div>
+
+        {/* 策展论点 */}
+        <div className="card editorial" style={{ marginTop: 14 }}>
+          <h2 className="ed-h">The curation thesis</h2>
+          <p className="ed-p">{t.thesis}</p>
+          <div style={{ marginTop: 8 }}>
             {t.tags.map((tag) => (
               <span key={tag} className="tag-chip">{tag}</span>
             ))}
           </div>
         </div>
 
+        {/* 跨媒介对比（仅情绪中枢专题） */}
         {t.compare && (
-          <div className="card" style={{ marginTop: 14, borderLeft: '4px solid var(--violet-500)' }}>
-            <h2 style={{ fontSize: '1.15rem' }}>Why these four mediums, one mood</h2>
-            <p style={{ fontSize: 16 }}>{t.compare}</p>
+          <div className="card editorial" style={{ marginTop: 14, borderLeft: '4px solid var(--violet-500)' }}>
+            <h2 className="ed-h">Why these four mediums, one mood</h2>
+            <p className="ed-p">{t.compare}</p>
           </div>
         )}
 
+        {/* 条目长条 + 原创策展注解 */}
         {items.length > 0 && (
-          <div style={{ marginTop: 26 }}>
+          <div style={{ marginTop: 28 }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
               <h2 style={{ fontSize: '1.2rem', margin: 0 }}>The list ({items.length})</h2>
               <CopyListButton
@@ -136,6 +152,27 @@ export default function MusicThemePage({ params }: { params: { slug: string } })
           </div>
         )}
 
+        {/* 对比 / 替代视角 */}
+        <div className="card editorial" style={{ marginTop: 28, borderLeft: '4px solid var(--amber-500)' }}>
+          <h2 className="ed-h">If this list isn&apos;t quite your night</h2>
+          <p className="ed-p">{alternatives}</p>
+        </div>
+
+        {/* 相关专题内链 */}
+        {related.length > 0 && (
+          <div style={{ marginTop: 28 }}>
+            <h2 className="ed-h" style={{ marginBottom: 12 }}>Related curation lists</h2>
+            <div className="grid grid-2">
+              {related.map((r) => (
+                <Link key={r.slug} href={channelHref(r)} className="theme-card card" style={{ display: 'block' }}>
+                  <h3 style={{ color: 'var(--violet-700)', margin: '0 0 6px' }}>{r.title}</h3>
+                  <p className="muted" style={{ margin: 0, fontSize: 13.5 }}>{r.intro}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div style={{ marginTop: 22, display: 'flex', gap: 14, flexWrap: 'wrap' }}>
           <Link href="/tools/playlist/" className="pill-tag" style={{ background: 'var(--violet-600)' }}>
             🎵 Generate your own playlist →
@@ -143,7 +180,22 @@ export default function MusicThemePage({ params }: { params: { slug: string } })
           <Link href="/music/" className="pill-tag">← All music themes</Link>
         </div>
 
-        <h2 style={{ marginTop: 30, fontSize: '1.15rem' }}>Frequently asked</h2>
+        {/* FAQ */}
+        <div className="pillar-links">
+          <h2>Go deeper — the theory behind this list</h2>
+          <p>These pillar guides explain the mood-first method and link back to lists like this one.</p>
+          <div>
+            <Link href="/articles/how-mood-shapes-media-choice/">How Mood Shapes Media Choice →</Link>
+            {' · '}
+            <Link href="/articles/mixing-media/">A Beginner&apos;s Guide to Mixing Media →</Link>
+            {' · '}
+            <Link href="/articles/cozy-media-defined/">What Makes &quot;Cozy Media&quot;? →</Link>
+            {' · '}
+            <Link href="/articles/streaming-fragmentation/">Streaming Fragmentation in North America →</Link>
+          </div>
+        </div>
+
+        <h2 style={{ marginTop: 32, fontSize: '1.15rem' }}>Frequently asked</h2>
         <div className="grid grid-2">
           {faq.map((f) => (
             <div key={f.q} className="card">
