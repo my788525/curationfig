@@ -16,7 +16,9 @@ export const GAME_ITEMS: CurationItem[] = [
       "playstation4"
     ],
     "cover": "/images/games/game-2551.webp",
-    "url": "/games/soulslike-lineage"
+    "url": "/games/soulslike-lineage",
+    "synopsis": "Dark Souls III is the fourth installment in the Dark Souls series, now introducing the players to the world of Lothric, a kingdom which has suffered the fate similar to its counterparts from the previous games, descending from…",
+    "moods": []
   },
   {
     "source": "game",
@@ -35,7 +37,9 @@ export const GAME_ITEMS: CurationItem[] = [
       "xbox-series-x"
     ],
     "cover": "/images/games/game-326243.webp",
-    "url": "/games/dark-fantasy"
+    "url": "/games/soulslike-lineage",
+    "synopsis": "The Golden Order has been broken. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
+    "moods": []
   },
   {
     "source": "game",
@@ -50,7 +54,9 @@ export const GAME_ITEMS: CurationItem[] = [
       "playstation4"
     ],
     "cover": "/images/games/game-3387.webp",
-    "url": "/games/dark-fantasy"
+    "url": "/games/soulslike-lineage",
+    "synopsis": "Bloodborne is an action-RPG and another member of souls-like title series. The game has no predecessors or successors, making it the only entry with one add-on: “The Old Hunters.” The Bloodborne universe, however, also…",
+    "moods": []
   },
   {
     "source": "game",
@@ -65,7 +71,8 @@ export const GAME_ITEMS: CurationItem[] = [
       "playstation3"
     ],
     "cover": "/images/games/game-4108.webp",
-    "url": "/games/soulslike-lineage"
+    "url": "/games/soulslike-lineage",
+    "moods": []
   },
   {
     "source": "game",
@@ -78,7 +85,9 @@ export const GAME_ITEMS: CurationItem[] = [
       "pc"
     ],
     "cover": "/images/games/game-433707.webp",
-    "url": "/games/soulslike-lineage"
+    "url": "/games/soulslike-lineage",
+    "synopsis": "Sekiro is a game developed by romanstarner. It was originally released in 2020.",
+    "moods": []
   },
   {
     "source": "game",
@@ -98,7 +107,9 @@ export const GAME_ITEMS: CurationItem[] = [
       "macos"
     ],
     "cover": "/images/games/game-605674.webp",
-    "url": "/games/soulslike-lineage"
+    "url": "/games/soulslike-lineage",
+    "synopsis": "You wake up at an abandoned train station in Krat, a city overwhelmed by madness and bloodlust. In front of you lies a single note that reads: \"Find Mr.",
+    "moods": []
   },
   {
     "source": "game",
@@ -114,7 +125,9 @@ export const GAME_ITEMS: CurationItem[] = [
       "playstation4"
     ],
     "cover": "/images/games/game-401.webp",
-    "url": "/games/dark-fantasy"
+    "url": "/games/soulslike-lineage",
+    "synopsis": "Dead or alive A game of insane complexity in the best traditions of the Dark Souls series, the games of which set the standard of quality in the genre.",
+    "moods": []
   },
   {
     "source": "game",
@@ -134,7 +147,9 @@ export const GAME_ITEMS: CurationItem[] = [
       "macos"
     ],
     "cover": "/images/games/game-9767.webp",
-    "url": "/games/souls-like-indie"
+    "url": "/games/soulslike-lineage",
+    "synopsis": "Hollow Knight is a Metroidvania-type game developed by an indie studio named Team Cherry. Most of the game's story is told through the in-world items, tablets, and thoughts of other characters.",
+    "moods": []
   },
   {
     "source": "game",
@@ -154,7 +169,9 @@ export const GAME_ITEMS: CurationItem[] = [
       "wii-u"
     ],
     "cover": "/images/games/game-25137.webp",
-    "url": "/games/retro-8bit"
+    "url": "/games/metroidvania-map",
+    "synopsis": "Beware of Dracula and his ghoulish minions as you enter his lair… Castlevania marked the beginning of Konami’s acclaimed series, one that is still going strong today!",
+    "moods": []
   },
   {
     "source": "game",
@@ -170,7 +187,8 @@ export const GAME_ITEMS: CurationItem[] = [
       "nintendo-switch"
     ],
     "cover": "/images/games/game-622495.webp",
-    "url": "/games/metroidvania-map"
+    "url": "/games/metroidvania-map",
+    "moods": []
   },
   {
     "source": "game",
@@ -190,7 +208,9 @@ export const GAME_ITEMS: CurationItem[] = [
       "nintendo-switch"
     ],
     "cover": "/images/games/game-11726.webp",
-    "url": "/games/pixel-art-indie"
+    "url": "/games/metroidvania-map",
+    "synopsis": "Dead Cells is a roguelike adventure title developed by Motion Twin. Not much is present in the game, as only bits of any information are given out to the players.",
+    "moods": []
   },
   {
     "source": "game",
@@ -210,7 +230,9 @@ export const GAME_ITEMS: CurationItem[] = [
       "linux"
     ],
     "cover": "/images/games/game-22121.webp",
-    "url": "/games/speedrun-bait"
+    "url": "/games/metroidvania-map",
+    "synopsis": "Celeste is a platformer about climbing a mountain, from the creators of TowerFall. Explore a sprawling mountain with over 500 levels bursting with secrets, across 8 unique areas.",
+    "moods": []
   },
   {
     "source": "game",
@@ -230,7 +252,9 @@ export const GAME_ITEMS: CurationItem[] = [
       "nintendo-switch"
     ],
     "cover": "/images/games/game-2536.webp",
-    "url": "/games/metroidvania-map"
+    "url": "/games/metroidvania-map",
+    "synopsis": "This is the action-adventure you’ve been waiting decades for. After a lab accident, a scientist awakens in a mysterious, alien world.",
+    "moods": []
   },
   {
     "source": "game",
@@ -250,7 +274,9 @@ export const GAME_ITEMS: CurationItem[] = [
       "macos"
     ],
     "cover": "/images/games/game-286485.webp",
-    "url": "/games/metroidvania-map"
+    "url": "/games/metroidvania-map",
+    "synopsis": "SteamWorld Quest is the roleplaying card game you’ve been waiting for! Lead a party of aspiring heroes through a beautifully hand-drawn world and intense battles using only your wits and a handful of cards.",
+    "moods": []
   },
   {
     "source": "game",
@@ -270,7 +296,9 @@ export const GAME_ITEMS: CurationItem[] = [
       "ios"
     ],
     "cover": "/images/games/game-654.webp",
-    "url": "/games/farming-calm"
+    "url": "/games/cozy-games",
+    "synopsis": "The hero (in the beginning you can choose gender, name and appearance) - an office worker who inherited an abandoned farm. The landscape of the farm can also be selected.",
+    "moods": []
   },
   {
     "source": "game",
@@ -286,7 +314,8 @@ export const GAME_ITEMS: CurationItem[] = [
       "nintendo-64"
     ],
     "cover": "/images/games/game-54346.webp",
-    "url": "/games/life-sim"
+    "url": "/games/cozy-games",
+    "moods": []
   },
   {
     "source": "game",
@@ -306,7 +335,9 @@ export const GAME_ITEMS: CurationItem[] = [
       "macos"
     ],
     "cover": "/images/games/game-326236.webp",
-    "url": "/games/cozy-games"
+    "url": "/games/cozy-games",
+    "synopsis": "What will you leave behind? Spiritfarer is a cozy management game about dying.",
+    "moods": []
   },
   {
     "source": "game",
@@ -326,7 +357,8 @@ export const GAME_ITEMS: CurationItem[] = [
       "macos"
     ],
     "cover": "/images/games/game-364942.webp",
-    "url": "/games/cozy-games"
+    "url": "/games/cozy-games",
+    "moods": []
   },
   {
     "source": "game",
@@ -345,7 +377,9 @@ export const GAME_ITEMS: CurationItem[] = [
       "linux"
     ],
     "cover": "/images/games/game-304247.webp",
-    "url": "/games/cozy-games"
+    "url": "/games/cozy-games",
+    "synopsis": "Hike, climb, and soar through the peaceful mountainside landscapes of Hawk Peak Provincial Park. Follow the marked trails or explore the backcountry as you make your way to the summit.",
+    "moods": []
   },
   {
     "source": "game",
@@ -363,7 +397,9 @@ export const GAME_ITEMS: CurationItem[] = [
       "snes"
     ],
     "cover": "/images/games/game-57375.webp",
-    "url": "/games/farming-calm"
+    "url": "/games/cozy-games",
+    "synopsis": "Harvest Moon (牧場物語, Bokujō Monogatari, lit. \"Farm \") is a farm simulation role-playing game developed by Amccus for the Super Nintendo Entertainment System.",
+    "moods": []
   },
   {
     "source": "game",
@@ -377,863 +413,8 @@ export const GAME_ITEMS: CurationItem[] = [
       "pc"
     ],
     "cover": "/images/games/game-117349.webp",
-    "url": "/games/narrative-walking"
-  },
-  {
-    "source": "game",
-    "refId": "274755",
-    "title": "Hades",
-    "seedName": "Hades",
-    "creator": "Indie, Adventure, Action, RPG",
-    "year": "2020",
-    "tags": [
-      "indie",
-      "adventure",
-      "action",
-      "role-playing-games-rpg",
-      "pc",
-      "playstation5",
-      "xbox-one",
-      "playstation4"
-    ],
-    "cover": "/images/games/game-274755.webp",
-    "url": "/games/roguelite-loop"
-  },
-  {
-    "source": "game",
-    "refId": "929000",
-    "title": "The Binding",
-    "seedName": "The Binding",
-    "creator": "",
-    "year": "2023",
-    "tags": [
-      "pc"
-    ],
-    "cover": "/images/games/game-929000.webp",
-    "url": "/games/roguelite-loop"
-  },
-  {
-    "source": "game",
-    "refId": "2556",
-    "title": "Risk of Rain",
-    "seedName": "Risk of Rain",
-    "creator": "Platformer, Indie, Action",
-    "year": "2013",
-    "tags": [
-      "platformer",
-      "indie",
-      "action",
-      "pc",
-      "playstation4",
-      "xbox-one",
-      "nintendo-switch",
-      "macos"
-    ],
-    "cover": "/images/games/game-2556.webp",
-    "url": "/games/twin-stick"
-  },
-  {
-    "source": "game",
-    "refId": "2574",
-    "title": "Enter the Gungeon",
-    "seedName": "Enter the Gungeon",
-    "creator": "Shooter, Indie, Action",
-    "year": "2016",
-    "tags": [
-      "shooter",
-      "indie",
-      "action",
-      "pc",
-      "xbox-one",
-      "playstation4",
-      "nintendo-switch",
-      "macos"
-    ],
-    "cover": "/images/games/game-2574.webp",
-    "url": "/games/twin-stick"
-  },
-  {
-    "source": "game",
-    "refId": "3561",
-    "title": "Spelunky",
-    "seedName": "Spelunky",
-    "creator": "Platformer, Indie",
-    "year": "2012",
-    "tags": [
-      "platformer",
-      "indie",
-      "pc",
-      "playstation4",
-      "xbox360",
-      "playstation3",
-      "ps-vita"
-    ],
-    "cover": "/images/games/game-3561.webp",
-    "url": "/games/roguelite-loop"
-  },
-  {
-    "source": "game",
-    "refId": "3635",
-    "title": "Rogue Legacy",
-    "seedName": "Rogue Legacy",
-    "creator": "Platformer, Indie, Action, RPG",
-    "year": "2013",
-    "tags": [
-      "platformer",
-      "indie",
-      "action",
-      "role-playing-games-rpg",
-      "pc",
-      "playstation4",
-      "nintendo-switch",
-      "ios"
-    ],
-    "cover": "/images/games/game-3635.webp",
-    "url": "/games/roguelite-loop"
-  },
-  {
-    "source": "game",
-    "refId": "650605",
-    "title": "Cult of the Lamb",
-    "seedName": "Cult of the Lamb",
-    "creator": "Indie, Strategy, Adventure, Action",
-    "year": "2022",
-    "tags": [
-      "indie",
-      "strategy",
-      "adventure",
-      "action",
-      "pc",
-      "playstation5",
-      "xbox-one",
-      "playstation4"
-    ],
-    "cover": "/images/games/game-650605.webp",
-    "url": "/games/roguelite-loop"
-  },
-  {
-    "source": "game",
-    "refId": "24072",
-    "title": "The Legend of Zelda",
-    "seedName": "The Legend of Zelda",
-    "creator": "Adventure, Action, RPG",
-    "year": "1986",
-    "tags": [
-      "adventure",
-      "action",
-      "role-playing-games-rpg",
-      "nintendo-switch",
-      "nintendo-3ds",
-      "wii-u",
-      "wii",
-      "game-boy-advance"
-    ],
-    "cover": "/images/games/game-24072.webp",
-    "url": "/games/retro-8bit"
-  },
-  {
-    "source": "game",
-    "refId": "327239",
-    "title": "The Legend of Zelda: Tears of the Kingdom",
-    "seedName": "Tears of the Kingdom",
-    "creator": "Adventure, Action",
-    "year": "2023",
-    "tags": [
-      "adventure",
-      "action",
-      "nintendo-switch"
-    ],
-    "cover": "/images/games/game-327239.webp",
-    "url": "/games/open-world-breath"
-  },
-  {
-    "source": "game",
-    "refId": "254542",
-    "title": "Horizon Zero Dawn: The Frozen Wilds",
-    "seedName": "Horizon Zero",
-    "creator": "Adventure, Action, RPG",
-    "year": "2017",
-    "tags": [
-      "adventure",
-      "action",
-      "role-playing-games-rpg",
-      "pc",
-      "playstation4"
-    ],
-    "cover": "/images/games/game-254542.webp",
-    "url": "/games/open-world-breath"
-  },
-  {
-    "source": "game",
-    "refId": "58550",
-    "title": "Ghost of Tsushima",
-    "seedName": "Ghost of Tsushima",
-    "creator": "Adventure, Action, RPG",
-    "year": "2020",
-    "tags": [
-      "adventure",
-      "action",
-      "role-playing-games-rpg",
-      "pc",
-      "playstation5",
-      "playstation4"
-    ],
-    "cover": "/images/games/game-58550.webp",
-    "url": "/games/open-world-breath"
-  },
-  {
-    "source": "game",
-    "refId": "4546",
-    "title": "Red Dead Redemption: Undead Nightmare",
-    "seedName": "Red Dead",
-    "creator": "Shooter, Adventure, Action",
-    "year": "2010",
-    "tags": [
-      "shooter",
-      "adventure",
-      "action",
-      "xbox360",
-      "playstation3"
-    ],
-    "cover": "/images/games/game-4546.webp",
-    "url": "/games/movie-game"
-  },
-  {
-    "source": "game",
-    "refId": "35358",
-    "title": "The Witcher",
-    "seedName": "The Witcher",
-    "creator": "RPG",
-    "year": "2007",
-    "tags": [
-      "role-playing-games-rpg",
-      "pc"
-    ],
-    "cover": "/images/games/game-35358.webp",
-    "url": "/games/open-world-rpg"
-  },
-  {
-    "source": "game",
-    "refId": "262382",
-    "title": "Disco Elysium",
-    "seedName": "Disco Elysium",
-    "creator": "Indie, Adventure, RPG",
-    "year": "2019",
-    "tags": [
-      "indie",
-      "adventure",
-      "role-playing-games-rpg",
-      "pc",
-      "playstation5",
-      "xbox-one",
-      "playstation4",
-      "xbox-series-x"
-    ],
-    "cover": "/images/games/game-262382.webp",
-    "url": "/games/noir-detective"
-  },
-  {
-    "source": "game",
-    "refId": "324997",
-    "title": "Baldur's Gate III",
-    "seedName": "Baldurs Gate 3",
-    "creator": "Strategy, Adventure, RPG",
-    "year": "2023",
-    "tags": [
-      "strategy",
-      "adventure",
-      "role-playing-games-rpg",
-      "pc",
-      "playstation5",
-      "xbox-series-x",
-      "macos"
-    ],
-    "cover": "/images/games/game-324997.webp",
-    "url": "/games/crpg-depth"
-  },
-  {
-    "source": "game",
-    "refId": "118168",
-    "title": "divinity (itch)",
-    "seedName": "Divinity",
-    "creator": "",
-    "year": "2017",
-    "tags": [
-      "web"
-    ],
-    "cover": "/images/games/game-118168.webp",
-    "url": "/games/crpg-depth"
-  },
-  {
-    "source": "game",
-    "refId": "30119",
-    "title": "Wasteland",
-    "seedName": "Wasteland",
-    "creator": "Indie, Strategy, Adventure, RPG",
-    "year": "1988",
-    "tags": [
-      "indie",
-      "strategy",
-      "adventure",
-      "role-playing-games-rpg",
-      "pc",
-      "ios",
-      "macos",
-      "linux"
-    ],
-    "cover": "/images/games/game-30119.webp",
-    "url": "/games/western-rpg"
-  },
-  {
-    "source": "game",
-    "refId": "319891",
-    "title": "Pillars (itch)",
-    "seedName": "Pillars",
-    "creator": "",
-    "year": "2019",
-    "tags": [
-      "pc"
-    ],
-    "cover": "/images/games/game-319891.webp",
-    "url": "/games/crpg-depth"
-  },
-  {
-    "source": "game",
-    "refId": "78995",
-    "title": "Torment",
-    "seedName": "Torment",
-    "creator": "Puzzle",
-    "year": "2013",
-    "tags": [
-      "puzzle",
-      "ios"
-    ],
-    "cover": "/images/games/game-78995.webp",
-    "url": "/games/crpg-depth"
-  },
-  {
-    "source": "game",
-    "refId": "3363",
-    "title": "Shovel Knight",
-    "seedName": "Shovel Knight",
-    "creator": "Indie, Platformer, Adventure, Action",
-    "year": "2014",
-    "tags": [
-      "indie",
-      "platformer",
-      "adventure",
-      "action",
-      "pc",
-      "playstation4",
-      "xbox-one",
-      "nintendo-switch"
-    ],
-    "cover": "/images/games/game-3363.webp",
-    "url": "/games/pixel-art-indie"
-  },
-  {
-    "source": "game",
-    "refId": "12850",
-    "title": "Cave Story+",
-    "seedName": "Cave Story",
-    "creator": "Indie, Platformer, Adventure, Action",
-    "year": "2010",
-    "tags": [
-      "indie",
-      "platformer",
-      "adventure",
-      "action",
-      "pc",
-      "nintendo-switch",
-      "nintendo-3ds",
-      "nintendo-ds"
-    ],
-    "cover": "/images/games/game-12850.webp",
-    "url": "/games/pixel-art-indie"
-  },
-  {
-    "source": "game",
-    "refId": "320",
-    "title": "Night in the Woods",
-    "seedName": "Night in the Woods",
-    "creator": "Adventure",
-    "year": "2017",
-    "tags": [
-      "adventure",
-      "pc",
-      "xbox-one",
-      "playstation4",
-      "nintendo-switch",
-      "ios",
-      "macos",
-      "linux"
-    ],
-    "cover": "/images/games/game-320.webp",
-    "url": "/games/pixel-art-indie"
-  },
-  {
-    "source": "game",
-    "refId": "35163",
-    "title": "Crusader Kings",
-    "seedName": "Crusader Kings",
-    "creator": "Strategy",
-    "year": "2004",
-    "tags": [
-      "strategy",
-      "pc"
-    ],
-    "cover": "/images/games/game-35163.webp",
-    "url": "/games/history-strategy"
-  },
-  {
-    "source": "game",
-    "refId": "52803",
-    "title": "Civilization",
-    "seedName": "Civilization",
-    "creator": "",
-    "year": "1991",
-    "tags": [
-      "pc",
-      "playstation1",
-      "snes",
-      "macintosh",
-      "commodore-amiga",
-      "atari-st"
-    ],
-    "cover": "/images/games/game-52803.webp",
-    "url": "/games/history-strategy"
-  },
-  {
-    "source": "game",
-    "refId": "23000",
-    "title": "Europa Universalis",
-    "seedName": "Europa Universalis",
-    "creator": "Strategy",
-    "year": "2001",
-    "tags": [
-      "strategy",
-      "pc"
-    ],
-    "cover": "/images/games/game-23000.webp",
-    "url": "/games/strategy-grand"
-  },
-  {
-    "source": "game",
-    "refId": "23001",
-    "title": "Hearts of Iron",
-    "seedName": "Hearts of Iron",
-    "creator": "Strategy",
-    "year": "2002",
-    "tags": [
-      "strategy",
-      "pc"
-    ],
-    "cover": "/images/games/game-23001.webp",
-    "url": "/games/strategy-grand"
-  },
-  {
-    "source": "game",
-    "refId": "246168",
-    "title": "Victoria",
-    "seedName": "Victoria",
-    "creator": "Casual, Indie",
-    "year": "2018",
-    "tags": [
-      "casual",
-      "indie",
-      "pc",
-      "web"
-    ],
-    "cover": "/images/games/game-246168.webp",
-    "url": "/games/strategy-grand"
-  },
-  {
-    "source": "game",
-    "refId": "56303",
-    "title": "Amnesia",
-    "seedName": "Amnesia",
-    "creator": "",
-    "year": "1986",
-    "tags": [
-      "apple-ii",
-      "commodore-amiga"
-    ],
-    "cover": "/images/games/game-56303.webp",
-    "url": "/games/horror-psych"
-  },
-  {
-    "source": "game",
-    "refId": "53478",
-    "title": "Silent Hill",
-    "seedName": "Silent Hill",
-    "creator": "Action",
-    "year": "1999",
-    "tags": [
-      "action",
-      "playstation1"
-    ],
-    "cover": "/images/games/game-53478.webp",
-    "url": "/games/horror-psych"
-  },
-  {
-    "source": "game",
-    "refId": "56183",
-    "title": "Resident Evil (2002)",
-    "seedName": "Resident Evil",
-    "creator": "Action",
-    "year": "2002",
-    "tags": [
-      "action",
-      "pc",
-      "xbox-one",
-      "playstation4",
-      "nintendo-switch",
-      "xbox360",
-      "playstation3",
-      "wii"
-    ],
-    "cover": "/images/games/game-56183.webp",
-    "url": "/games/horror-survival"
-  },
-  {
-    "source": "game",
-    "refId": "4050",
-    "title": "Fatal Frame",
-    "seedName": "Fatal Frame",
-    "creator": "Adventure, Action",
-    "year": "2001",
-    "tags": [
-      "adventure",
-      "action",
-      "xbox-old",
-      "playstation2"
-    ],
-    "cover": "/images/games/game-4050.webp",
-    "url": "/games/horror-atmosphere"
-  },
-  {
-    "source": "game",
-    "refId": "49",
-    "title": "Persona 5",
-    "seedName": "Persona 5",
-    "creator": "Adventure, Action, RPG",
-    "year": "2016",
-    "tags": [
-      "adventure",
-      "action",
-      "role-playing-games-rpg",
-      "playstation4",
-      "playstation3"
-    ],
-    "cover": "/images/games/game-49.webp",
-    "url": "/games/jrpg-turn"
-  },
-  {
-    "source": "game",
-    "refId": "52800",
-    "title": "Chrono Trigger",
-    "seedName": "Chrono Trigger",
-    "creator": "RPG",
-    "year": "1995",
-    "tags": [
-      "role-playing-games-rpg",
-      "pc",
-      "ios",
-      "android",
-      "nintendo-ds",
-      "wii",
-      "snes"
-    ],
-    "cover": "/images/games/game-52800.webp",
-    "url": "/games/jrpg-turn"
-  },
-  {
-    "source": "game",
-    "refId": "53800",
-    "title": "Dragon Quest (1986)",
-    "seedName": "Dragon Quest",
-    "creator": "RPG",
-    "year": "1986",
-    "tags": [
-      "role-playing-games-rpg",
-      "nintendo-switch",
-      "ios",
-      "android",
-      "game-boy-color",
-      "game-boy",
-      "nes"
-    ],
-    "cover": "/images/games/game-53800.webp",
-    "url": "/games/jrpg-turn"
-  },
-  {
-    "source": "game",
-    "refId": "23875",
-    "title": "Xenoblade Chronicles",
-    "seedName": "Xenoblade",
-    "creator": "Action, RPG",
-    "year": "2010",
-    "tags": [
-      "action",
-      "role-playing-games-rpg",
-      "nintendo-3ds",
-      "wii"
-    ],
-    "cover": "/images/games/game-23875.webp",
-    "url": "/games/jrpg-turn"
-  },
-  {
-    "source": "game",
-    "refId": "29180",
-    "title": "Ni no Kuni II: Revenant Kingdom",
-    "seedName": "Ni no Kuni",
-    "creator": "Adventure, RPG",
-    "year": "2018",
-    "tags": [
-      "adventure",
-      "role-playing-games-rpg",
-      "pc",
-      "xbox-one",
-      "playstation4",
-      "xbox-series-x",
-      "nintendo-switch"
-    ],
-    "cover": "/images/games/game-29180.webp",
-    "url": "/games/jrpg-turn"
-  },
-  {
-    "source": "game",
-    "refId": "850683",
-    "title": "Octopath Traveler 2",
-    "seedName": "Octopath",
-    "creator": "Strategy",
-    "year": "2023",
-    "tags": [
-      "strategy",
-      "pc",
-      "playstation5",
-      "playstation4",
-      "nintendo-switch"
-    ],
-    "cover": "/images/games/game-850683.webp",
-    "url": "/games/jrpg-turn"
-  },
-  {
-    "source": "game",
-    "refId": "24079",
-    "title": "EarthBound",
-    "seedName": "Earthbound",
-    "creator": "RPG",
-    "year": "1994",
-    "tags": [
-      "role-playing-games-rpg",
-      "snes"
-    ],
-    "cover": "/images/games/game-24079.webp",
-    "url": "/games/jrpg-turn"
-  },
-  {
-    "source": "game",
-    "refId": "10065",
-    "title": "Cities: Skylines",
-    "seedName": "Cities Skylines",
-    "creator": "Strategy, Simulation",
-    "year": "2015",
-    "tags": [
-      "strategy",
-      "simulation",
-      "pc",
-      "xbox-one",
-      "playstation4",
-      "nintendo-switch",
-      "macos",
-      "linux"
-    ],
-    "cover": "/images/games/game-10065.webp",
-    "url": "/games/sim-city-build"
-  },
-  {
-    "source": "game",
-    "refId": "11407",
-    "title": "Banished",
-    "seedName": "Banished",
-    "creator": "Strategy, Indie, Simulation",
-    "year": "2014",
-    "tags": [
-      "strategy",
-      "indie",
-      "simulation",
-      "pc"
-    ],
-    "cover": "/images/games/game-11407.webp",
-    "url": "/games/sim-city-build"
-  },
-  {
-    "source": "game",
-    "refId": "45821",
-    "title": "Frostpunk",
-    "seedName": "Frostpunk",
-    "creator": "Strategy, Simulation",
-    "year": "2018",
-    "tags": [
-      "strategy",
-      "simulation",
-      "pc",
-      "xbox-one",
-      "playstation4",
-      "nintendo-switch"
-    ],
-    "cover": "/images/games/game-45821.webp",
-    "url": "/games/sim-city-build"
-  },
-  {
-    "source": "game",
-    "refId": "145126",
-    "title": "Anno",
-    "seedName": "Anno",
-    "creator": "Shooter, Action",
-    "year": "2014",
-    "tags": [
-      "shooter",
-      "action",
-      "pc"
-    ],
-    "cover": "/images/games/game-145126.webp",
-    "url": "/games/sim-city-build"
-  },
-  {
-    "source": "game",
-    "refId": "10926",
-    "title": "Factorio",
-    "seedName": "Factorio",
-    "creator": "Casual, Strategy, Indie, Simulation",
-    "year": "2020",
-    "tags": [
-      "casual",
-      "strategy",
-      "indie",
-      "simulation",
-      "pc",
-      "nintendo-switch",
-      "macos",
-      "linux"
-    ],
-    "cover": "/images/games/game-10926.webp",
-    "url": "/games/factory-automation"
-  },
-  {
-    "source": "game",
-    "refId": "55131",
-    "title": "Street Fighter (1987)",
-    "seedName": "Street Fighter",
-    "creator": "Fighting",
-    "year": "1987",
-    "tags": [
-      "fighting",
-      "pc",
-      "playstation3",
-      "wii",
-      "commodore-amiga",
-      "atari-st"
-    ],
-    "cover": "/images/games/game-55131.webp",
-    "url": "/games/fighting-frame"
-  },
-  {
-    "source": "game",
-    "refId": "57840",
-    "title": "Tekken (1994)",
-    "seedName": "Tekken",
-    "creator": "Fighting",
-    "year": "1994",
-    "tags": [
-      "fighting",
-      "ios",
-      "android",
-      "playstation1"
-    ],
-    "cover": "/images/games/game-57840.webp",
-    "url": "/games/fighting-frame"
-  },
-  {
-    "source": "game",
-    "refId": "944912",
-    "title": "Super-Smash",
-    "seedName": "Super Smash",
-    "creator": "Action",
-    "year": "2023",
-    "tags": [
-      "action",
-      "web"
-    ],
-    "cover": "/images/games/game-944912.webp",
-    "url": "/games/fighting-frame"
-  },
-  {
-    "source": "game",
-    "refId": "53004",
-    "title": "Guilty Gear",
-    "seedName": "Guilty Gear",
-    "creator": "Fighting",
-    "year": "1998",
-    "tags": [
-      "fighting",
-      "pc",
-      "playstation4",
-      "nintendo-switch",
-      "playstation1"
-    ],
-    "cover": "/images/games/game-53004.webp",
-    "url": "/games/anime-action"
-  },
-  {
-    "source": "game",
-    "refId": "17599",
-    "title": "Mortal Kombat Komplete Edition",
-    "seedName": "Mortal Kombat",
-    "creator": "Arcade, Fighting",
-    "year": "2013",
-    "tags": [
-      "arcade",
-      "fighting",
-      "pc",
-      "xbox360",
-      "playstation3"
-    ],
-    "cover": "/images/games/game-17599.webp",
-    "url": "/games/fighting-frame"
-  },
-  {
-    "source": "game",
-    "refId": "460427",
-    "title": "Dragon Ball",
-    "seedName": "Dragon Ball",
-    "creator": "Adventure",
-    "year": "",
-    "tags": [
-      "adventure"
-    ],
-    "cover": null,
-    "url": "/games/anime-action"
-  },
-  {
-    "source": "game",
-    "refId": "10035",
-    "title": "Hitman",
-    "seedName": "Hitman",
-    "creator": "Shooter, Action, Simulation",
-    "year": "2016",
-    "tags": [
-      "shooter",
-      "action",
-      "simulation",
-      "pc",
-      "xbox-one",
-      "playstation4",
-      "macos",
-      "linux"
-    ],
-    "cover": "/images/games/game-10035.webp",
-    "url": "/games/stealth-ghost"
+    "url": "/games/narrative-walking",
+    "synopsis": "Waking with a pounding headache, you find yourself in a mansion on the eve of 1930 - but you are not alone.What Remains is a horror game originally created for the Asylum Jam 2014 ( asylumjam) and has since been worked into a…",
+    "moods": []
   }
 ];
