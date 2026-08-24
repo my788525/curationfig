@@ -23,7 +23,7 @@ export default function PlaylistToolPage() {
           part a search engine overview can&apos;t hand you; you have to come in.
         </p>
 
-        <div style={{ maxWidth: 560, marginTop: 18 }}>
+        <div style={{ marginTop: 18 }}>
           <PlaylistGenerator />
         </div>
 
