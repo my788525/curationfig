@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import TiltCard from '@/components/TiltCard';
 
 export type MarqueeCard = {
@@ -20,15 +20,13 @@ export type MarqueeLane = {
 /**
  * Marquee — hub / 首页下方的横向滚动"热门条目跑马灯"。
  * - 纯 CSS 关键帧无限滚动（复制一份内容实现无缝循环）；
- * - hover 整条 lane 暂停（prefers-reduced-motion 下不滚动，直接横向可滚）；
+ * - 不随鼠标悬停暂停（持续滚动）；
  * - 每张卡用 TiltCard 包裹获得 3D 悬停；
  * - 无封面时显示渐变占位 + 标题（tv 兜底）。
  */
 export default function Marquee({ lanes }: { lanes: MarqueeLane[] }) {
-  const [paused, setPaused] = useState(false);
-
   return (
-    <div className="marquee" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+    <div className="marquee">
       {lanes.map((lane, li) => (
         <div className="marquee-lane" key={lane.label}>
           {lane.href ? (
@@ -40,7 +38,7 @@ export default function Marquee({ lanes }: { lanes: MarqueeLane[] }) {
           )}
           <div className="marquee-track-wrap">
             <div
-              className={`marquee-track ${paused ? 'paused' : ''} ${
+              className={`marquee-track ${
                 lane.cards.length < 8 ? 'slow' : ''
               } ${li % 2 === 1 ? 'reverse' : ''}`}
             >

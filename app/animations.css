@@ -211,7 +211,6 @@
 }
 .marquee-track.slow { animation-duration: 300s; }
 .marquee-track.reverse { animation-name: marqueeScrollRev; }
-.marquee-track.paused { animation-play-state: paused; }
 @keyframes marqueeScroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
