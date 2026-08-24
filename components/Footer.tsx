@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE, CHANNELS } from '@/lib/site';
 import { ATTRIBUTION_HTML } from '@/lib/media/sources';
+import { Newsletter } from '@/components/Newsletter';
 
 export function Footer() {
   return (
@@ -43,6 +44,9 @@ export function Footer() {
               <li><Link href="/privacy/">Privacy &amp; Data</Link></li>
               <li><a href="https://curationfig.com/llms.txt">llms.txt</a></li>
             </ul>
+          </div>
+          <div>
+            <Newsletter />
           </div>
         </div>
         <div

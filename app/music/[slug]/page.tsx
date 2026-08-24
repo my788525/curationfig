@@ -5,6 +5,7 @@ import {
   MUSIC_THEMES,
   MOOD_THEMES,
   itemBlurb,
+  editorialTake,
   consumptionTip,
   themeAudience,
   themeCriteria,
@@ -45,7 +46,7 @@ export default function MusicThemePage({ params }: { params: { slug: string } })
   const missing: string[] = [];
   for (const name of t.items) {
     const hit = itemsBySeed.get(name.toLowerCase()) || itemsBySeed.get(name.toLowerCase().replace(/"/g, ''));
-    if (hit) items.push({ ...hit, editorialNote: t.editorialNotes?.[name] });
+    if (hit) items.push({ ...hit, editorialNote: editorialTake(hit, t.thesis, t.editorialNotes?.[name]) });
     else missing.push(name);
   }
 

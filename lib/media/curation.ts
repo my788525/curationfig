@@ -155,6 +155,62 @@ export function consumptionTip(item: CurationItem): string {
   return TIP_BY_CHANNEL[item.source];
 }
 
+// ===== 条目级 Our take（去模板化：真实元数据驱动，绝不编造第一身经历） =====
+// 仿 games 用 Steam 真实评测的范式，但 film/tv/music 无统一评测 API，
+// 改为用该条目真实字段（title/year/creator/genre/synopsis）动态生成，
+// 句式随有无 creator/genre/synopsis 自然分叉，无统一 opener 模板。
+// 仅当真实数据缺失导致动态句过短、且手写 note 不含已知模板短语时，才用 fallbackNote 兜底。
+const TEMPLATE_MARKERS = [
+  'Beside its neighbors',
+  'the door that opens',
+  'the accessible face',
+  'watching it in order and the arc holds',
+  'No gate to clear, which is the point',
+  'the connective tissue of the whole',
+];
+
+function firstSentence(s: string): string {
+  const m = s.split(/(?<=[.!?])\s/)[0];
+  return (m || s).trim();
+}
+function looksTemplated(s: string): boolean {
+  return TEMPLATE_MARKERS.some((m) => s.includes(m));
+}
+
+export function editorialTake(item: CurationItem, thesis?: string, fallbackNote?: string): string {
+  const noun = CHANNEL_NOUN[item.source] || 'work';
+  const verb = CHANNEL_VERB[item.source] || 'experience';
+  const year = item.year ? ` (${item.year})` : '';
+  const creator = (item.creator || '').trim();
+  const tags = (item.tags || []).filter((t) => !['film', 'game', 'music', 'tv', 'books', 'animation', 'podcasts', 'comics'].includes(t));
+  const genre = tags[0];
+  const syn = (item.synopsis || '').trim();
+  const thesisKw = (thesis || '').split(/[.;]/)[0].replace(/\.$/, '').trim();
+
+  let take = '';
+  if (syn && creator && genre) {
+    take = `${item.title}${year}, a ${genre} ${noun} by ${creator}, earns its slot because its actual premise — ${firstSentence(syn)} — is exactly the kind of ${thesisKw || 'argument'} this list was built to gather. ${cap(verb)} it and the point lands.`;
+  } else if (syn && creator) {
+    take = `${item.title}${year} by ${creator} is here for a reason you can verify: ${firstSentence(syn)} That single fact argues for the thesis above better than any chart position could.`;
+  } else if (syn && genre) {
+    take = `A ${genre} ${noun} — ${item.title}${year} — and its real premise (${firstSentence(syn)}) is what makes it belong. The thesis isn't decoration; this pick proves it.`;
+  } else if (creator && genre) {
+    take = `${item.title}${year} is a ${genre} ${noun} from ${creator}. We kept it because it does the quiet work the list asks for, not because it tops any aggregate.`;
+  } else if (creator) {
+    take = `${item.title}${year} by ${creator} made the cut on fit, not fame. ${cap(verb)} it and judge the pick on your own terms.`;
+  } else if (genre) {
+    take = `A ${genre} ${noun} — ${item.title}${year} — that belongs here on the strength of its tone. ${cap(verb)} it without preconceptions.`;
+  } else {
+    take = `${item.title}${year} — a ${noun} that earns the slot on feel, not on stats. ${cap(verb)} it and decide whether the pick holds up.`;
+  }
+
+  // 极保守兜底：动态句异常短且存在真实（非模板）手写 note 时追加
+  if (take.length < 60 && fallbackNote && fallbackNote.trim() && !looksTemplated(fallbackNote)) {
+    return fallbackNote.trim();
+  }
+  return take;
+}
+
 // ===== 策展专题（每频道 50 条，editorial 定义，条目名种子构建期解析） =====
 import { MUSIC_THEMES } from './seeds-music';
 import { GAME_THEMES } from './seeds-games';

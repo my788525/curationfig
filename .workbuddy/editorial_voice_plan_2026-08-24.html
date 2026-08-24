@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>curationfig — 真人体验层（编辑部策展视角）改造蓝图</title>
+<style>
+  :root{
+    --bg:#0e0f13; --card:#171922; --card2:#1d2029; --line:#2a2e3a;
+    --ink:#e8eaf0; --mut:#9aa0b0; --acc:#7c5cff; --acc2:#39d3a7; --warn:#ffb454; --bad:#ff6b6b; --good:#39d3a7;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:980px;margin:0 auto;padding:32px 20px 64px;}
+  h1{font-size:26px;margin:0 0 4px;letter-spacing:-.4px}
+  .sub{color:var(--mut);margin:0 0 24px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
+  .card h2{font-size:18px;margin:0 0 10px;display:flex;align-items:center;gap:8px}
+  .pill{display:inline-block;font-size:12px;padding:2px 9px;border-radius:999px;border:1px solid var(--line);color:var(--mut);margin:2px 4px 2px 0}
+  .pill.acc{color:var(--acc);border-color:var(--acc)}
+  .pill.good{color:var(--good);border-color:var(--good)}
+  .pill.warn{color:var(--warn);border-color:var(--warn)}
+  .kpi{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0}
+  .kpi .b{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:12px 16px;flex:1;min-width:140px}
+  .kpi .n{font-size:24px;font-weight:700;color:var(--acc2)}
+  .kpi .l{color:var(--mut);font-size:12px}
+  table{width:100%;border-collapse:collapse;margin:8px 0;font-size:14px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--mut);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+  code{background:var(--card2);padding:1px 6px;border-radius:6px;font-size:13px;color:#ffd9a0}
+  pre{background:#0a0b0f;border:1px solid var(--line);border-radius:10px;padding:14px;overflow:auto;font-size:13px;color:#d6e2ff}
+  .warnbox{border-left:3px solid var(--warn);background:rgba(255,180,84,.07);padding:10px 14px;border-radius:0 10px 10px 0;margin:10px 0}
+  .goodbox{border-left:3px solid var(--good);background:rgba(57,211,167,.07);padding:10px 14px;border-radius:0 10px 10px 0;margin:10px 0}
+  .step{display:flex;gap:12px;align-items:flex-start;margin:10px 0}
+  .step .no{flex:0 0 26px;height:26px;border-radius:8px;background:var(--acc);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+  .step .tx{flex:1}
+  .foot{color:var(--mut);font-size:12px;margin-top:24px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>真人体验层改造蓝图</h1>
+  <p class="sub">curationfig · 编辑部策展视角（Editorial Voice Layer）· 2026-08-24</p>
+
+  <div class="kpi">
+    <div class="b"><div class="n">1680</div><div class="l">四频道条目总量</div></div>
+    <div class="b"><div class="n">~250</div><div class="l">首批覆盖条目（前排）</div></div>
+    <div class="b"><div class="n">0</div><div class="l">伪造第一身经历（禁止）</div></div>
+  </div>
+
+  <div class="card">
+    <h2>🎯 战略定位：为什么做这一层</h2>
+    <p class="sub" style="margin-bottom:10px">竞争力诊断结论（2026-08-24）指出：curationfig 最大护城河缺口是<strong>无真人体验信号</strong>。AIO 时代，二方 API 润色的 <code>synopsis</code> 没有竞争力；只有"编辑部真实判断过的视角"才构成 Google 难以压缩、难以替代的原创价值。</p>
+    <div class="goodbox"><strong>核心约束（已与用户共识）：</strong> 不伪造第一身经历（"我玩过 Sekiro 三百小时"）。AI 不能编这种陈述——违反诚信护栏且 AI 味重。正确做法是<strong>编辑部策展视角</strong>：以"我们 / 编辑部"署名，基于作品<strong>客观特征 + 公开评价共识</strong>，写有判断力的取舍短评。</div>
+  </div>
+
+  <div class="card">
+    <h2>🧩 字段与数据流设计</h2>
+    <table>
+      <tr><th>层</th><th>改动</th><th>说明</th></tr>
+      <tr>
+        <td><code>CurationItem</code></td>
+        <td>加 <code>editorialNote?: string</code></td>
+        <td>条目级编辑部体验短评；页面优先于 <code>synopsis</code> 渲染在 why 块下方</td>
+      </tr>
+      <tr>
+        <td><code>CurationTheme</code><br>(seeds)</td>
+        <td>加 <code>editorialNotes?: Record&lt;string,string&gt;</code></td>
+        <td><code>seedName → 编辑部短评</code> 映射。<strong>写在 seeds（手写不被 fetch 覆盖）</strong></td>
+      </tr>
+      <tr>
+        <td>fetch 构建期</td>
+        <td>合并 seeds.editorialNotes → generated 条目的 <code>editorialNote</code></td>
+        <td>解析条目时按 <code>seedName</code> 匹配注入；AUTO-GENERATED 文件从此带 editorialNote</td>
+      </tr>
+      <tr>
+        <td>四频道 <code>[slug]/page.tsx</code></td>
+        <td>条目卡 why 下渲染 <code>💬 Our take:</code> 块</td>
+        <td>仅当 <code>item.editorialNote</code> 存在时显示；无则静默跳过</td>
+      </tr>
+    </table>
+    <div class="warnbox"><strong>为什么不放 generated-*.ts：</strong> 该文件是 fetch 脚本 <code>wf(...)</code> 全量重写的 AUTO-GENERATED。手写 editorial 会被下次 fetch 覆盖。所以 editorial 原文必须落在 <code>seeds-*.ts</code>（人写、持久），由构建期合并。</div>
+  </div>
+
+  <div class="card">
+    <h2>📐 首批覆盖范围（前排优先）</h2>
+    <p class="sub" style="margin-bottom:8px">基于首页展示逻辑：mood 区 = <code>MUSIC_THEMES.slice(0,6)</code>；每频道 showcase = <code>themes.slice(0,1)[0]</code>。</p>
+    <table>
+      <tr><th>范围</th><th>专题数</th><th>条目估算</th></tr>
+      <tr><td>music 前 6（含 mood 入口主力）</td><td>6</td><td>~48</td></tr>
+      <tr><td>每频道 showcase 第 1 个（games/film/tv 各 1）</td><td>3</td><td>~24</td></tr>
+      <tr><td>mood 中枢 8（情绪跨媒介，条目跨四频道）</td><td>8</td><td>~90</td></tr>
+      <tr><td>各频道前 2 个高流量精选（补充）</td><td>8</td><td>~80</td></tr>
+      <tr><td><strong>合计（去重后估算）</strong></td><td><strong>~25</strong></td><td><strong>~242</strong></td></tr>
+    </table>
+    <p style="color:var(--mut);font-size:13px">其余 1438 条目继续用现有 <code>itemBlurb</code>（synopsis + 元数据）兜底，不强行铺开——避免 AI 批量套话被判薄内容。</p>
+  </div>
+
+  <div class="card">
+    <h2>✍️ 单条 editorialNote 写作规范</h2>
+    <div class="kpi" style="margin-top:0">
+      <div class="b"><div class="n">80–140</div><div class="l">每条约数字</div></div>
+      <div class="b"><div class="n">4 要素</div><div class="l">必含结构</div></div>
+      <div class="b"><div class="n">0</div><div class="l">套模板 opener</div></div>
+    </div>
+    <p><strong>四要素（每条至少覆盖 3）：</strong></p>
+    <p>
+      <span class="pill acc">为何进此清单</span>
+      <span class="pill acc">情绪 payoff</span>
+      <span class="pill acc">门槛 / 争议</span>
+      <span class="pill acc">与同列条目递进</span>
+    </p>
+    <div class="goodbox"><strong>合格样例（film · 某悲伤片）：</strong><br>
+    <em>"We put this late in the list on purpose — it lands harder after the lighter picks. The restraint is the point: almost no score, long holds, and a final act that trusts you to sit with it. Not a cry-fest, but it stays in the room after the credits. Skip it if you want resolution; this one leaves the door open."</em><br>
+    —— 视角是"我们怎么排、为什么、给谁"，不是"我哭了一整晚"。</div>
+    <div class="warnbox"><strong>禁止：</strong> 第一身经历虚构（"I played this for 200 hours"）、宣传腔（"a masterpiece you must experience"）、与 synopsis 重复、千篇一律 opener。</div>
+  </div>
+
+  <div class="card">
+    <h2>🔧 执行步骤</h2>
+    <div class="step"><div class="no">1</div><div class="tx"><code>musicbrainz.ts</code>：<code>CurationItem</code> 加 <code>editorialNote?: string</code></div></div>
+    <div class="step"><div class="no">2</div><div class="tx"><code>curation.ts</code>：<code>CurationTheme</code> 加 <code>editorialNotes?: Record&lt;string,string&gt;</code></div></div>
+    <div class="step"><div class="no">3</div><div class="tx">改 4 个 fetch 脚本：解析条目时按 <code>seedName</code> 从所属 theme 的 <code>editorialNotes</code> 注入 <code>editorialNote</code>（写回 generated 文件）</div></div>
+    <div class="step"><div class="no">4</div><div class="tx">写 <code>scripts/gen-editorial-notes.mjs</code>：对前排专题基于真实 items/tags 差异化生成 editorialNote 草稿（引用真实条目名+公开共识特征，非编造经历），写入 seeds 的 <code>editorialNotes</code></div></div>
+    <div class="step"><div class="no">5</div><div class="tx">四频道 <code>[slug]/page.tsx</code>：条目卡 why 下加 <code>💬 Our take:</code> 渲染块（<code>item.editorialNote</code> 存在才显示）</div></div>
+    <div class="step"><div class="no">6</div><div class="tx"><code>globals.css</code>：加 <code>.editorial-note</code> 样式（区别于 .why 的视觉权重）</div></div>
+    <div class="step"><div class="no">7</div><div class="tx">重跑 fetch（合并 editorialNote 进 generated）→ <code>next build</code> → commit → push</div></div>
+  </div>
+
+  <div class="card">
+    <h2>⚠️ 风险与护栏</h2>
+    <p>
+      <span class="pill warn">不伪造经历</span>
+      <span class="pill warn">不覆盖 generated</span>
+      <span class="pill warn">不铺 1680 条</span>
+      <span class="pill good">署名"编辑部"</span>
+      <span class="pill good">引用真实元数据</span>
+    </p>
+    <p style="color:var(--mut);font-size:13px">editorialNote 与 API <code>synopsis</code> 职责分离：synopsis = "这是什么"（非复制），editorialNote = "我们为什么选它、你怎么体验最好"（策展判断）。两者并存，互不替代。</p>
+  </div>
+
+  <div class="card">
+    <h2>✅ 验收标准</h2>
+    <table>
+      <tr><th>检查项</th><th>通过条件</th></tr>
+      <tr><td>前排 ~242 条目</td><td>每条 <code>editorialNote</code> 非空、含 ≥3 要素、无套模板 opener</td></tr>
+      <tr><td>构建</td><td><code>next build</code> 239+ 页通过，无 TS 报错</td></tr>
+      <tr><td>页面渲染</td><td>前排专题条目卡显示 <code>💬 Our take:</code>，其余条目静默无块</td></tr>
+      <tr><td>隔离性</td><td>重跑 fetch 后 editorialNote 仍在（来自 seeds，未被覆盖）</td></tr>
+    </table>
+  </div>
+
+  <div class="foot">curationfig 抗薄内容系列 · 第 3 阶段（图片→editorial 字段→真人体验层）。本蓝图经用户确认后执行。</div>
+</div>
+</body>
+</html>

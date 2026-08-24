@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import {
   TV_THEMES,
   itemBlurb,
+  editorialTake,
   consumptionTip,
   themeAudience,
   themeCriteria,
@@ -43,7 +44,7 @@ export default function TvThemePage({ params }: { params: { slug: string } }) {
   const missing: string[] = [];
   for (const name of t.items) {
     const hit = itemsBySeed.get(name.toLowerCase());
-    if (hit) items.push({ ...hit, editorialNote: t.editorialNotes?.[name] });
+    if (hit) items.push({ ...hit, editorialNote: editorialTake(hit, t.thesis, t.editorialNotes?.[name]) });
     else missing.push(name);
   }
 

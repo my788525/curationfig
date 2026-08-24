@@ -1,79 +1,28 @@
 ---
 title: How Mood Shapes Media Choice
-subtitle: Connecting film tone, game atmosphere, and soundtrack — the theory behind cross-medium curation
+subtitle: Why we pick what to watch, play, and listen to by feeling first — and what that means for building a better list.
 date: 2026-08-24
 canonical: https://curationfig.com/articles/how-mood-shapes-media-choice/
 ---
 
-Most recommendation engines get one thing backwards. They sort by what you watched
-last, by what is popular, by a star rating someone else assigned. They almost never
-sort by **how you want to feel**, which is usually the only thing that actually
-decides what you press play on a given Tuesday. This guide is the theory behind
-everything else on CurationFig: the idea that emotion is the real genre, and that
-the same feeling shows up in completely different forms across film, games, and
-music.
+Most recommendation systems optimize for one thing: what you already clicked. They watch your last ten choices and serve you the eleventh, slightly louder. The result is a feed that feels like a hall of mirrors — familiar, frictionless, and oddly exhausting.
 
-## The feeling is the genre
+CurationFig starts from a different premise. You rarely choose a film because it has a 94% score. You choose it because you want to feel a certain way tonight — calmer, sharper, less alone. Mood is the search term you can't type into a genre box.
 
-When someone says "I want something cozy tonight," they are not asking for a
-specific director or publisher. They are describing a state — safe, low-stakes,
-warm — and trusting you to find it wherever it lives. A cozy feeling might arrive
-through a farming game, a slow film about a small town, a series you have already
-seen, or a record with no words in it. The medium is almost irrelevant. The mood
-is the category.
+## Feeling is the real filter
 
-This is why a genre tag fails so often. "Indie" or "drama" or "RPG" tells you what
-something *is*, not what it *does* to you. Two films tagged "drama" can leave you
-in opposite emotional states. Two albums tagged "electronic" can be a focus tool
-or a panic button. If you curate by mood instead of by taxonomy, the list finally
-does the job a recommendation was always supposed to do: it meets you where you are.
+When we say "mood-first," we mean the emotional temperature of a work is the primary key, not its release year, its studio, or its aggregate rating. A 1953 film like *Tokyo Story* and a 2023 game can sit in the same emotional drawer if they ask for the same kind of attention. That is why our lists are organized by feeling — patience, melancholy, cozy focus — rather than by franchise or format.
 
-## Why emotion travels between media
+This is not relativism. A slow-burn crime series and a 90-minute comedy make different promises to your evening. Naming the promise is the curatorial act.
 
-There is a reason the same rainy-night feeling works as a jazz record, a noir film,
-and a life-sim game. Emotion is carried by **texture and pace**, not by plot. A
-reverb-heavy guitar, a rain-slick street, a game where you water plants — these
-are all "slow and safe" at the level of sensation. Your nervous system reads them
-the same way before your brain ever parses the story.
+## Why algorithms can't do this
 
-Film delivers mood through light, score, and the length of a take. Games deliver
-it through agency and loop — a cozy game *lets you* be calm, which is stronger than
-a film *showing* you calm. Music delivers it most purely, because it has no story
-to get in the way. Put them side by side and you see the same emotional argument
-made four different ways. That is the entire premise of our cross-medium lists,
-like [Rain on the Window](/music/rainy-window/) or [The Lonely Tuesday](/music/lonely-tuesday/).
+An algorithm can learn that you watched a lot of sci-fi. It cannot tell whether you wanted wonder or dread, and it certainly cannot tell that last Tuesday you wanted wonder but this Tuesday you want comfort. Those are context signals no clickstream captures cleanly.
 
-## The mismatch problem with algorithms
+Our editorial layer is the part no API generates: the reason a specific work earns its place in a feeling. That reasoning is the product. When you read "we kept this because it does the quiet work the list asks for, not because it tops any chart," you are reading a human decision, not a sort order.
 
-An algorithm optimizes for a click, then a watch, then another click. Mood does not
-optimize anything — it sits. A genuinely mood-matched evening might involve one
-album on loop for two hours, which looks like "low engagement" to a platform. So
-the feed keeps serving novelty, and the calm you wanted gets drowned in the next
-loud thing.
+## What to do with this
 
-This is the gap CurationFig lives in. We are not trying to maximize your session.
-We are trying to hand you the specific feeling you asked for, in whatever medium
-happens to fit your night. Sometimes that is a [three-minute piece of music](/film/slow-cinema-patience/)
-that says more than a two-hour film. Sometimes it is a [game you can actually lose](/games/soulslike-lineage/),
-because dread is a mood too.
+Start from the night you actually have, not the night a homepage assumes. If you want a quiet watch, our [slow cinema list](/film/slow-cinema-patience/) is built for patience over plot. If you want focus, the [late-night lofi list](/music/late-night-focus-lofi/) is a backdrop, not a distraction.
 
-## A practical way to choose by mood
-
-Start with the state, not the title. Ask: do I want to be alone or accompanied?
-Still or moving? Warm or clean? Then pick the medium that delivers that state with
-the least friction. Tired and finished with the day? A [cozy game](/games/cozy-games/)
-asks nothing of you. Restless and awake? An [adrenaline list](/music/adrenaline-night/)
-gives the night a shape. Need to disappear into work? [Deep focus](/music/focus-flow/)
-media is engineered to get out of your way.
-
-The point is not that one medium is better. It is that each is a different door
-into the same room. Once you curate by feeling, you stop arguing with genres and
-start building nights.
-
-## Where this goes next
-
-The rest of our guides build on this. [A beginner's guide to mixing media](/articles/mixing-media/)
-shows you how to chain a film and a game into one evening. [What makes "cozy media"](/articles/cozy-media-defined/)
-pins down the words we use most. And [streaming fragmentation](/articles/streaming-fragmentation/)
-explains why finding these small, specific feelings has gotten so hard — and what
-to do about it.
+The point is not to abandon discovery. It is to make discovery legible — to say out loud why a thing belongs, so you can disagree intelligently and build your own version.

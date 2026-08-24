@@ -142,6 +142,17 @@ p { margin: 0 0 1em; }
 .foot ul { list-style: none; padding: 0; margin: 0; }
 .foot li { margin: 6px 0; }
 
+/* Newsletter (footer) */
+.newsletter h4 { color: #fff; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 8px; }
+.nl-sub { margin: 0 0 10px; max-width: 260px; color: #b9b0c8; }
+.nl-form { display: flex; gap: 8px; flex-wrap: wrap; }
+.nl-input { flex: 1 1 160px; min-width: 140px; padding: 9px 11px; border-radius: 8px; border: 1px solid #3a3150; background: #1c1730; color: #ece8f5; font-size: 13.5px; }
+.nl-input::placeholder { color: #7d7390; }
+.nl-btn { padding: 9px 16px; border-radius: 8px; border: 0; background: var(--violet-600); color: #fff; font-weight: 700; font-size: 13.5px; cursor: pointer; }
+.nl-btn:disabled { opacity: .6; cursor: default; }
+.nl-ok { color: #8fe3b0; margin: 0; font-size: 13.5px; }
+.nl-err { color: #ff9b9b; margin: 8px 0 0; font-size: 13px; }
+
 /* Generator */
 .gen-box { background: var(--violet-50); border: 1px solid #e0cdf2; border-radius: var(--radius); padding: 22px; }
 .gen-box label { display: block; font-weight: 600; font-size: 13.5px; margin: 12px 0 5px; color: var(--ink-700); }

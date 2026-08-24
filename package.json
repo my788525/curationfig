@@ -5,7 +5,7 @@
   "description": "CurationFig — Editorial curation discovery for Film, TV, Games & Music",
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/gen-open-dataset.mjs write && next build && pagefind --site out",
+    "build": "node scripts/protect-generated.mjs && node scripts/gen-open-dataset.mjs write && next build && pagefind --site out",
     "start": "next start",
     "lint": "next lint",
     "search:index": "pagefind --site out",

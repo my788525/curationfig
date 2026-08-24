@@ -55,7 +55,7 @@ fills.
 Beyond annoyance, fragmentation quietly narrows taste. When the feed only shows
 owned content, viewers drift toward the center and stop finding the quiet, specific
 works that actually change how they feel. The long tail — the [cozy games](/games/cozy-games/),
-the [bittersweet endings](/music/bittersweet-endings/), the [limited series](/tv/limited-series-tight/)
+the [dream-pop](/music/dream-pop/), the [limited series](/tv/limited-series-tight/)
 that respect your time — gets buried under what is convenient to serve.
 
 ## What to do about it
@@ -68,7 +68,7 @@ that respect your time — gets buried under what is convenient to serve.
    site rather than a playlist.
 4. **Pair across media.** If a film is locked behind a service you don't have, the
    same mood is probably available as a [game](/games/cozy-games/) or a
-   [record](/music/rainy-window/).
+   [record](/music/classical-rainy-window/).
 
 ## The honest bottom line
 
