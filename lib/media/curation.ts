@@ -241,6 +241,47 @@ export const ALL_THEMES: CurationTheme[] = [
 
 export const THEME_TARGET = 50; // 每频道目标
 
+// ===== 条目 → 所属专题页 URL 解析 =====
+// 本站没有"条目详情页"（架构为专题清单），条目卡点击必须落到"包含它的专题页"，
+// 否则 /<channel>/<item-slug>/ 全部 404。按 seedName/title 命中专题 items，
+// 回退按 title；都未命中则回退 hub。source→路径前缀不完全等同（game→games）。
+const CHANNEL_PATH: Record<Channel, string> = {
+  music: 'music',
+  game: 'games',
+  film: 'film',
+  tv: 'tv',
+  books: 'books',
+  animation: 'animation',
+  podcasts: 'podcasts',
+  comics: 'comics',
+};
+
+const _itemThemeCache: Record<string, string> = {};
+for (const t of ALL_THEMES) {
+  for (const name of t.items) {
+    const key = `${t.channel}::${String(name).toLowerCase()}`;
+    if (!_itemThemeCache[key]) _itemThemeCache[key] = t.slug;
+  }
+}
+
+export function resolveItemUrl(
+  item: { source?: string; seedName?: string; title?: string },
+  fallback = '/'
+): string {
+  const ch = (item.source || '').toLowerCase() as Channel;
+  const prefix = CHANNEL_PATH[ch];
+  if (!prefix) return fallback;
+  const candidates = [item.seedName, item.title]
+    .map((s) => String(s || '').toLowerCase())
+    .filter(Boolean);
+  for (const name of candidates) {
+    const slug = _itemThemeCache[`${ch}::${name}`];
+    if (slug) return `/${prefix}/${slug}/`;
+  }
+  return fallback;
+}
+
+
 // ===== 抗 AIO 多层原创文本：editorial 兜底（旧专题无手写字段时的合理程序化文案） =====
 // 目标：保证每个清单页面（除去 API 自动输出内容）原创文本 ≥450 词，且不复制任何第三方 overview。
 // 所有 fallback 都基于 theme 本身的 intro/thesis/tags/items（真实 editorial 定义），组合后为空泛套话。

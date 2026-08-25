@@ -9,6 +9,7 @@ import {
   ANIMATION_THEMES,
   PODCASTS_THEMES,
   COMICS_THEMES,
+  resolveItemUrl,
 } from '@/lib/media/curation';
 import { MUSIC_ITEMS } from '@/lib/media/generated-music';
 import { GAME_ITEMS } from '@/lib/media/generated-games';
@@ -192,7 +193,7 @@ function coverCards(
       title: i.title,
       subtitle: i.creator || '',
       cover: i.cover,
-      href: i.url || hub,
+      href: resolveItemUrl(i, hub),
     }));
 }
 
@@ -206,7 +207,7 @@ function allCards(
     title: i.title,
     subtitle: i.creator || '',
     cover: i.cover,
-    href: i.url || hub,
+    href: resolveItemUrl(i, hub),
   }));
 }
 

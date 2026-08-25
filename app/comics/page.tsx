@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { COMICS_THEMES, MOOD_THEMES } from '@/lib/media/curation';
+import { COMICS_THEMES, MOOD_THEMES, resolveItemUrl } from '@/lib/media/curation';
 import { COMICS_ITEMS } from '@/lib/media/generated-comics';
 import Reveal from '@/components/Reveal';
 import Marquee from '@/components/Marquee';
@@ -8,7 +8,7 @@ import Marquee from '@/components/Marquee';
 function cards(items: { title: string; creator?: string; cover?: string | null; url: string }[], n = 14) {
   return items
     .slice(0, n)
-    .map((i) => ({ title: i.title, subtitle: i.creator || '', cover: i.cover, href: i.url || '/comics/' }));
+    .map((i) => ({ title: i.title, subtitle: i.creator || '', cover: i.cover, href: resolveItemUrl(i, '/comics/') }));
 }
 
 export const metadata: Metadata = {
