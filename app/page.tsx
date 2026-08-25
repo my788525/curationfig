@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE, CHANNELS } from '@/lib/site';
 import {
   MUSIC_THEMES,
+  MOOD_THEMES,
   GAME_THEMES,
   FILM_THEMES,
   TV_THEMES,
@@ -102,6 +103,26 @@ export default function HomePage() {
             { label: 'Comics', href: '/comics/', cards: marqueeByChannel.comics },
           ]}
         />
+      </section>
+
+      {/* 全站唯一的跨媒介情绪入口：集中在首页，避免在各单频道 hub 重复出现 */}
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <h2 style={{ fontSize: '1.4rem' }}>Explore by mood</h2>
+          <p className="muted" style={{ maxWidth: 720, marginTop: -4 }}>
+            Start from how you feel, not which app you open. Each mood crosses film, TV, games,
+            and music — open one and we pull the right thing from every channel.
+          </p>
+          <Reveal className="grid grid-4" itemClassName="reveal-item">
+            {MOOD_THEMES.map((t) => (
+              <Link key={t.slug} href={`/music/${t.slug}/`} className="card mood-chip">
+                <h3>{t.title}</h3>
+                <p className="thesis">{t.intro}</p>
+                <span className="muted">→ Enter the mood</span>
+              </Link>
+            ))}
+          </Reveal>
+        </div>
       </section>
 
       <section className="section">

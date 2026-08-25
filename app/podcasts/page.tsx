@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { PODCASTS_THEMES, MOOD_THEMES, resolveItemUrl } from '@/lib/media/curation';
+import { PODCASTS_THEMES, resolveItemUrl } from '@/lib/media/curation';
 import { PODCASTS_ITEMS } from '@/lib/media/generated-podcasts';
 import Reveal from '@/components/Reveal';
 import Marquee from '@/components/Marquee';
@@ -43,21 +43,6 @@ export default function PodcastsHub() {
 
       <section className="section">
         <div className="wrap">
-          <h2 style={{ fontSize: '1.3rem' }}>Find media by mood &amp; theme</h2>
-          <p className="muted" style={{ maxWidth: 720, marginTop: -4 }}>
-            Start from how you feel, not which shelf you browse. Each mood below crosses film, TV,
-            games, music, and books — open one and we&apos;ll pull the right thing from every channel.
-          </p>
-          <Reveal className="grid grid-4" itemClassName="reveal-item">
-            {MOOD_THEMES.map((t) => (
-              <Link key={t.slug} href={`/music/${t.slug}/`} className="card mood-chip">
-                <h3>{t.title}</h3>
-                <p className="thesis">{t.intro}</p>
-                <span className="muted">→ Enter the mood</span>
-              </Link>
-            ))}
-          </Reveal>
-
           <h2 style={{ fontSize: '1.3rem', marginTop: 34 }}>All podcast themes</h2>
           <Reveal className="grid grid-2">
             {PODCASTS_THEMES.map((t) => (
