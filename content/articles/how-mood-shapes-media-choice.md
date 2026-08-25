@@ -19,7 +19,7 @@ This is not relativism. A slow-burn crime series and a 90-minute comedy make dif
 
 An algorithm can learn that you watched a lot of sci-fi. It cannot tell whether you wanted wonder or dread, and it certainly cannot tell that last Tuesday you wanted wonder but this Tuesday you want comfort. Those are context signals no clickstream captures cleanly.
 
-Our editorial layer is the part no API generates: the reason a specific work earns its place in a feeling. That reasoning is the product. When you read "we kept this because it does the quiet work the list asks for, not because it tops any chart," you are reading a human decision, not a sort order.
+Our editorial layer is the part no API generates: the reason a specific work earns its place in a feeling, stated in plain language tied to that list's thesis. That reasoning is the product. When you read "Stalker is the list's most generous on-ramp: the long take feels like breathing, not endurance," you are reading a human decision anchored to the mood — not a sort order.
 
 ## What to do with this
 
