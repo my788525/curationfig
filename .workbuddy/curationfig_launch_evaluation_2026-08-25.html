@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CurationFig 上线可行性评估 · 2026-08-25</title>
+<style>
+  :root{
+    --bg:#0f1117; --card:#171a23; --card2:#1d212c; --line:#2a2f3a;
+    --txt:#e6e9ef; --mut:#9aa3b2; --acc:#6ea8fe; --good:#39d98a; --warn:#ffb454; --bad:#ff6b6b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.6 -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 22px 80px}
+  h1{font-size:27px;margin:0 0 6px;letter-spacing:.5px}
+  h2{font-size:19px;margin:38px 0 14px;padding-left:11px;border-left:3px solid var(--acc)}
+  .sub{color:var(--mut);font-size:13px;margin-bottom:26px}
+  .verdict{background:linear-gradient(135deg,#1c2740,#171a23);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:22px 0;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  .verdict .tag{font-size:13px;font-weight:700;padding:7px 14px;border-radius:999px}
+  .v-go{background:rgba(57,217,138,.15);color:var(--good);border:1px solid rgba(57,217,138,.4)}
+  .v-cond{background:rgba(110,168,254,.15);color:var(--acc);border:1px solid rgba(110,168,254,.4)}
+  .verdict p{margin:0;flex:1;min-width:260px;color:var(--txt)}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 16px}
+  .kpi .n{font-size:24px;font-weight:800;color:var(--acc)}
+  .kpi .l{font-size:12px;color:var(--mut);margin-top:4px}
+  .kpi.warn .n{color:var(--warn)} .kpi.bad .n{color:var(--bad)} .kpi.good .n{color:var(--good)}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px;background:var(--card);border-radius:10px;overflow:hidden}
+  th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  th{background:var(--card2);color:var(--mut);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+  tr:last-child td{border-bottom:none}
+  .call{border-radius:12px;padding:15px 17px;margin:14px 0;font-size:14px}
+  .call.good{background:rgba(57,217,138,.1);border:1px solid rgba(57,217,138,.35)}
+  .call.warn{background:rgba(255,180,84,.1);border:1px solid rgba(255,180,84,.35)}
+  .call.bad{background:rgba(255,107,107,.1);border:1px solid rgba(255,107,107,.35)}
+  .call b{display:block;margin-bottom:5px;font-size:14px}
+  .pill{display:inline-block;font-size:11px;padding:3px 9px;border-radius:999px;margin:2px 4px 2px 0;background:var(--card2);border:1px solid var(--line);color:var(--mut)}
+  .pill.acc{color:var(--acc);border-color:rgba(110,168,254,.4)}
+  .pill.good{color:var(--good);border-color:rgba(57,217,138,.4)}
+  .pill.warn{color:var(--warn);border-color:rgba(255,180,84,.4)}
+  ul{margin:8px 0;padding-left:20px} li{margin:6px 0}
+  .src{font-size:12px;color:var(--mut);margin-top:30px;border-top:1px solid var(--line);padding-top:14px}
+  .em{color:var(--acc);font-weight:600}
+  .big{font-size:17px;font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>CurationFig 上线可行性评估</h1>
+  <div class="sub">策展发现站 · 域名未购 / 停 Cloudflare 开发预览 · 评估日 2026-08-25 · 数据源见文末</div>
+
+  <div class="verdict">
+    <span class="tag v-cond">有条件 GO</span>
+    <span class="tag v-go">低投入试水</span>
+    <p><b>结论：买域名上线，但必须 reposition——以 3 个交互工具为矛、以品牌/邮件社区为盾，把 233 个编辑列表降级为"被引用层+内链 feeders"。</b>别指望列表靠 SEO 带来流量或 affiliate 收入，那个 thesis 在 2026 的媒体策展赛道已经数学上不成立。</p>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi good"><div class="n">~233</div><div class="l">策展专题（8 频道）</div></div>
+    <div class="kpi good"><div class="n">1130+</div><div class="l">真实元数据条目（仅 film/music/games）</div></div>
+    <div class="kpi good"><div class="n">3</div><div class="l">交互工具（个性化·进站）</div></div>
+    <div class="kpi warn"><div class="n">$0</div><div class="l">站内变现机制</div></div>
+    <div class="kpi bad"><div class="n">74%</div><div class="l">信息类查询零点击率</div></div>
+  </div>
+
+  <h2>一、站内基线（已建成，非纸上）</h2>
+  <p>该站不是空壳，是已构建、已静态导出的成品。技术 SEO 就绪（<span class="pill acc">sitemap.ts</span> <span class="pill acc">llms.txt</span> <span class="pill acc">output:export</span> <span class="pill acc">273 静态页</span>）。</p>
+  <table>
+    <tr><th>维度</th><th>现状</th><th>评估</th></tr>
+    <tr><td>内容骨架</td><td>film 47 / tv 47 / game 53 / music 71 个专题，books/animation/comics/podcasts 各 5 = <b>~233 个策展列表</b>，每列 ~8 条目 ≈ 1860+ 策展推荐</td><td>体量扎实，非 thin content</td></tr>
+    <tr><td>真实数据</td><td>film 312 / music 482 / games 339 条已接 TMDB·MusicBrainz·RAWG 真实元数据（年份/封面/创作者）；tv/books 等另有生成文件</td><td>有可信数据源，封面本地化已做</td></tr>
+    <tr><td>编辑层</td><td>13 篇 editorial 文章 + 全部 "Our take" 已重写为具体事实论点（前窗口已整改）</td><td>符合 E-E-A-T 编辑立场要求</td></tr>
+    <tr><td>交互工具</td><td>① Playlist Generator（音乐/游戏，个性化）② Taste Twin（输入作品→按 DNA 推相似）③ Where to find it（合法渠道指引）</td><td><span class="pill good">安全护城河</span> 个性化·必须进站</td></tr>
+    <tr><td>变现</td><td><b>全站零 affiliate / 广告代码</b>；WhereToFind 明确写 "no affiliate traps"</td><td><span class="pill warn">当前 $0 收入</span></td></tr>
+  </table>
+
+  <h2>二、外部市场数据（2026 检索）</h2>
+  <table>
+    <tr><th>信号</th><th>数据</th><th>对 curationfig 的含义</th></tr>
+    <tr><td>整体零点击</td><td>64.8% 谷歌搜索无点击；有 AIO 时 ~83%；AI Mode 93%（SparkToro / Semrush 2026）</td><td>纯靠排名换点击的模型失效</td></tr>
+    <tr><td>按意图零点击</td><td>信息类 <b>74%</b> · 本地 72% · 商业调研 46% · 交易 31%</td><td>媒体"发现/推荐"属信息类→最易被吃</td></tr>
+    <tr><td>实体知识面板</td><td>Google 知识面板已直接零点击"电影、音乐等知名实体"</td><td>"某电影/专辑信息"类查询已被 Google 原生吞掉</td></tr>
+    <tr><td>存活点击质量</td><td>AI 引荐转化率为谷歌自然 4–6×；商业/交易意图仍 31–46% 点击</td><td>把赌注压在交易意图页（where to watch/buy）</td></tr>
+    <tr><td>竞品壁垒</td><td>Letterboxd 1700 万用户/7 亿条记录（UGC 护城河，但<b>仍未盈利</b>）；Goodreads 9000 万（亚马逊）；IMDb/Metacritic/RT 评分聚合</td><td>新静态站无法在"全/社区"维度竞争</td></tr>
+  </table>
+
+  <div class="call warn">
+    <b>⚠️ 赛道定性：媒体"推荐/发现"是 AIO 死区 +  incumbent 红海双重夹击</b>
+    "best movies 2024 / what to watch tonight / books like X" 这类查询既是 AI Overview 直接作答的信息类，又是 Google 知识面板零点击实体区，还被 Letterboxd/Goodreads/IMDb 的 UGC 飞轮垄断。以"列表换 SEO 流量再变现"的假设，在此赛道 2026 年不成立。
+  </div>
+
+  <h2>三、护城河双轨分析（对照你的 AIO 铁律）</h2>
+  <p>你自己的铁律把内容分为<span class="pill warn">死区（描述答案）</span>与<span class="pill good">安全（个性化·进站·产出在站上）</span>。curationfig 恰好分裂成两半：</p>
+
+  <div class="call bad">
+    <b>死区相邻侧：233 个编辑列表</b>
+    多为"按心情/场景挑片/书/游戏"型信息发现内容。AIO 触发高、竞品垄断、无 UGC 飞轮。这一半<b>不能</b>作为流量/收入指望，只能当"被 AI 引用层（GEO）+ 内链 feeders 到工具"。
+  </div>
+
+  <div class="call good">
+    <b>安全护城河侧：3 个交互工具</b>
+    站点代码自己写明了定位——Playlist Generator 页："搜索引擎 overview 给不了你这部分，你必须进来""个性化生成需要你的输入，是对零点击的有意反制，价值在页面上不在摘要里"。这正是你铁律定义的"帮人把事办了"：个性化、需进站、产出在你站、有复访理由（生成→保存→再来）。<b>这是全站唯一符合 safe-moat 的资产。</b>
+  </div>
+
+  <h2>四、变现路径：当前 $0，但藏着一个 safe-zone 机会</h2>
+  <table>
+    <tr><th>路径</th><th>可行性</th><th>备注</th></tr>
+    <tr><td>信息发现页 affiliate</td><td><span class="pill warn">低</span></td><td>AIO 吃掉顶端流量；亚马逊书籍/游戏佣金仅 4–8%</td></tr>
+    <tr><td>"where to watch/buy" 交易意图 affiliate</td><td><span class="pill good">中高</span></td><td>交易意图零点击仅 31%，69% 仍点击——<b>恰好藏在 WhereToFind 工具里，但当前被"no affiliate traps"原则关掉</b></td></tr>
+    <tr><td>订阅 / 社区（Letterboxd Pro 模式）</td><td><span class="pill warn">长周期</span></td><td>需先有规模；Letterboxd 1700 万用户仍不盈利，勿高估</td></tr>
+    <tr><td>品牌/被引用（GEO）</td><td><span class="pill acc">可建</span></td><td>编辑立场+llms.txt 已成，争取成为 AIO 引用源（品牌印象，非流量）</td></tr>
+  </table>
+
+  <div class="call warn">
+    <b>内部矛盾点</b>：你最好的变现角度（where to watch 交易意图）正好在 WhereToFind 工具里，而该工具为品牌声誉写死了"no affiliate traps"。要变现就得在"透明披露佣金"框架内重构该工具——这是上线前必须定的一个产品决策。
+  </div>
+
+  <h2>五、Go / No-Go 判定</h2>
+  <div class="call good">
+    <b>✅ 建议：有条件 GO（低投入试水）</b>
+    上线的财务下行近乎为零（域名 ~$12/年 + Cloudflare 免费），所以"上"本身不冒险。真正的风险是<b>内容精力的机会成本</b>——同等精力投入蓝海站（如 ReloFig 交易意图+高 AIO 安全度）回报更确定。
+  </div>
+  <div class="call bad">
+    <b>❌ 下述情况应 NO-GO</b>
+    若你心里的模型是"做列表→谷歌排名→affiliate/广告被动收入"，请直接否决——这个 thesis 在此赛道 2026 已死。别上。
+  </div>
+
+  <h2>六、若决定上：执行条件（按优先级）</h2>
+  <ul>
+    <li><b>1. 以工具为门面</b>：首页首屏主推 3 个工具，列表降级为辅助导航与内链。</li>
+    <li><b>2. 第 1 天起建自有受众</b>：邮件订阅 / 社区入口。零点击时代唯一耐久流量是你自己拥有的。</li>
+    <li><b>3. 定变现框架</b>：在"透明披露"下为 WhereToFind 接交易意图 affiliate，或干脆保持纯净品牌、靠社区/订阅。</li>
+    <li><b>4. 列表当 GEO 资产</b>：强化 llms.txt + 结构化数据，争取被 AIO 引用（计品牌印象，不计流量）。</li>
+    <li><b>5. 设 6–12 月里程碑</b>：看自有受众（邮件/复访/工具使用）是否增长。增长→加注；只是死静态页→砍掉，精力转蓝海站。</li>
+  </ul>
+
+  <h2>七、机会成本提醒（组合视角）</h2>
+  <p>你矩阵有 33+ 站。curationfig 的远期收益天花板受"媒体策展"赛道结构性压制（AIO + incumbent + 变现难）。相比之下，<span class="em">ReloFig（搬家·交易意图·按辖区真数据）</span>、各 YMYL 站等"帮人把事办了 + 交易意图"的资产，AIO 安全度与变现确定性都更高。建议 curationfig 只拿<b>低优先级的试水资源</b>，主力精力留给高确定性蓝海。</p>
+
+  <div class="src">
+    数据来源（检索日 2026-08-25）：
+    站内基线来自 /d/work/GitHub/curationfig 仓库（generated-*.ts 条目计数、seeds 列表计数、app/ 路由与工具页、全仓 affiliate/ads 代码检索为 0）；
+    外部：SparkToro/Datos 零点击统计 2026、Semrush Sensor 2026、Pew 2025 AI Overview 研究、Similarweb AI 引荐转化、Letterboxd 2024 年报（1700 万用户/7 亿记录）、Goodreads 9000 万成员（Amazon 收购 $150M）、Redef/StatSignificant 竞品报道。
+    所有数字均来自联网检索，非臆造；具体点位见正文括号标注。
+  </div>
+
+</div>
+</body>
+</html>

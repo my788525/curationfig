@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import './globals.css';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
@@ -62,7 +62,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main>{children}</main>
         <Footer />
-      </body>
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      '@context': 'https://schema.org', '@type': 'Dataset',
+      name: 'Content Curation & Reference Dataset 2026',
+      description: 'Content curation reference dataset: citation formats, research methodology guides, fact-checking frameworks, and content attribution standards. Sourced from APA, MLA, Chicago, and IFLA.',
+      url: 'https://curationfig.com/data/content-curation-2026.json',
+      identifier: 'content-curation-2026',
+      datePublished: '2026-01-01', dateModified: '2026-08-27',
+      creator: { '@type': 'Organization', name: 'CurationFig' },
+      publisher: { '@type': 'Organization', name: 'CurationFig', url: 'https://curationfig.com' },
+      includedInDataCatalog: { '@type': 'DataCatalog', name: 'CurationFig Data' },
+      distribution: { '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: 'https://curationfig.com/data/content-curation-2026.json' },
+      spatialCoverage: { '@type': 'Place', name: 'United States' }, temporalCoverage: '2026',
+    }) }} />
+    </body>
     </html>
   );
 }

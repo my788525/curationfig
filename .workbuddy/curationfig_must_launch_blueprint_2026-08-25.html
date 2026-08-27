@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CurationFig 必上重构蓝图 · 2026-08-25</title>
+<style>
+  :root{
+    --bg:#0f1117; --card:#171a23; --card2:#1d212c; --line:#2a2f3a;
+    --txt:#e6e9ef; --mut:#9aa3b2; --acc:#6ea8fe; --good:#39d98a; --warn:#ffb454; --bad:#ff6b6b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.6 -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;}
+  .wrap{max-width:940px;margin:0 auto;padding:40px 22px 90px}
+  h1{font-size:27px;margin:0 0 6px;letter-spacing:.5px}
+  h2{font-size:19px;margin:38px 0 14px;padding-left:11px;border-left:3px solid var(--acc)}
+  h3{font-size:15px;margin:18px 0 8px;color:var(--acc)}
+  .sub{color:var(--mut);font-size:13px;margin-bottom:24px}
+  .big{font-size:17px;font-weight:700}
+  .verdict{background:linear-gradient(135deg,#15321f,#171a23);border:1px solid rgba(57,217,138,.4);border-radius:14px;padding:20px 22px;margin:22px 0}
+  .verdict b{color:var(--good)}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:18px 0}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 15px}
+  .kpi .n{font-size:22px;font-weight:800;color:var(--acc)}
+  .kpi .l{font-size:12px;color:var(--mut);margin-top:3px}
+  .kpi.good .n{color:var(--good)} .kpi.warn .n{color:var(--warn)}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px;background:var(--card);border-radius:10px;overflow:hidden}
+  th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  th{background:var(--card2);color:var(--mut);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+  tr:last-child td{border-bottom:none}
+  .call{border-radius:12px;padding:15px 17px;margin:14px 0;font-size:14px}
+  .call.good{background:rgba(57,217,138,.1);border:1px solid rgba(57,217,138,.35)}
+  .call.warn{background:rgba(255,180,84,.1);border:1px solid rgba(255,180,84,.35)}
+  .call.bad{background:rgba(255,107,107,.1);border:1px solid rgba(255,107,107,.35)}
+  .call b{display:block;margin-bottom:5px}
+  .pill{display:inline-block;font-size:11px;padding:3px 9px;border-radius:999px;margin:2px 4px 2px 0;background:var(--card2);border:1px solid var(--line);color:var(--mut)}
+  .pill.acc{color:var(--acc);border-color:rgba(110,168,254,.4)}
+  .pill.good{color:var(--good);border-color:rgba(57,217,138,.4)}
+  .pill.warn{color:var(--warn);border-color:rgba(255,180,84,.4)}
+  ul{margin:8px 0;padding-left:20px} li{margin:6px 0}
+  .road{display:grid;grid-template-columns:1fr;gap:10px;margin:14px 0}
+  .step{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:10px;padding:13px 16px}
+  .step.p0{border-left-color:var(--bad)} .step.p1{border-left-color:var(--warn)} .step.p2{border-left-color:var(--good)}
+  .step .h{font-weight:700;font-size:14px;margin-bottom:4px}
+  .step .h span{font-size:11px;padding:2px 8px;border-radius:999px;margin-left:8px;vertical-align:middle}
+  .step.p0 .h span{background:rgba(255,107,107,.15);color:var(--bad)}
+  .step.p1 .h span{background:rgba(255,180,84,.15);color:var(--warn)}
+  .step.p2 .h span{background:rgba(57,217,138,.15);color:var(--good)}
+  .em{color:var(--acc);font-weight:600}
+  .src{font-size:12px;color:var(--mut);margin-top:30px;border-top:1px solid var(--line);padding-top:14px}
+  .kpirow{display:flex;gap:24px;flex-wrap:wrap;margin:10px 0 4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>把 CurationFig 从「可上可不上」改造成「不上就亏」</h1>
+  <div class="sub">优化重构蓝图 · 2026-08-25 · 目标：关闭 AIO 死区相邻面，强化安全护城河，建立自有资产与交易区变现</div>
+
+  <div class="verdict">
+    <p><b>核心命题：</b>站点的价值不在 233 个编辑列表（那是 AIO 死区相邻面，不能指望流量），而在一个<b>别人抄不来的组合</b>——① 跨媒介情绪入口（film+TV+game+music 同屏，incumbent 各自孤岛做不到）② 个性化工具产出可分享/可打印 + 邮箱捕获（每次使用=自有资产）③ 透明披露的「去哪看/买」交易意图 affiliate（当前被关掉的 $0 → 安全区收入）。三件齐备，<b>不上 = 把已沉没的 233 列表 + 1130 真实条目 + 3 工具 + 技术 SEO 全部归零，并放弃一个矩阵内少有的「有品牌护城河 + 有 owned audience + 有安全区变现」资产。</b></p>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="n">$0→$</div><div class="l">现状变现 → 交易区 affiliate</div></div>
+    <div class="kpi good"><div class="n">69%</div><div class="l">交易意图仍点击（变现可达）</div></div>
+    <div class="kpi warn"><div class="n">4 孤岛</div><div class="l">incumbent 各自单媒介</div></div>
+    <div class="kpi good"><div class="n">+资产</div><div class="l">邮箱列表/复访习惯复利</div></div>
+  </div>
+
+  <h2>一、为什么现在「不上可惜」——沉没资产 + 机会窗口</h2>
+  <div class="call good">
+    <b>✅ 已实打实投入、闲置即归零的资产</b>
+    <ul>
+      <li>~233 策展专题 + 1130+ 真实元数据条目（TMDB/MB/RAWG）+ 13 篇文章 + 3 工具 + 技术 SEO 就绪（sitemap/llms.txt/273 静态页）。</li>
+      <li>这些不是 PPT，是已构建、已静态导出的成品。放着 = 零变现、零复利；上线 = 边际成本极低（域名 ~$12/年 + CF 免费）。</li>
+    </ul>
+  </div>
+  <div class="call warn">
+    <b>⚠️ 机会窗口：AIO 吞噬信息流量，但「个性化 + 跨媒介 + 交易意图」仍是空位</b>
+    <ul>
+      <li>2026 信息类查询 74% 零点击、电影/音乐实体被知识面板吞掉——纯列表站死路。</li>
+      <li>但<b>跨媒介情绪发现</b>（"我这个心情，跨电影/剧/游戏/音乐给我配一晚"）是 Letterboxd（仅 film）、Goodreads（仅 books）、Spotify（仅 music）都做不到的——它们被单媒介锁死。</li>
+      <li><b>交易意图</b>（where to watch/buy）零点击仅 31%，69% 仍点击，且 AIO 安全——这是唯一能稳定变现的入口，目前被 "no affiliate traps" 原则关死。</li>
+    </ul>
+  </div>
+
+  <h2>二、六大优化方向（每个都把你推向安全护城河侧）</h2>
+
+  <h3>① 定位重构：把「跨媒介情绪入口」升为主品牌</h3>
+  <table>
+    <tr><th>现状</th><th>优化</th><th>为什么必须</th></tr>
+    <tr><td>mood 仅在首页网格，链接到 /music/&lt;slug&gt;/；tagline 是泛泛的 "Editorial curation discovery"</td><td>主定位改为 <span class="pill good">One mood, every medium</span>；mood 入口升为一级导航；每个 mood 页同屏聚合 film+TV+game+music 条目</td><td>这是唯一蓝海，incumbent 抄不了（它们单媒介）</td></tr>
+    <tr><td>books/animation/comics/podcasts 在 mood 里零参与（仅 4 小频道各 5 列表）</td><td>补这 4 频道的 mood 标签 + 列表量，让 "every medium" 名副其实</td><td>否则品牌承诺虚；需补内容债</td></tr>
+  </table>
+
+  <h3>② 工具加固：从「能用」到「产出可带走 + 捕获资产」</h3>
+  <div class="call good">
+    <b>✅ 把工具变成自有受众飞轮（你铁律 2.0 护城河：可打印/可下载交付物）</b>
+    <ul>
+      <li>Playlist Generator / Taste Twin 输出 → <b>可分享链接 + 可打印 night plan</b>（价值在站上产出，用户带走，复访理由成立）。</li>
+      <li>每个工具输出页 + 列表页加 <b>email 订阅</b>（"每周一份 mood drop"）——零点击时代唯一耐久流量是你拥有的。</li>
+      <li><b>工具串联</b>（vertical-solution-pack 思路）：Taste Twin 推相似 → 一键 "turn this into a playlist" / "find where to watch"，形成 tool chain，提升停留与转化。</li>
+    </ul>
+  </div>
+
+  <h3>③ 列表去死区化：从「描述答案」变「被 AI 引用层」</h3>
+  <table>
+    <tr><th>动作</th><th>效果</th></tr>
+    <tr><td>强化 llms.txt（已有）+ 每个列表加 JSON-LD <span class="pill acc">ItemList / Review</span></td><td>提升被 AIO 引用概率 → 品牌印象（计引用频次，不计流量，符合你双轨 KPI）</td></tr>
+    <tr><td>列表内强 CTA：「Love this mood? Generate your own →」</td><td>列表降级为内链 feeders，把浏览者导去工具（变现/捕获入口）</td></tr>
+  </table>
+
+  <h3>④ 变现：把 $0 接成安全区收入（最关键的「必上」杠杆）</h3>
+  <div class="call warn">
+    <b>⚠️ 内部矛盾必须解：最好的变现角度就在 WhereToFind，却被 "no affiliate traps" 关掉</b>
+    <ul>
+      <li>重构 WhereToFind：在<b>透明披露</b>（"we may earn a commission at no extra cost"）框架下接 streaming / Amazon books·games affiliate。</li>
+      <li>交易意图零点击仅 31% → 69% 仍点击，且 AIO 安全（不在死区）。这是全站唯一稳定变现入口。</li>
+      <li>邮箱列表是 affiliate 转化的蓄水池：先捕获，再每周推 mood drop 带 affiliate 链接。</li>
+      <li><b>暂不做展示广告</b>：信息类流量已被 AIO 吃，广告 eCPM 低且伤品牌。</li>
+    </ul>
+  </div>
+
+  <h3>⑤ 自有受众飞轮（让「不上」= 放弃复利资产）</h3>
+  <div class="call good">
+    <b>✅ 这是「不上可惜」的真正内核</b>
+    <ul>
+      <li>每工具输出 + 列表页 email 捕获 → 建<b>媒体发现兴趣邮箱列表</b>。</li>
+      <li>该列表是矩阵内少数「高意图 + 可反复触达 + 可带 affiliate」的资产，随订阅增长复利。</li>
+      <li>2026 数据：owned media 32% 营销者增预算；email 高回报且完全自有；AI 引荐转化 4–6×——把站当「捕获层」，把 email 当「留存/转化层」。</li>
+    </ul>
+  </div>
+
+  <h3>⑥ 技术/SEO 加固（已有基础，补强 GEO）</h3>
+  <ul>
+    <li>llms.txt 扩展：明确列出 editorial thesis + 数据源（CC0/CC BY），便于 AI 引用。</li>
+    <li>已生成的 <span class="pill acc">curation-themes.json / *-items.json</span> 开放数据集 → 可被开发者/AI 取用，制造外链与引用（GEO 资产）。</li>
+    <li>sitemap/JSON-LD 已就绪，上线即提交 GSC。</li>
+  </ul>
+
+  <h2>三、优先级路线图（决定「能不能赚」→「护城河多深」→「复利多快」）</h2>
+  <div class="road">
+    <div class="step p0">
+      <div class="h">P0 · 上线即做，决定能不能赚<span>必做</span></div>
+      <ul>
+        <li>WhereToFind 透明披露 affiliate（streaming + Amazon books/games）</li>
+        <li>全站 email 捕获（工具输出页 + 列表页 + 首页）</li>
+        <li>Playlist Generator / Taste Twin 输出可分享 + 可打印</li>
+        <li>买域名、绑 CF、GSC DNS TXT 验证 + 重提 sitemap</li>
+      </ul>
+    </div>
+    <div class="step p1">
+      <div class="h">P1 · 上线 1–2 月，决定护城河<span>关键</span></div>
+      <ul>
+        <li>cross-medium mood 升主定位 + 一级导航；每个 mood 页跨 4 媒介聚合</li>
+        <li>工具串联（Taste Twin → playlist / where to watch）</li>
+        <li>JSON-LD ItemList/Review + llms.txt 扩展，抢 GEO 引用</li>
+        <li>补 books/animation/comics/podcasts 的 mood 标签与列表量（填内容债）</li>
+      </ul>
+    </div>
+    <div class="step p2">
+      <div class="h">P2 · 3–6 月，决定复利<span>增益</span></div>
+      <ul>
+        <li>新增高差异化工具：Mood Night Planner（跨媒介一晚安排）、Taste Passport（偏好档案）</li>
+        <li>newsletter 周更（mood drop 带 affiliate）</li>
+        <li>开放数据集外链引流 + 开发者社区</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>四、决策里程碑（6–12 月看是否加注，否则砍）</h2>
+  <table>
+    <tr><th>时点</th><th>过关信号（达标=加注）</th><th>不达标=止损</th></tr>
+    <tr><td>3 月</td><td>email 订阅 ≥ 门槛值；工具使用量稳定；affiliate 出首笔收入</td><td rowspan="2">仍是死静态页、无 owned 受众、无 affiliate 收入 → 砍，精力转 ReloFig 等蓝海</td></tr>
+    <tr><td>6 月</td><td>owned 受众复访率上升；affiliate 月收入曲线向上；GEO 被引用频次增长</td></tr>
+  </table>
+
+  <div class="call bad">
+    <b>❌ 反向确认：什么情况下仍不该上</b>
+    若你无法接受「先做工具+邮箱+透明 affiliate」的 reposition，仍想靠「列表换 SEO 被动收入」——那无论怎么优化都救不回，因为死区是结构性的。本蓝图的所有动作，本质都是<b>把站点从死区面拽到安全护城河面</b>；拒绝这一步，就不上。
+  </div>
+
+  <div class="src">
+    数据来源（检索日 2026-08-25）：站内基线来自 /d/work/GitHub/curationfig 仓库（generated-*.ts 条目计数、seeds 列表计数、app/ 路由与工具页、全仓 affiliate 代码检索为 0）；
+    外部：SparkToro/Datos 零点击 2026（64.8% 整体 / 信息类 74% / 交易 31%）、Semrush Sensor、Similarweb（AI 引荐转化 4–6×）、Pew 2025；竞品 Letterboxd 1700 万用户（单 film）、Goodreads 9000 万（单 books，亚马逊）、Spotify（单 music）——单媒介孤岛事实；owned media 增预算 32%（行业调研 2026）。
+  </div>
+
+</div>
+</body>
+</html>
