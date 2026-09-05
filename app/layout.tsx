@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from 'next';
 import './globals.css';
+import Script from "next/script";
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { SITE } from '@/lib/site';
@@ -75,6 +76,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       distribution: { '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: 'https://curationfig.com/data/content-curation-2026.json' },
       spatialCoverage: { '@type': 'Place', name: 'United States' }, temporalCoverage: '2026',
     }) }} />
+    <Script src="https://www.googletagmanager.com/gtag/js?id=G-81KMZWDEJG" strategy="afterInteractive" />
+    <Script id="ga4-init" strategy="afterInteractive" dangerouslySetInnerHTML={{__html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-81KMZWDEJG');`}} />
     </body>
     </html>
   );
